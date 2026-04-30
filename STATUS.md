@@ -1,10 +1,11 @@
 # PMD Project Status
 
-**Last updated**: 2026-04-13
+**Last updated**: 2026-04-30
+**Repository**: https://github.com/Ray16/PMD
 
 ## Project Goal
 
-Engineer PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypass mevalonate pathway to produce isopentenol. The key challenge is **substrate inhibition**: at high intracellular MVAP concentrations (100-200 mM), the enzyme is inhibited by its own substrate. We need to increase Ki while maintaining or improving kcat/Km.
+Use molecular modeling to understand the mechanism and improve catalytic efficiency of PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypass mevalonate pathway to produce isopentenol. The key challenge is **substrate inhibition**: at high intracellular MVAP concentrations (100-200 mM), the enzyme is inhibited by its own substrate. We aim to elucidate the structural basis of substrate inhibition and engineer variants with higher Ki while maintaining or improving kcat/Km.
 
 ## Variants Under Study
 
@@ -16,6 +17,8 @@ Engineer PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypa
 | R74H-R147K-M212Q (HKQ) | R74H, R147K, M212Q | 0.4 | 80 | 1079 |
 | R74G-R147K-M212Q (GKQ) | R74G, R147K, M212Q | 0.5 | 11 | 8 |
 
+**Additional variants** (14 new, cofolded with 2-MVAP): I145A, I145F, I226V, K22M, K22Y, M212Q, R147K, R74G_R147K, R74G_R147K_Q140L, R74H, S186C, S208E, T209D, V230E
+
 ## Completed Work
 
 ### 1. Structure Collection (`structures/`)
@@ -25,7 +28,14 @@ Engineer PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypa
 - **AlphaFold/AF-P32377-F1-model_v6.pdb** — AlphaFold prediction (pLDDT 94.75)
 - **PDB/1FI4_catalytic_residues.md** — documented catalytic/active site residues with literature sources
 
-### 2. FoldX Mutant Structures (`structures/FoldX/`)
+### 2. Catalytic Residue Identification
+11 verified residues (cross-referenced with 5 papers):
+- **Catalytic core**: D302 (base), R158 (decarboxylation)
+- **ATP binding**: S121, S155, S208
+- **Substrate binding**: K18, Y19, W20, K22, S120, S153
+- Mutation sites R74, R147, M212 are NOT catalytic — they affect Ki indirectly
+
+### 3. FoldX Mutant Structures (`structures/FoldX/`)
 - Repaired WT: `1FI4_clean_Repair.pdb`
 - 4 mutant directories: `mut_Y19H/`, `mut_R74G/`, `mut_R74H_R147K_M212Q/`, `mut_R74G_R147K_M212Q/`
 - 5 runs each, ddG predictions:
@@ -36,39 +46,38 @@ Engineer PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypa
 - **Key finding**: ddG does NOT correlate with titer — confirms Ki, not stability, drives in vivo performance
 - Scripts: `run_foldx.sh`, `clean_pdb.py`
 
-### 3. Boltz-2 Cofolding (`structures/boltz2/`)
-- Cofolded all 5 variants with MVAP + ATP + Mg2+
+### 4. Boltz-2 Cofolding (`structures/boltz2/`)
+- Cofolded all 19 variants with 2 MVAP molecules + ATP + Mg2+ (50 seeds each)
 - Pocket constraints applied to 11 verified catalytic residues
-- 5 diffusion samples per variant, best models in `best_structures/`
+- Best models in `best_structures/`
 - All models high confidence (>0.93 ipTM)
 - **Key finding**: confidence metrics don't correlate with titer — static structures can't capture substrate inhibition
-- Visualization: `best_structures/visualize_best.pml`
-- Full metrics: `best_structures/README.md`
-
-### 4. Catalytic Residue Identification
-11 verified residues (cross-referenced with 5 papers):
-- **Catalytic core**: D302 (base), R158 (decarboxylation)
-- **ATP binding**: S121, S155, S208
-- **Substrate binding**: K18, Y19, W20, K22, S120, S153
-- Mutation sites R74, R147, M212 are NOT catalytic — they affect Ki indirectly
-
-## In Progress
+- Ablation studies completed (4 conditions):
+  - Full constraints (baseline)
+  - No constraints
+  - No cofactors (no ATP/Mg2+)
+  - No ATP
+- Ablation analysis: `compare_four_conditions.py`, results in `four_condition_comparison.json`
+- Orchestration: `run_boltz2_2mvap.sh`, `run_fill_and_merge.sh`
+- Merge scripts: `merge_new_models.py`, `merge_new_variants.py`, `merge_fill_models.py`, `merge_ablation_models.py`
 
 ### 5. Cosolvent MD — Substrate Bath Simulation (`md/`)
-**Status: System preparation running (background job)**
+- Ran MD for 5 variants (WT, R74G, Y19H, HKQ, GKQ) with ~20 free MVAP molecules (~100 mM)
+- Uses ff14SB (protein) + GAFF2 (ligands) + TIP3P (water)
+- Robust pipeline with NaN crash recovery: `run_md_robust.sh`
+- MD outputs in `md_output/` (5 variants, ~20GB total)
+- Analysis completed: MVAP density maps, contact frequencies, closest residue analysis
+- Scripts: `md/analysis/analyze_substrate_bath.py`
+- Outputs: density maps (`.dx`, `.npz`), contact frequency plots, distance heatmaps
 
-**Why**: Static structures can't explain Ki differences. We need MD with ~20 free MVAP molecules (~100 mM) to observe where a second MVAP binds on the enzyme surface and how mutations affect that binding.
-
-**Pipeline**:
-1. [RUNNING] `prepare_md_systems.py` — building AMBER topology for all 5 variants
-   - Uses ff14SB (protein) + GAFF2 (ligands) + TIP3P (water)
-   - Known issue: ATP parameterization may timeout (needs antechamber fix)
-   - Check progress: `cat md/pipeline.log`
-2. [TODO] Add ~20 MVAP molecules to solvent using packmol
-3. [TODO] Run 10 ns MD on GPUs 0-4 (OpenMM, ~30-50 min each)
-4. [TODO] Analyze: MVAP density maps, secondary binding site identification
-
-**Key question being addressed**: Where is the secondary MVAP binding site that causes non-competitive substrate inhibition? Why does R74G increase Ki to 110 mM while R74G-R147K-M212Q drops it to 11 mM?
+### 6. Analysis & Figures (`analysis/`)
+- **7 main figures** (fig1–fig7): L2 distance distributions, close binding frequency, consensus contacts, R74G competitive binding, R74 loop mechanism, GKQ paradox, confidence correlation
+- **2 supplementary figures**: Ki vs close fraction, full contact heatmap
+- **Structural panels**: enzyme overview, entrance analysis, Q212 bridge, R74 gateway, variant comparison
+- **Ablation comparison**: four-condition pairwise entrance analysis
+- **Reports**: `comprehensive_guide.md/pdf`, `substrate_inhibition_report.md`
+- **3D viewers**: interactive HTML viewers for consensus sites, R74 loop, competitive binding
+- Scripts: `generate_report_figures.py`, `generate_struct_figures.py`, `generate_struct_panels.py`, `run_ablation_analysis.py`, `md_to_pdf.py`
 
 ## Directory Layout
 
@@ -76,28 +85,31 @@ Engineer PMDsc (phosphomevalonate decarboxylase, S. cerevisiae) for the IPP-bypa
 PMD/
 ├── STATUS.md                  ← you are here
 ├── goal.md                    ← project objectives
+├── .gitignore                 ← excludes large outputs from git
 ├── paper/                     ← 5 reference papers
-├── discovered_paper/          ← 3 additional papers
-├── foldx5_Linux/              ← FoldX 5.1 binary
 ├── structures/
 │   ├── PDB/                   ← experimental + cleaned structures
 │   ├── AlphaFold/             ← predicted structure
 │   ├── FoldX/                 ← FoldX mutant structures + ddG
-│   ├── boltz2/                ← Boltz-2 cofolding results
-│   │   ├── best_structures/   ← best model per variant + .pml + README
-│   │   ├── output/            ← 5-sample results
-│   │   └── output_1sample/    ← 1-sample backup
-│   └── sequences/             ← FASTA files for all variants
-└── md/                        ← MD simulations (in progress)
-    ├── cofold_input/          ← YAML inputs (copied from boltz2)
-    ├── cofold_output/         ← PDB inputs (copied from best_structures)
-    ├── md_prep/               ← AMBER topology (being generated)
-    └── pipeline.log           ← preparation log
+│   ├── sequences/             ← FASTA files for all variants
+│   └── boltz2/                ← Boltz-2 cofolding
+│       ├── best_structures/   ← best model per variant
+│       ├── cofold_2mvap/      ← 19 variant YAML configs
+│       ├── cofold_2mvap_no_*/  ← ablation YAML configs
+│       └── output_*/          ← prediction outputs (gitignored)
+├── md/                        ← MD simulations
+│   ├── cofold_input/          ← YAML inputs
+│   ├── cofold_output/         ← PDB inputs
+│   ├── analysis/              ← density maps, contact plots
+│   ├── md_prep/               ← AMBER topology (gitignored)
+│   └── md_output/             ← trajectories (gitignored)
+├── analysis/                  ← figures, reports, HTML viewers
+├── download_papers.py         ← paper download utility
+└── fetch_papers.py            ← paper search utility
 ```
 
-## Next Steps (after MD completes)
+## Next Steps
 
-1. Analyze MVAP density maps — identify secondary binding hot spots
-2. Compare hot spots across variants — correlate with experimental Ki
-3. If secondary site is identified: design mutations to disrupt it → higher Ki
-4. Consider longer MD (50-100 ns) if 10 ns doesn't show clear binding events
+1. Design mutations to disrupt secondary MVAP binding site → higher Ki
+2. Consider longer MD (50-100 ns) if needed for clearer binding events
+3. Validate proposed mutations with Boltz-2 cofolding + MD
