@@ -1,0 +1,19 @@
+FoldX 5.1 (2011)
+by the FoldX Consortium 
+Jesper Borg, Frederic Rousseau, Joost Schymkowitz,
+Luis Serrano and Francois Stricher
+------------------------------------------------------
+
+PDB file analysed: batch
+Output type: BuildModel
+Pdb	total energy	Backbone Hbond	Sidechain Hbond	Van der Waals	Electrostatics	Solvation Polar	Solvation Hydrophobic	Van der Waals clashes	entropy sidechain	entropy mainchain	sloop_entropy	mloop_entropy	cis_bond	torsional clash	backbone clash	helix dipole	water bridge	disulfide	electrostatic kon	partial covalent bonds	energy Ionisation	Entropy Complex
+1FI4_clean_Repair_1_0.pdb	83.0223	-274.199	-150.104	-453.356	-15.8821	627.769	-584.884	34.1858	236.559	641.653	0	0	1.12406	20.4862	292.461	-1.35734	0	0	0	0	1.02797	0
+1FI4_clean_Repair_1_1.pdb	83.2006	-274.795	-149.796	-453.268	-15.479	628.201	-584.606	34.5441	235.791	641.627	0	0	1.12406	20.4328	292.277	-1.39055	0	0	0	0	0.814531	0
+1FI4_clean_Repair_1_2.pdb	83.2478	-274.854	-149.774	-453.418	-15.2997	628.678	-584.7	34.4676	235.926	641.255	0	0	1.12406	20.4329	292.379	-1.41007	0	0	0	0	0.820103	0
+1FI4_clean_Repair_1_3.pdb	82.2855	-274.738	-151.251	-453.329	-15.1797	628.542	-584.59	34.4861	236.076	641.237	0	0	1.12406	20.4932	292.402	-1.40104	0	0	0	0	0.815157	0
+1FI4_clean_Repair_1_4.pdb	82.1952	-274.365	-152.248	-454.024	-15.2622	629.807	-585.171	34.4704	236.77	641.199	0	0	1.12406	20.4763	292.405	-1.40177	0	0	0	0	0.81915	0
+WT_1FI4_clean_Repair_1_0.pdb	80.3718	-274.162	-151.57	-455.387	-16.0957	629.227	-587.171	34.9423	237.387	641.95	0	0	1.12406	20.7189	292.865	-1.36779	0	0	0	0	0.774911	0
+WT_1FI4_clean_Repair_1_1.pdb	79.9812	-274.984	-151.606	-455.487	-15.7052	629.727	-587.176	35.4369	236.923	641.65	0	0	1.12406	20.6853	292.739	-1.37663	0	0	0	0	0.770257	0
+WT_1FI4_clean_Repair_1_2.pdb	80.3391	-275.074	-151.521	-455.558	-15.5167	629.978	-587.137	35.3026	237.024	641.624	0	0	1.12406	20.7134	292.871	-1.39196	0	0	0	0	0.771564	0
+WT_1FI4_clean_Repair_1_3.pdb	79.5182	-274.947	-152.871	-455.304	-15.4036	629.743	-586.875	35.1872	237.191	641.573	0	0	1.12406	20.7162	292.841	-1.38683	0	0	0	0	0.770889	0
+WT_1FI4_clean_Repair_1_4.pdb	79.243	-275.15	-153.184	-455.39	-15.5214	629.865	-586.883	35.2547	237.364	641.65	0	0	1.12406	20.7297	292.824	-1.3871	0	0	0	0	0.770592	0

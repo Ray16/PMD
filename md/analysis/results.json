@@ -1,0 +1,495 @@
+{
+  "variants": [
+    "HKQ",
+    "GKQ",
+    "R74G",
+    "Y19H"
+  ],
+  "trajectory_info": {
+    "HKQ": {
+      "n_frames": 114,
+      "total_ns": 0.114
+    },
+    "GKQ": {
+      "n_frames": 98,
+      "total_ns": 0.098
+    },
+    "R74G": {
+      "n_frames": 91,
+      "total_ns": 0.091
+    },
+    "Y19H": {
+      "n_frames": 103,
+      "total_ns": 0.103
+    }
+  },
+  "min_distance_per_residue": {
+    "HKQ": {
+      "top10_closest": [
+        {
+          "residue_bio": 243,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.0671
+        },
+        {
+          "residue_bio": 239,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 2.159
+        },
+        {
+          "residue_bio": 245,
+          "residue_name": "ASP",
+          "avg_min_dist_nm": 2.2263
+        },
+        {
+          "residue_bio": 176,
+          "residue_name": "HIS",
+          "avg_min_dist_nm": 2.2851
+        },
+        {
+          "residue_bio": 294,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.3071
+        },
+        {
+          "residue_bio": 244,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 2.3253
+        },
+        {
+          "residue_bio": 174,
+          "residue_name": "ASP",
+          "avg_min_dist_nm": 2.3273
+        },
+        {
+          "residue_bio": 242,
+          "residue_name": "VAL",
+          "avg_min_dist_nm": 2.3358
+        },
+        {
+          "residue_bio": 248,
+          "residue_name": "THR",
+          "avg_min_dist_nm": 2.3809
+        },
+        {
+          "residue_bio": 247,
+          "residue_name": "ALA",
+          "avg_min_dist_nm": 2.4445
+        }
+      ]
+    },
+    "GKQ": {
+      "top10_closest": [
+        {
+          "residue_bio": 228,
+          "residue_name": "HIS",
+          "avg_min_dist_nm": 1.8849
+        },
+        {
+          "residue_bio": 227,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.0746
+        },
+        {
+          "residue_bio": 232,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 2.127
+        },
+        {
+          "residue_bio": 224,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.1866
+        },
+        {
+          "residue_bio": 235,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.2168
+        },
+        {
+          "residue_bio": 231,
+          "residue_name": "PRO",
+          "avg_min_dist_nm": 2.2978
+        },
+        {
+          "residue_bio": 239,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 2.322
+        },
+        {
+          "residue_bio": 223,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 2.3727
+        },
+        {
+          "residue_bio": 229,
+          "residue_name": "VAL",
+          "avg_min_dist_nm": 2.3864
+        },
+        {
+          "residue_bio": 220,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 2.4135
+        }
+      ]
+    },
+    "R74G": {
+      "top10_closest": [
+        {
+          "residue_bio": 101,
+          "residue_name": "GLN",
+          "avg_min_dist_nm": 0.458
+        },
+        {
+          "residue_bio": 98,
+          "residue_name": "THR",
+          "avg_min_dist_nm": 0.4827
+        },
+        {
+          "residue_bio": 102,
+          "residue_name": "TRP",
+          "avg_min_dist_nm": 0.6981
+        },
+        {
+          "residue_bio": 90,
+          "residue_name": "GLU",
+          "avg_min_dist_nm": 0.7359
+        },
+        {
+          "residue_bio": 100,
+          "residue_name": "SER",
+          "avg_min_dist_nm": 0.7413
+        },
+        {
+          "residue_bio": 87,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 0.7497
+        },
+        {
+          "residue_bio": 99,
+          "residue_name": "LEU",
+          "avg_min_dist_nm": 0.8563
+        },
+        {
+          "residue_bio": 97,
+          "residue_name": "PRO",
+          "avg_min_dist_nm": 0.8565
+        },
+        {
+          "residue_bio": 94,
+          "residue_name": "ALA",
+          "avg_min_dist_nm": 0.8671
+        },
+        {
+          "residue_bio": 96,
+          "residue_name": "LEU",
+          "avg_min_dist_nm": 0.8699
+        }
+      ]
+    },
+    "Y19H": {
+      "top10_closest": [
+        {
+          "residue_bio": 95,
+          "residue_name": "SER",
+          "avg_min_dist_nm": 1.096
+        },
+        {
+          "residue_bio": 94,
+          "residue_name": "ALA",
+          "avg_min_dist_nm": 1.262
+        },
+        {
+          "residue_bio": 93,
+          "residue_name": "ASP",
+          "avg_min_dist_nm": 1.3024
+        },
+        {
+          "residue_bio": 96,
+          "residue_name": "LEU",
+          "avg_min_dist_nm": 1.36
+        },
+        {
+          "residue_bio": 97,
+          "residue_name": "PRO",
+          "avg_min_dist_nm": 1.4919
+        },
+        {
+          "residue_bio": 4,
+          "residue_name": "TYR",
+          "avg_min_dist_nm": 1.5655
+        },
+        {
+          "residue_bio": 1,
+          "residue_name": "MET",
+          "avg_min_dist_nm": 1.6299
+        },
+        {
+          "residue_bio": 92,
+          "residue_name": "LYS",
+          "avg_min_dist_nm": 1.655
+        },
+        {
+          "residue_bio": 2,
+          "residue_name": "THR",
+          "avg_min_dist_nm": 1.6998
+        },
+        {
+          "residue_bio": 98,
+          "residue_name": "THR",
+          "avg_min_dist_nm": 1.7309
+        }
+      ]
+    }
+  },
+  "contact_frequency": {
+    "HKQ": {
+      "0.4": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.5": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.6": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.8": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "1.0": {
+        "n_contacting_residues": 2,
+        "max_freq": 0.0175
+      }
+    },
+    "GKQ": {
+      "0.4": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.5": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.6": {
+        "n_contacting_residues": 0,
+        "max_freq": 0.0
+      },
+      "0.8": {
+        "n_contacting_residues": 2,
+        "max_freq": 0.0306
+      },
+      "1.0": {
+        "n_contacting_residues": 6,
+        "max_freq": 0.051
+      }
+    },
+    "R74G": {
+      "0.4": {
+        "n_contacting_residues": 10,
+        "max_freq": 0.4396
+      },
+      "0.5": {
+        "n_contacting_residues": 14,
+        "max_freq": 0.6593
+      },
+      "0.6": {
+        "n_contacting_residues": 22,
+        "max_freq": 0.8571
+      },
+      "0.8": {
+        "n_contacting_residues": 39,
+        "max_freq": 0.989
+      },
+      "1.0": {
+        "n_contacting_residues": 54,
+        "max_freq": 1.0
+      }
+    },
+    "Y19H": {
+      "0.4": {
+        "n_contacting_residues": 1,
+        "max_freq": 0.0485
+      },
+      "0.5": {
+        "n_contacting_residues": 1,
+        "max_freq": 0.0874
+      },
+      "0.6": {
+        "n_contacting_residues": 1,
+        "max_freq": 0.1165
+      },
+      "0.8": {
+        "n_contacting_residues": 6,
+        "max_freq": 0.165
+      },
+      "1.0": {
+        "n_contacting_residues": 12,
+        "max_freq": 0.3689
+      }
+    }
+  },
+  "binding_sites": {
+    "HKQ": [],
+    "GKQ": [
+      {
+        "residues_bio": [
+          239
+        ],
+        "avg_freq": 0.05102040816326531,
+        "max_freq": 0.05102040816326531,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          232,
+          235
+        ],
+        "avg_freq": 0.03571428571428571,
+        "max_freq": 0.05102040816326531,
+        "overlaps": []
+      }
+    ],
+    "R74G": [
+      {
+        "residues_bio": [
+          99,
+          100,
+          101,
+          102,
+          103
+        ],
+        "avg_freq": 0.8395604395604396,
+        "max_freq": 1.0,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          94,
+          95,
+          96,
+          97,
+          98
+        ],
+        "avg_freq": 0.7516483516483516,
+        "max_freq": 1.0,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          90,
+          91,
+          92,
+          93
+        ],
+        "avg_freq": 0.6730769230769231,
+        "max_freq": 0.9560439560439561,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          83,
+          84,
+          86,
+          87
+        ],
+        "avg_freq": 0.423076923076923,
+        "max_freq": 0.8461538461538461,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          383
+        ],
+        "avg_freq": 0.3956043956043956,
+        "max_freq": 0.3956043956043956,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          53,
+          54,
+          55,
+          56
+        ],
+        "avg_freq": 0.34615384615384615,
+        "max_freq": 0.5384615384615384,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          380,
+          381
+        ],
+        "avg_freq": 0.3351648351648352,
+        "max_freq": 0.3626373626373626,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          134
+        ],
+        "avg_freq": 0.3076923076923077,
+        "max_freq": 0.3076923076923077,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          2
+        ],
+        "avg_freq": 0.27472527472527475,
+        "max_freq": 0.27472527472527475,
+        "overlaps": []
+      }
+    ],
+    "Y19H": [
+      {
+        "residues_bio": [
+          1,
+          2
+        ],
+        "avg_freq": 0.23300970873786409,
+        "max_freq": 0.2912621359223301,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          4
+        ],
+        "avg_freq": 0.20388349514563106,
+        "max_freq": 0.20388349514563106,
+        "overlaps": []
+      },
+      {
+        "residues_bio": [
+          94,
+          95,
+          97
+        ],
+        "avg_freq": 0.19741100323624594,
+        "max_freq": 0.36893203883495146,
+        "overlaps": []
+      }
+    ]
+  },
+  "mvap_approach": {
+    "HKQ": {
+      "n_contacting_0.8nm": 0,
+      "closest_approach_nm": 3.5457
+    },
+    "GKQ": {
+      "n_contacting_0.8nm": 1,
+      "closest_approach_nm": 3.2879
+    },
+    "R74G": {
+      "n_contacting_0.8nm": 4,
+      "closest_approach_nm": 2.4182
+    },
+    "Y19H": {
+      "n_contacting_0.8nm": 2,
+      "closest_approach_nm": 4.2842
+    }
+  }
+}

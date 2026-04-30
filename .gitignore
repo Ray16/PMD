@@ -1,0 +1,27 @@
+# Boltz2 prediction outputs (large structure files)
+structures/boltz2/output/
+structures/boltz2/output_1sample/
+structures/boltz2/output_2mvap/
+structures/boltz2/output_2mvap_no_atp/
+structures/boltz2/output_2mvap_no_cofactor/
+structures/boltz2/output_2mvap_no_constraint/
+
+# MD simulation outputs (20GB+)
+md/md_output/
+md/md_prep/
+
+# FoldX binary distribution
+foldx5_Linux/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Downloaded papers (PDFs)
+discovered_paper/

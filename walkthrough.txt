@@ -1,0 +1,423 @@
+
+
+---                                                                                                           
+  Section 3: The 19 Variants — The Experimental Dataset
+                                                                                                                                  
+  This section presents the raw data that everything else builds on. Kang et al. (2017, 2019) made 19 variants of PMDsc — the
+  wild-type plus 18 mutants — and measured their kinetic parameters in vitro (kcat, Km, Ki) and their isopentenol production in   
+  vivo (titer in mg/L).                                           
+
+  What the kinetic parameters mean:
+
+  - kcat (turnover number): how many substrate molecules the enzyme converts per second. Higher = faster enzyme.
+  - Km (Michaelis constant): the substrate concentration at which the enzyme runs at half its maximum speed. Lower Km = tighter
+  substrate binding. Think of it as the enzyme's "appetite" — low Km means it's efficient even at low substrate concentrations.
+  - kcat/Km (catalytic efficiency): the overall measure of how good the enzyme is at catalysis. This iswhat enzyme engineers
+  traditionally optimize.
+  - Ki (substrate inhibition constant): the substrate concentration at which inhibition kicks in strongly. Higher Ki = the enzyme
+  can tolerate more substrate before being inhibited. This turns out to be more important than kcat/Km for this system.
+  - Titer: the actual amount of isopentenol produced in engineered E. coli. This is the bottom line — what we ultimately care
+  about.
+
+  Where the mutations are:
+
+  The mutations span 11 positions on the enzyme. Some are in the active site itself (Y19, K22 — directly touch the substrate; S208
+   — binds ATP), and some are nearby but not catalytic (R74 at the entrance, R147 and M212 on nearby helices, I145 in the interior
+   of helix H2, I226 and V230 on helix H5). The location matters because mutations at catalytic residues tend to damage activity,
+  while mutations at non-catalytic positions can modulate inhibition without killing the enzyme.
+
+  The five key observations:
+
+  1. Ki dominates titer, not kcat/Km. This is the single most important insight from the data. R74G is a terrible enzyme by
+  conventional metrics (kcat/Km = 0.04, worse than wild-type's 0.066), yet it produces the second-most isopentenol (975 mg/L).
+  Why? Because its Ki is 110 mM — the enzyme barely gets inhibited even at high MVAP concentrations. Conversely, V230E has
+  reasonable catalytic efficiency but Ki = 10 mM, so the enzyme is heavily inhibited in vivo, producingonly 278 mg/L. The lesson:
+   at the 100-200 mM MVAP concentrations inside the cell, what limits production isn't how fast the enzyme can turn over substrate
+   — it's how much the substrate shuts the enzyme down.
+  2. The GKQ paradox. R74G by itself relieves inhibition (Ki = 110). R147K and M212Q by themselves are catalytically beneficial
+  mutations. But combining all three into GKQ (R74G-R147K-M212Q) produces Ki = 11 and a nearly dead enzyme in vivo (titer = 8).
+  The mutations that should help individually are catastrophic together. This is a non-additive (epistatic) interaction, and
+  explaining it is the central scientific question of the project.
+  3. HKQ vs GKQ. These two triple mutants carry the same R147K and M212Q mutations. The only differenceis position 74: His in
+  HKQ, Gly in GKQ. This single amino acid difference produces a 7-fold difference in Ki (80 vs 11) and a 135-fold difference in
+  titer (1079 vs 8). Whatever is happening at position 74 is the key to the entire story.
+  4. K22 mutations kill the enzyme. K22 directly contacts the substrate in the active site. Changing itto methionine or tyrosine
+  drops titer to 22 mg/L regardless of everything else. This tells you that K22 is essential for catalysis — you can't touch it.
+  5. Multi-mutant R74G combinations reduce L2 binding. Adding R147K to R74G (double mutant, titer 909) or R147K + Q140L (triple,
+  titer 401) both show reduced secondary substrate binding. But importantly, R74G-R147K works well while adding M212Q on top
+  (making GKQ) is catastrophic. The M212Q step is where things go wrong.
+
+  ---
+  Section 4: The Enzyme — Structural Context
+
+  PMDsc belongs to the GHMP kinase superfamily (Galactokinase, Homoserine kinase, Mevalonate kinase, Phosphomevalonate kinase).
+  The crystal structure (PDB code 1FI4) was solved at 2.27 Angstrom resolution in the apo (empty, no substrate bound) form. The
+  protein has 396 residues.
+
+  The active site is a pocket that accommodates three things simultaneously: the substrate (MVAP), ATP (the phosphate donor), and
+  a magnesium ion (Mg2+, needed for catalysis). The catalytic mechanism involves D302 acting as a base (abstracting a proton),
+  R158 facilitating decarboxylation (removal of CO2), and several serine residues (S121, S155, S208) coordinating ATP.
+
+  The key conceptual division for this project is:                                                                                
+  - Catalytic residues (K18, Y19, W20, K22, S120, S121, S153, S155, R158, S208, D302): these directly participate in binding
+  substrate or performing chemistry. Mutating them risks killing the enzyme.                                                      
+  - Non-catalytic positions near the active site (R74, R147, M212, I145, I226, V230): these shape the environment around the
+  active site. Mutating them can change how the enzyme interacts with its surroundings — including how a second substrate molecule
+   binds — without necessarily destroying catalytic activity.
+
+  This distinction is critical for the project's logic: if you want to reduce substrate inhibition (change Ki) without killing the
+   enzyme (maintain kcat/Km), you need to target the non-catalytic positions.
+
+  ---
+  Section 5: Computational Approach — How the Simulations Work
+
+  This section describes the core methodology. Boltz-2 is a deep learning-based structure prediction tool (similar in concept to
+  AlphaFold) that can predict protein-ligand complex structures. The key innovation here is using it tocofold the enzyme with two
+   MVAP molecules simultaneously, to find where the second (inhibitory) substrate binds.
+
+  The setup:
+
+  - L1 (ligand 1): constrained to the active site using "pocket conditioning" — essentially telling Boltz-2 "place this MVAP in
+  the known catalytic pocket." L1 represents the substrate that's being processed.
+  - L2 (ligand 2): completely unconstrained — Boltz-2 is free to place it anywhere on the protein surface. L2 represents the
+  inhibitory second substrate molecule. Where Boltz-2 places L2 is the prediction of where the secondary binding site is.
+
+  For each of the 19 variants, 50 independent Boltz-2 models were generated (950 total). For each model, the analysis measures:
+
+  1. L2-L1 distance: how far apart the two MVAP molecules are (center-of-mass to center-of-mass). If L2ends up far from L1, it
+  probably just landed at a random spot on the protein surface. If L2 is close to L1 (< 15 Angstroms), it found the secondary
+  binding site.
+  2. L2 contact residues: which protein residues are within 4 Angstroms of L2. This tells you what the secondary binding site
+  looks like.
+  3. Binding mode: is L2 sitting at the entrance to the active site (non-competitive inhibition) or inside the active site itself
+  competing with L1 (competitive inhibition)?
+  4. iPTM confidence: Boltz-2's own confidence score for the L2 placement. Higher iPTM = Boltz-2 is more confident about where it
+  put L2.
+
+  Additionally, single-MVAP structures (50 per variant, no L2) were generated as references. These are used to study how different
+   mutations change the enzyme's structure in the absence of the inhibitor — for example, how H74 pushes loop 17-33 closed.
+
+  ---
+  Section 6: The Secondary Binding Site — Where the Inhibitor Binds
+
+  This is the first major finding. Across all 19 variants, when Boltz-2 places L2 close to the active site, it consistently lands
+  in the same place: the mouth of the active-site channel. This is a shallow depression where the substrate normally pauses before
+   entering the active site.
+
+  Two distinct inhibition mechanisms:
+
+  1. Entrance binding (non-competitive inhibition): L2 parks at the entrance, blocking the door. It contacts gateway residues
+  (position 74, K22, T209) but doesn't go inside. This is like someone standing in a doorway — they don't take your seat, but they
+   prevent you from getting through. The catalytic machinery inside is fine, but new substrate can't get in. Because the inhibitor
+   doesn't need to compete for the same binding site as the substrate, this type of inhibition is effective at relatively low
+  inhibitor concentrations — hence low Ki.
+  2. Active-site binding (competitive inhibition): L2 actually enters the active site and competes withL1 for the catalytic
+  pocket. This is like someone taking your seat — but they have to beat you to it. Because the inhibitor has to outcompete the
+  substrate (which is already bound and being processed), it takes much higher concentrations to achieve inhibition — hence high
+  Ki.
+
+  This distinction is crucial. If you just count "how many models have L2 close to L1" (total close-binding), you lump both
+  mechanisms together. But they have opposite implications for Ki: entrance binding = low Ki (bad), active-site binding = high Ki
+  (less bad). That's why the guide uses entrance-binding fraction as the primary metric.
+
+  The L2 placement table ranks all 19 variants by entrance-binding fraction. The key patterns:
+
+  - Variants at the top (I145F 48%, S208E 42%, V230E 40%) have high entrance binding — the inhibitor frequently lands at the
+  entrance. V230E, the one with measured Ki = 10 (the strongest inhibition), is right at the top.
+  - Variants at the bottom (HKQ 2%, GKQ 4%, R74G-R147K-Q140L 4%) have minimal entrance binding. HKQ (Ki= 80) effectively blocks
+  the entrance.
+  - R74G (Ki = 110) has only 6% entrance binding but 12% active-site binding. Its inhibition is competitive, which explains its
+  high Ki despite having some close-binding overall.
+
+  Consensus contact residues — looking across all 271 close-binding models from all 19 variants, the same residues show up over
+  and over:
+
+  - R/G/H74 (80% of models), K22 (79%), T209 (79%): these three define the entrance site. They're contacted in ~4 out of every 5
+  close-binding models.
+  - N28 (61%), N72 (56%): secondary anchors flanking the entrance.
+  - S153 (50%), S208 (47%): catalytic residues that border the entrance — important for understanding the site geometry but can't
+  be mutated without killing catalysis.
+
+  The secondary site is not a deep, well-defined pocket like a traditional allosteric site. It's a shallow surface depression at
+  the channel mouth. Under normal conditions, substrate passes through quickly. At saturating concentrations, a second molecule
+  gets stuck here and blocks traffic.
+
+  ---
+  Section 7: Single-Mutation Effects — Dissecting Individual Contributions
+
+  This section examines what each mutation does individually before looking at combinations. The 14 single mutants (plus the 5
+  original variants) let you isolate the effect of each position.
+
+  Position 74 (the entrance gateway): The most important position. Three amino acids are tested:
+  - Arg (wild-type): 28% entrance binding. The long, positively charged sidechain acts as an electrostatic trap for MVAP's
+  negatively charged phosphate. Ki = 18.
+  - Gly (R74G): 6% entrance, 12% active-site. No sidechain at all — the trap is gone, but so is any barrier. The inhibition mode
+  switches to competitive. Ki = 110.
+  - His (R74H): 10% entrance, 4% active-site. The bulky imidazole ring physically pushes the loop closed. Ki not measured but
+  titer (770) is much better than WT (475).
+
+  Position 22 (the loop anchor): K22M and K22Y both collapse titer to 22 mg/L. K22 is essential for catalysis. The
+  entrance-binding fractions (18% and 24%) aren't dramatically different from WT, so the problem isn't inhibition — it's that the
+  enzyme can't work without K22.
+
+  Position 145 (helix H2 interior): I145F increases entrance binding to 48% — the highest of any variant. The bulky phenylalanine
+  apparently reshapes the entrance channel to make it more attractive to L2. This tells you that I145 is important for maintaining
+   the entrance geometry, and you should not mutate it in the HKQ background (it would undo H74's entrance closure).
+
+  Position 147 (helix H2 surface): R147K has the same entrance-binding fraction as WT (28%) but much better titer (793 vs 475).
+  Its benefit is purely catalytic — it improves kcat/Km from 0.066 to 0.32 without changing the inhibition landscape.
+
+  Position 212 (helix H4): M212Q alone actually increases entrance binding (36% vs WT's 28%). As a single mutation, it does not
+  help with inhibition. Its inhibition-relieving effect only manifests in the HKQ combination, where itforms the Q212 bridge
+  (Section 10). In the GKQ combination, it actually makes things worse.
+
+  Entrance-adjacent positions: T209D slightly reduces entrance binding (26% vs 28%). S208E dramaticallyincreases both entrance
+  (42%) and active-site (28%) binding — disrupting this catalytic residue reshapes the entire pocket. S186C increases entrance
+  binding to 36%.
+
+  Distal positions: V230E has 40% entrance binding consistent with its very low Ki (10). I226V shows 24% entrance and 12%
+  active-site binding.
+
+  The section's overall lesson: individual mutations have modest, predictable effects. The dramatic phenomena (GKQ collapse, HKQ
+  success) only emerge from combinations — they are epistatic (non-additive) effects.
+
+  ---
+  Section 8: The R74 Gateway Mechanism — Three Amino Acids, Three Strategies
+
+  This section explains the physical mechanism by which position 74 controls substrate inhibition. It'sthe mechanistic heart of
+  the story.
+
+  Arginine (WT) — the electrostatic trap:                                                                                         
+                                                                                                                                
+  Arginine has a long, flexible sidechain terminating in a positively charged guanidinium group. MVAP carries a negatively charged
+   phosphate group. Opposite charges attract. When a second MVAP approaches the entrance, R74's positive charge reaches out and
+  grabs the phosphate via a hydrogen bond (2.3 Angstroms). The entrance becomes a sticky trap — the second substrate molecule gets
+   caught there and blocks the channel. This is effective inhibition: Ki = 18 mM.
+
+  Crucially, R74 makes zero physical contacts with loop 17-33 (the loop that forms one wall of the entrance). It doesn't close the
+   entrance — it just makes the entrance attractive to the substrate.
+
+  Glycine (R74G) — the open gate:
+
+  Glycine is the smallest amino acid — it has no sidechain at all (just a hydrogen atom). With R74G, the electrostatic trap is
+  gone. There's nothing at position 74 to grab the substrate. But there's also nothing to block entry. The entrance is wide open.
+  L2 can occasionally drift all the way into the active site and compete with L1, but this is inefficient because the substrate
+  has to outcompete an already-bound molecule. The result is competitive inhibition with Ki = 110 mM. High Ki, but through a
+  fundamentally different mechanism — not because the enzyme resists inhibition, but because the remaining inhibition mode
+  (competitive) is inherently weaker.
+
+  Histidine (R74H and HKQ) — the closed door:
+
+  Histidine has a compact, bulky imidazole ring. Unlike arginine, which reaches out toward the substrate, histidine pushes inward
+  toward the loop. It makes 21 direct van der Waals contacts with loop residues T25, K26, and N28. These contacts physically push
+  loop 17-33 closed over the entrance, like shutting a door. The substrate can't get in.
+
+  This is the most effective strategy: R74H alone reduces close-binding from 32% to 14%. In HKQ (with the added Q212 bridge), only
+   1 out of 50 models places L2 near the active site.
+
+  The key insight: Arg and His both reduce inhibition compared to having no gatekeeper, but through opposite physics:
+  - Arg attracts the inhibitor (trap) — the inhibitor binds, but the trapping still causes inhibition.
+  - His blocks the inhibitor (door) — the inhibitor can't bind at all, so no inhibition.
+
+  For production purposes, blocking is better than trapping. A closed door prevents inhibition entirely. A trap still holds the
+  inhibitor in place where it can block substrate turnover.
+
+  ---
+  Section 9: R74G and Competitive Inhibition — A Different Mode
+
+  This section examines R74G's close-binding models in detail. When L2 does get close in R74G models, it's qualitatively different
+   from other variants: L2 doesn't sit at the entrance — it goes all the way inside the active site, contacting 10 catalytic
+  residues (K18, Y19, W20, K22, S121, S153, S155, R158, S208, D302) and physically displacing L1.
+
+  This is textbook competitive inhibition: two molecules competing for the same site. Competitive inhibition requires high
+  inhibitor concentrations because the inhibitor must outcompete the substrate that's already there. This explains R74G's high Ki
+  (110 mM) despite having some close-binding.
+
+  All G74-containing variants (R74G, R74G-R147K, GKQ, R74G-R147K-Q140L) show this active-site binding mode. By contrast, WT (with
+  R74) almost never shows it — only 2 out of 16 close-binding models have active-site binding (4%). Theexception is S208E, which
+  shows 28% active-site binding despite retaining R74 — because mutating the catalytic S208 to Glu disrupts the active-site
+  geometry so much that it creates an opening for L2 to enter.
+
+  ---
+  Section 10: The GKQ Paradox — Why Adding Good Mutations Makes Things Worse
+
+  This is the central puzzle and arguably the most intellectually interesting part of the project.
+
+  The paradox laid out:
+
+  ┌─────────────────────────┬────────────────────────┬──────┬───────┬──────────────────────────────┐
+  │          Step           │        Variant         │  Ki  │ Titer │        What happened         │
+  ├─────────────────────────┼────────────────────────┼──────┼───────┼──────────────────────────────┤
+  │ Start                   │ R74G                   │ 110  │ 975   │ Great Ki, poor catalysis     │
+  ├─────────────────────────┼────────────────────────┼──────┼───────┼──────────────────────────────┤
+  │ Add R147K               │ R74G-R147K             │ N.D. │ 909   │ Better catalysis, still good │
+  ├─────────────────────────┼────────────────────────┼──────┼───────┼──────────────────────────────┤
+  │ Add M212Q               │ GKQ (R74G-R147K-M212Q) │ 11   │ 8     │ Catastrophe                  │
+  ├─────────────────────────┼────────────────────────┼──────┼───────┼──────────────────────────────┤
+  │ But with H instead of G │ HKQ (R74H-R147K-M212Q) │ 80   │ 1079  │ Best variant                 │
+  └─────────────────────────┴────────────────────────┴──────┴───────┴──────────────────────────────┘
+
+  R147K and M212Q are individually beneficial mutations. Adding them to R74G should help. And they do help with catalysis (kcat/Km
+   goes from 0.04 to 0.50). But they catastrophically worsen inhibition (Ki drops from ~high to 11). The same two mutations
+  combined with R74H instead of R74G produce the best variant ever.
+
+  The Q212 bridge explains why:
+
+  The M212Q mutation replaces methionine (a nonpolar amino acid with a sulfur-containing sidechain) with glutamine (a polar amino
+  acid with an amide group that can donate and accept hydrogen bonds). This amide group is the key player.
+
+  In HKQ (with H74): H74's 21 contacts push loop 17-33 into a specific conformation. In this conformation, Q212's amide group is
+  perfectly positioned to form hydrogen bonds with two residues on the loop: Y19 (2.72 A) and K22 (2.79A). This creates a bridge
+  connecting helix H4 (where Q212 sits) to loop 17-33 (where Y19 and K22 sit). The bridge locks the loop in its closed position —
+  it can't swing open because it's tethered. Combined with H74's physical contacts, the entrance is doubly secured: closed door +
+  locked loop.
+
+  In GKQ (with G74): G74 has no sidechain, so the loop adopts a different conformation. In this conformation, Q212 is too far from
+   Y19 and K22 to form the bridge (distances > 6 Angstroms, well beyond hydrogen-bond range). The bridge does not form despite the
+   identical M212Q mutation being present. Instead, Q212's amide group is free — it's not tied up in the bridge. When L2
+  occasionally visits the entrance, this free amide group can form hydrogen bonds directly with L2, stabilizing the inhibitor at
+  the entrance. In other words, the same mutation that protects the entrance in HKQ actively helps the inhibitor bind in GKQ.
+
+  The K147 salt bridge also behaves differently: in HKQ, K147 forms a salt bridge with E144 (2.5 A), stabilizing helix H2. In GKQ,
+   K147 points away from E144 toward H176 instead. Same mutation, different structural context, different behavior.
+
+  Why GKQ fails — the full picture:
+
+  1. G74 leaves the entrance physically open (no barrier).
+  2. The Q212 bridge doesn't form (loop is not locked).
+  3. R147K and M212Q restore the catalytic geometry that R74G alone had disrupted — but this also restores the entrance site's
+  shape.
+  4. Q212's free amide stabilizes L2 when it visits the entrance.
+
+  The result: a fast enzyme (good kcat/Km) that is easily inhibited (low Ki) — the worst possible combination for in vivo
+  production.
+
+  The frequency vs affinity distinction:
+
+  There's an apparent contradiction: GKQ's entrance-binding fraction from Boltz-2 is only 4% — lower than WT's 28%. If entrance
+  accessibility determined Ki, GKQ should have high Ki. But Ki = 11 (low). The resolution is that Boltz-2 measures geometric
+  accessibility (how often L2 lands at the entrance) but not thermodynamic affinity (how tightly L2 binds once it's there). GKQ's
+  entrance site is rarely visited (4%) but when L2 does land there, Q212 stabilizes the interaction, making it thermodynamically
+  favorable. The entrance is a rare but effective trap.
+
+  The R74G-R147K intermediate supports this interpretation: it's the same as GKQ but without M212Q, so position 212 is methionine
+  (no H-bond donor). Without Q212's stabilizing amide, L2 can't be trapped at the entrance even when itvisits. Titer = 909,
+  nearly as good as R74G alone.
+
+  ---
+  Section 11: Why HKQ Wins — The Best of Both Worlds
+
+  HKQ achieves the highest titer (1079 mg/L) because it simultaneously solves both challenges:
+
+  Challenge 1 — catalytic efficiency: R147K and M212Q together improve kcat/Km from 0.066 (WT) to 0.40 — a 6-fold improvement. The
+   enzyme is much better at processing MVAP.
+
+  Challenge 2 — substrate inhibition resistance: Three layers of protection work together:
+
+  1. H74 closes the entrance (21 contacts to loop 17-33 physically seal the channel mouth) — the door.
+  2. Q212 bridge locks loop 17-33 (H-bonds to Y19 and K22 prevent the loop from reopening) — the deadbolt.
+  3. K147-E144 salt bridge (stabilizes helix H2, adding rigidity to the entrance region) — the doorframe.
+
+  Only 1 out of 50 Boltz-2 models places L2 anywhere near the active site. Ki = 80 mM.
+
+  Why is HKQ's Ki (80) lower than R74G's (110)? Because they use different strategies. R74G eliminates the entrance site entirely
+  — there's nothing there for the inhibitor to bind. The only inhibition mode left is competitive (active-site), which is
+  inherently weak. HKQ merely closes the entrance — the site still exists structurally, just blocked. Under extreme conditions,
+  the door might occasionally crack open. But for in vivo production, HKQ's combination of good catalysis (kcat/Km = 0.40) and
+  strong Ki (80) is far superior to R74G's high Ki (110) with terrible catalysis (kcat/Km = 0.04).
+
+  The ranking table shows all 19 variants ordered by entrance-binding fraction alongside their Ki, kcat/Km, and titer. The best
+  production variants cluster at low entrance binding + adequate catalytic efficiency: HKQ (2% entrance, 0.40 kcat/Km), R74G-R147K
+   (6% entrance, 0.42), R74H (10% entrance, 0.44).                                                                                
+                                                                                                                                  
+  The mechanism summary table at the end of this section is a good reference: it shows how each key variant uses (or doesn't use) 
+  the three protective mechanisms (entrance anchor type, loop closure contacts, Q212 bridge).                                     
+                                                                  
+  ---
+  Section 12: Correlations and Statistical Analysis
+
+  This section puts numbers on the relationships described qualitatively above.
+
+  Ki prediction accuracy: The entrance-binding model correctly predicts Ki rank order for 4 of 5 variants with measured Ki:
+  - V230E (40% entrance) → lowest Ki (10). Correct.
+  - WT (28% entrance) → moderate Ki (18). Correct.
+  - HKQ (2% entrance) → high Ki (80). Correct.
+  - R74G (6% entrance but mostly competitive mode) → highest Ki (110). Correct — the mechanism classification resolves this.
+  - GKQ (4% entrance) → should predict high Ki, but actual Ki = 11. Wrong. This is the one failure, explained by the
+  frequency-vs-affinity distinction (Q212 stabilization).
+
+  Correlation statistics: Entrance-binding fraction gives Pearson r = -0.60 with Ki (better than total close-binding at r = -0.45
+  or mean distance at r = 0.33). The p-values are not significant (0.28), but with only n = 5 data points, significance is
+  extremely hard to achieve. The important point is that removing GKQ gives a perfectly monotonic rank ordering for the remaining
+  4 variants.
+
+  Group comparison: High-titer variants (>= 700 mg/L) have roughly half the entrance-binding fraction (10.4%) of low-titer
+  variants (< 400 mg/L, 20.4%). The Mann-Whitney p = 0.295 is not significant, but the trend is in the expected direction.
+
+  Titer regression model: A model using kcat/Km + entrance fraction gives R² = 0.045 — essentially no predictive power. This
+  confirms that titer is affected by many factors beyond enzyme kinetics (protein expression level, folding stability, cellular
+  metabolic context). You can't predict titer from kinetics alone, but you can predict which mutations will relieve substrate
+  inhibition.
+
+  ---
+  Section 13: Proposed Mutations — What to Try Next
+
+  Based on the consensus contact residues from 271 close-binding models, three mutations are proposed to further disrupt the
+  secondary binding site:
+
+  1. T209A or T209V (priority 1): T209 contacts L2 in 79% of all close-binding models — it's the strongest non-catalytic L2
+  contact. It forms a hydrogen bond to MVAP's phosphate. Replacing it with a non-polar residue (Ala or Val) should eliminate this
+  H-bond. The existing T209D mutant retains 28% close-binding, suggesting that the negative charge of aspartate partially
+  compensates for the lost hydroxyl — so a non-polar replacement is preferred. Caution: T209 is adjacent to catalytic S208, so you
+   need to verify that S208 positioning isn't perturbed.
+  2. N72A or N72V (priority 2): N72 contacts L2 in 56% of close-binding models. It H-bonds MVAP's carboxylate from the opposite
+  side of the entrance. Removing this H-bond should weaken L2 binding at the entrance.
+  3. N28A or N28V (priority 3): N28 contacts L2 in 61% of models. It's a loop 17-33 anchor for L2. Higher frequency than N72 but
+  ranked lower because mutating a loop residue carries more risk of perturbing loop conformation.
+
+  The ideal next-generation variant would be HKQ + one or more of these mutations: keep HKQ's triple defense (H74 closure, Q212
+  bridge, K147 salt bridge) and add entrance-disrupting mutations on top.
+
+  The section also notes that position 145 mutations should be avoided in the HKQ background (I145F increases binding to 58%),
+  that V230E serves as a useful negative control (high binding, low Ki), and that S208E is informative but untargetable because
+  S208 is catalytic.
+
+  ---
+  Section 14: Limitations — What We Can and Can't Conclude
+
+  The guide is honest about six limitations:
+
+  1. Statistical power: 50 models per variant is enough for entrance-binding fractions, but only 5 variants have measured Ki
+  values — too few for significant correlations. The model works for 4 of 5 variants but can't be rigorously validated.
+  2. Geometry vs thermodynamics: Boltz-2 tells you where L2 can land but not how tightly it binds. GKQ shows this matters — 4%
+  entrance binding but Ki = 11 because of Q212 stabilization. Full free energy calculations (FEP/TI) would be needed to predict Ki
+   quantitatively.
+  3. No dynamics: Boltz-2 produces frozen snapshots. In reality, the entrance opens and closes dynamically. H74's 21 contacts in a
+   static structure might be fewer in solution when the loop fluctuates.
+  4. No binding energies: The analysis identifies the site and its contacts but cannot calculate binding affinity.
+  5. Missing Ki data: Measuring Ki for R74H, R147K, M212Q, I145F, and I145A would provide much strongerstatistical power for
+  testing the entrance-binding hypothesis.
+  6. Titer confounders: Titer depends on protein expression, folding, and cellular metabolism — not just enzyme kinetics. The weak
+   titer-entrance correlation (r = -0.21) partly reflects these additional factors.
+
+  ---
+  Section 15: File Index and References
+
+  The file index maps out the project directory structure — where the raw structures, Boltz-2 outputs, analysis scripts, and
+  figures live. The references cite the five key papers: Kang et al. (2017, 2019) for the kinetic and titer data, and Chen et al.
+  (2020), Barta et al. (2012), and Michihara et al. (2008) for the structural and mechanistic characterization of the enzyme.
+
+  ---
+  The overall narrative arc of the guide:
+
+  The problem is substrate inhibition (Sections 1-2). A second MVAP molecule binds the enzyme and shutsit down. The experimental
+  data (Section 3) shows that Ki dominates titer and reveals the GKQ paradox. The computational approach (Section 5) uses Boltz-2
+  cofolding to find where the inhibitor binds. The secondary binding site is at the entrance to the active-site channel (Section
+  6), and there are two distinct inhibition mechanisms — entrance binding (non-competitive, low Ki) andactive-site binding
+  (competitive, high Ki). Position 74 is the master switch (Sections 7-9): Arg traps the inhibitor, Glyopens the gate, His closes
+   the door. The GKQ paradox (Section 10) is explained by the Q212 bridge — the same M212Q mutation either protects the entrance
+  (with H74) or stabilizes the inhibitor (with G74), depending on the conformational context set by position 74. HKQ wins (Section
+   11) because it combines catalytic efficiency with a triple-defense entrance closure. The analysis correctly predicts Ki for 4
+  of 5 variants (Section 12), and the one failure (GKQ) reveals the distinction between geometric accessibility and thermodynamic
+  affinity. Proposed mutations (Section 13) target the top consensus contacts at the entrance to further weaken inhibitor binding
+  in the HKQ background.

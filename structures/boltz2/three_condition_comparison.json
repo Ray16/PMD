@@ -1,0 +1,1476 @@
+{
+  "conditions": {
+    "constrained": {
+      "WT": {
+        "n_models": 50,
+        "ki": 18,
+        "titer": 475,
+        "kcat_km": 0.066,
+        "mean_dist": 26.304663627071374,
+        "std_dist": 12.009593252729927,
+        "median_dist": 32.39538087634208,
+        "frac_entrance": 0.28,
+        "frac_active_site": 0.04,
+        "frac_close": 0.32,
+        "n_entrance": 14,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 14,
+          "active_site": 2,
+          "intermediate": 6,
+          "distant": 28
+        },
+        "mean_confidence": 0.9030993556976319,
+        "mean_iptm": 0.9162330329418182,
+        "mean_plddt": 0.8998159205913544,
+        "mean_contacts": 3.64
+      },
+      "Y19H": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 388,
+        "kcat_km": 0.78,
+        "mean_dist": 31.78710779729683,
+        "std_dist": 9.874454419130192,
+        "median_dist": 35.38297978026199,
+        "frac_entrance": 0.16,
+        "frac_active_site": 0.0,
+        "frac_close": 0.16,
+        "n_entrance": 8,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 38,
+          "entrance": 8,
+          "intermediate": 4
+        },
+        "mean_confidence": 0.9041873121261597,
+        "mean_iptm": 0.9071145355701447,
+        "mean_plddt": 0.9034554994106293,
+        "mean_contacts": 1.74
+      },
+      "K22M": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 30.24353944225119,
+        "std_dist": 10.26998689883,
+        "median_dist": 34.849039234144186,
+        "frac_entrance": 0.18,
+        "frac_active_site": 0.0,
+        "frac_close": 0.18,
+        "n_entrance": 9,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 36,
+          "entrance": 9,
+          "intermediate": 5
+        },
+        "mean_confidence": 0.9027444660663605,
+        "mean_iptm": 0.9076277482509613,
+        "mean_plddt": 0.9015236330032349,
+        "mean_contacts": 2.58
+      },
+      "K22Y": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 28.62779108725254,
+        "std_dist": 11.118210164948797,
+        "median_dist": 34.9522381791363,
+        "frac_entrance": 0.24,
+        "frac_active_site": 0.06,
+        "frac_close": 0.3,
+        "n_entrance": 12,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 34,
+          "entrance": 12,
+          "active_site": 3,
+          "intermediate": 1
+        },
+        "mean_confidence": 0.9043223631381988,
+        "mean_iptm": 0.908348239660263,
+        "mean_plddt": 0.90331587433815,
+        "mean_contacts": 2.6
+      },
+      "R74G": {
+        "n_models": 50,
+        "ki": 110,
+        "titer": 975,
+        "kcat_km": 0.04,
+        "mean_dist": 28.916646688222105,
+        "std_dist": 11.24995527992757,
+        "median_dist": 34.957806639205785,
+        "frac_entrance": 0.06,
+        "frac_active_site": 0.12,
+        "frac_close": 0.18,
+        "n_entrance": 3,
+        "n_active_site": 6,
+        "binding_modes": {
+          "distant": 32,
+          "active_site": 6,
+          "intermediate": 9,
+          "entrance": 3
+        },
+        "mean_confidence": 0.9034560310840607,
+        "mean_iptm": 0.9086635005474091,
+        "mean_plddt": 0.9021541500091552,
+        "mean_contacts": 3.76
+      },
+      "R74H": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 770,
+        "kcat_km": 0.44,
+        "mean_dist": 28.630033582285996,
+        "std_dist": 10.294183464116541,
+        "median_dist": 30.49925881326933,
+        "frac_entrance": 0.1,
+        "frac_active_site": 0.04,
+        "frac_close": 0.14,
+        "n_entrance": 5,
+        "n_active_site": 2,
+        "binding_modes": {
+          "distant": 33,
+          "intermediate": 10,
+          "entrance": 5,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9021085035800934,
+        "mean_iptm": 0.9123209726810455,
+        "mean_plddt": 0.8995553565025329,
+        "mean_contacts": 3.7
+      },
+      "I145A": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 623,
+        "kcat_km": 0.01,
+        "mean_dist": 25.77403899675103,
+        "std_dist": 12.463513460042105,
+        "median_dist": 33.92660802160697,
+        "frac_entrance": 0.32,
+        "frac_active_site": 0.06,
+        "frac_close": 0.38,
+        "n_entrance": 16,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 28,
+          "entrance": 16,
+          "active_site": 3,
+          "intermediate": 3
+        },
+        "mean_confidence": 0.9041583025455475,
+        "mean_iptm": 0.917649632692337,
+        "mean_plddt": 0.9007854676246643,
+        "mean_contacts": 3.74
+      },
+      "I145F": {
+        "n_models": 50,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.2,
+        "mean_dist": 20.9390710899047,
+        "std_dist": 12.288303720345123,
+        "median_dist": 12.843380302371592,
+        "frac_entrance": 0.48,
+        "frac_active_site": 0.1,
+        "frac_close": 0.58,
+        "n_entrance": 24,
+        "n_active_site": 5,
+        "binding_modes": {
+          "distant": 18,
+          "entrance": 24,
+          "intermediate": 3,
+          "active_site": 5
+        },
+        "mean_confidence": 0.9050544583797455,
+        "mean_iptm": 0.9255776309967041,
+        "mean_plddt": 0.8999236559867859,
+        "mean_contacts": 5.2
+      },
+      "R147K": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 793,
+        "kcat_km": 0.32,
+        "mean_dist": 28.69629351356696,
+        "std_dist": 11.548193628546342,
+        "median_dist": 34.804045212845494,
+        "frac_entrance": 0.28,
+        "frac_active_site": 0.0,
+        "frac_close": 0.28,
+        "n_entrance": 14,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 32,
+          "entrance": 14,
+          "intermediate": 4
+        },
+        "mean_confidence": 0.903406138420105,
+        "mean_iptm": 0.9138215684890747,
+        "mean_plddt": 0.9008022630214692,
+        "mean_contacts": 2.64
+      },
+      "S186C": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 596,
+        "kcat_km": 0.08,
+        "mean_dist": 24.795683544194265,
+        "std_dist": 12.706162643561704,
+        "median_dist": 25.79465989594263,
+        "frac_entrance": 0.36,
+        "frac_active_site": 0.06,
+        "frac_close": 0.42,
+        "n_entrance": 18,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 26,
+          "entrance": 18,
+          "intermediate": 3,
+          "active_site": 3
+        },
+        "mean_confidence": 0.9046426320075989,
+        "mean_iptm": 0.9198097944259643,
+        "mean_plddt": 0.9008508276939392,
+        "mean_contacts": 4.3
+      },
+      "S208E": {
+        "n_models": 50,
+        "ki": null,
+        "titer": null,
+        "kcat_km": null,
+        "mean_dist": 17.00108052390099,
+        "std_dist": 12.561279176068025,
+        "median_dist": 9.850207994616614,
+        "frac_entrance": 0.42,
+        "frac_active_site": 0.28,
+        "frac_close": 0.7,
+        "n_entrance": 21,
+        "n_active_site": 14,
+        "binding_modes": {
+          "distant": 14,
+          "active_site": 14,
+          "entrance": 21,
+          "intermediate": 1
+        },
+        "mean_confidence": 0.9076020014286041,
+        "mean_iptm": 0.9369404888153077,
+        "mean_plddt": 0.9002673697471618,
+        "mean_contacts": 6.12
+      },
+      "T209D": {
+        "n_models": 50,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.13,
+        "mean_dist": 28.70061747856921,
+        "std_dist": 11.340028641982816,
+        "median_dist": 34.81454575998927,
+        "frac_entrance": 0.26,
+        "frac_active_site": 0.02,
+        "frac_close": 0.28,
+        "n_entrance": 13,
+        "n_active_site": 1,
+        "binding_modes": {
+          "distant": 33,
+          "entrance": 13,
+          "intermediate": 3,
+          "active_site": 1
+        },
+        "mean_confidence": 0.8978426146507263,
+        "mean_iptm": 0.9112155675888062,
+        "mean_plddt": 0.8944993567466736,
+        "mean_contacts": 2.92
+      },
+      "M212Q": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 601,
+        "kcat_km": 0.5,
+        "mean_dist": 26.613496743845367,
+        "std_dist": 12.406021718834332,
+        "median_dist": 34.08346072558386,
+        "frac_entrance": 0.36,
+        "frac_active_site": 0.02,
+        "frac_close": 0.38,
+        "n_entrance": 18,
+        "n_active_site": 1,
+        "binding_modes": {
+          "distant": 30,
+          "entrance": 18,
+          "active_site": 1,
+          "intermediate": 1
+        },
+        "mean_confidence": 0.9001474559307099,
+        "mean_iptm": 0.9141720986366272,
+        "mean_plddt": 0.8966412806510925,
+        "mean_contacts": 3.58
+      },
+      "I226V": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 633,
+        "kcat_km": 0.46,
+        "mean_dist": 26.386283352830645,
+        "std_dist": 12.745258842398801,
+        "median_dist": 34.4817261542354,
+        "frac_entrance": 0.24,
+        "frac_active_site": 0.12,
+        "frac_close": 0.36,
+        "n_entrance": 12,
+        "n_active_site": 6,
+        "binding_modes": {
+          "distant": 29,
+          "active_site": 6,
+          "intermediate": 3,
+          "entrance": 12
+        },
+        "mean_confidence": 0.903605751991272,
+        "mean_iptm": 0.9144510948657989,
+        "mean_plddt": 0.90089439868927,
+        "mean_contacts": 3.9
+      },
+      "V230E": {
+        "n_models": 50,
+        "ki": 10,
+        "titer": 278,
+        "kcat_km": 0.08,
+        "mean_dist": 24.10828565397057,
+        "std_dist": 12.886494686517288,
+        "median_dist": 20.928630457781736,
+        "frac_entrance": 0.4,
+        "frac_active_site": 0.06,
+        "frac_close": 0.46,
+        "n_entrance": 20,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 23,
+          "entrance": 20,
+          "active_site": 3,
+          "intermediate": 4
+        },
+        "mean_confidence": 0.90319051861763,
+        "mean_iptm": 0.92000492811203,
+        "mean_plddt": 0.8989869046211243,
+        "mean_contacts": 4.22
+      },
+      "R74G-R147K": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 909,
+        "kcat_km": 0.42,
+        "mean_dist": 31.495529516585812,
+        "std_dist": 10.497421133189079,
+        "median_dist": 36.63980863673967,
+        "frac_entrance": 0.06,
+        "frac_active_site": 0.06,
+        "frac_close": 0.12,
+        "n_entrance": 3,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 35,
+          "active_site": 3,
+          "intermediate": 9,
+          "entrance": 3
+        },
+        "mean_confidence": 0.9017070853710174,
+        "mean_iptm": 0.9041649580001831,
+        "mean_plddt": 0.9010925936698914,
+        "mean_contacts": 2.76
+      },
+      "HKQ": {
+        "n_models": 50,
+        "ki": 80,
+        "titer": 1079,
+        "kcat_km": 0.4,
+        "mean_dist": 33.471580805767374,
+        "std_dist": 7.563700701958133,
+        "median_dist": 36.10748768929544,
+        "frac_entrance": 0.02,
+        "frac_active_site": 0.0,
+        "frac_close": 0.02,
+        "n_entrance": 1,
+        "n_active_site": 0,
+        "binding_modes": {
+          "intermediate": 9,
+          "distant": 40,
+          "entrance": 1
+        },
+        "mean_confidence": 0.9008281612396241,
+        "mean_iptm": 0.8987913703918458,
+        "mean_plddt": 0.9013373506069183,
+        "mean_contacts": 1.8
+      },
+      "GKQ": {
+        "n_models": 50,
+        "ki": 11,
+        "titer": 8,
+        "kcat_km": 0.5,
+        "mean_dist": 33.21606387816802,
+        "std_dist": 8.430505681641879,
+        "median_dist": 36.49659727767943,
+        "frac_entrance": 0.04,
+        "frac_active_site": 0.02,
+        "frac_close": 0.06,
+        "n_entrance": 2,
+        "n_active_site": 1,
+        "binding_modes": {
+          "intermediate": 7,
+          "distant": 40,
+          "entrance": 2,
+          "active_site": 1
+        },
+        "mean_confidence": 0.9033243834972382,
+        "mean_iptm": 0.9024937951564789,
+        "mean_plddt": 0.9035320174694061,
+        "mean_contacts": 2.14
+      },
+      "R74G-R147K-Q140L": {
+        "n_models": 50,
+        "ki": null,
+        "titer": 401,
+        "kcat_km": 0.03,
+        "mean_dist": 32.021760727701036,
+        "std_dist": 9.84807180553357,
+        "median_dist": 36.360328091929304,
+        "frac_entrance": 0.04,
+        "frac_active_site": 0.06,
+        "frac_close": 0.1,
+        "n_entrance": 2,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 38,
+          "active_site": 3,
+          "intermediate": 7,
+          "entrance": 2
+        },
+        "mean_confidence": 0.9025025796890259,
+        "mean_iptm": 0.9047560822963715,
+        "mean_plddt": 0.9019391989707947,
+        "mean_contacts": 2.22
+      }
+    },
+    "no_constraint": {
+      "WT": {
+        "n_models": 18,
+        "ki": 18,
+        "titer": 475,
+        "kcat_km": 0.066,
+        "mean_dist": 20.051475304547594,
+        "std_dist": 10.28919156315254,
+        "median_dist": 18.52153981123692,
+        "frac_entrance": 0.2222222222222222,
+        "frac_active_site": 0.2777777777777778,
+        "frac_close": 0.5,
+        "n_entrance": 4,
+        "n_active_site": 5,
+        "binding_modes": {
+          "active_site": 5,
+          "distant": 9,
+          "entrance": 4
+        },
+        "mean_confidence": 0.9051556885242462,
+        "mean_iptm": 0.9334661033418443,
+        "mean_plddt": 0.8980780707465278,
+        "mean_contacts": 6.222222222222222
+      },
+      "Y19H": {
+        "n_models": 17,
+        "ki": null,
+        "titer": 388,
+        "kcat_km": 0.78,
+        "mean_dist": 21.710107738012546,
+        "std_dist": 12.36189251951949,
+        "median_dist": 12.759516558279955,
+        "frac_entrance": 0.6470588235294118,
+        "frac_active_site": 0.0,
+        "frac_close": 0.6470588235294118,
+        "n_entrance": 11,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 6,
+          "entrance": 11
+        },
+        "mean_confidence": 0.9061493733349968,
+        "mean_iptm": 0.929973213111653,
+        "mean_plddt": 0.9001934212796828,
+        "mean_contacts": 5.529411764705882
+      },
+      "K22M": {
+        "n_models": 15,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 27.38618696069328,
+        "std_dist": 11.372063433606362,
+        "median_dist": 32.692610973666675,
+        "frac_entrance": 0.3333333333333333,
+        "frac_active_site": 0.0,
+        "frac_close": 0.3333333333333333,
+        "n_entrance": 5,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 10,
+          "entrance": 5
+        },
+        "mean_confidence": 0.9040202339490254,
+        "mean_iptm": 0.9223252097765605,
+        "mean_plddt": 0.8994439721107483,
+        "mean_contacts": 4.133333333333334
+      },
+      "K22Y": {
+        "n_models": 14,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 22.881774784811544,
+        "std_dist": 9.867381307709019,
+        "median_dist": 23.945227564534584,
+        "frac_entrance": 0.35714285714285715,
+        "frac_active_site": 0.0,
+        "frac_close": 0.35714285714285715,
+        "n_entrance": 5,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 6,
+          "entrance": 5,
+          "intermediate": 3
+        },
+        "mean_confidence": 0.906004113810403,
+        "mean_iptm": 0.9256653828280312,
+        "mean_plddt": 0.901088821036475,
+        "mean_contacts": 4.357142857142857
+      },
+      "R74G": {
+        "n_models": 17,
+        "ki": 110,
+        "titer": 975,
+        "kcat_km": 0.04,
+        "mean_dist": 27.15241957479868,
+        "std_dist": 9.36615805216627,
+        "median_dist": 24.26417014081564,
+        "frac_entrance": 0.11764705882352941,
+        "frac_active_site": 0.0,
+        "frac_close": 0.11764705882352941,
+        "n_entrance": 2,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 8,
+          "intermediate": 7,
+          "entrance": 2
+        },
+        "mean_confidence": 0.9025868633214165,
+        "mean_iptm": 0.909310989520129,
+        "mean_plddt": 0.9009058124878827,
+        "mean_contacts": 3.764705882352941
+      },
+      "R74H": {
+        "n_models": 18,
+        "ki": null,
+        "titer": 770,
+        "kcat_km": 0.44,
+        "mean_dist": 20.405627467511735,
+        "std_dist": 9.616046679197007,
+        "median_dist": 21.982971880783644,
+        "frac_entrance": 0.2777777777777778,
+        "frac_active_site": 0.1111111111111111,
+        "frac_close": 0.3888888888888889,
+        "n_entrance": 5,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 5,
+          "distant": 7,
+          "intermediate": 4,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9081740015082889,
+        "mean_iptm": 0.9456032845709059,
+        "mean_plddt": 0.8988166782591078,
+        "mean_contacts": 7.222222222222222
+      },
+      "I145A": {
+        "n_models": 20,
+        "ki": null,
+        "titer": 623,
+        "kcat_km": 0.01,
+        "mean_dist": 13.330810523953634,
+        "std_dist": 6.753533496113018,
+        "median_dist": 10.459928550774222,
+        "frac_entrance": 0.7,
+        "frac_active_site": 0.2,
+        "frac_close": 0.9,
+        "n_entrance": 14,
+        "n_active_site": 4,
+        "binding_modes": {
+          "distant": 2,
+          "entrance": 14,
+          "active_site": 4
+        },
+        "mean_confidence": 0.9087283849716187,
+        "mean_iptm": 0.9481577813625336,
+        "mean_plddt": 0.8988710224628449,
+        "mean_contacts": 8.7
+      },
+      "I145F": {
+        "n_models": 18,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.2,
+        "mean_dist": 20.797338139187396,
+        "std_dist": 10.642945864711358,
+        "median_dist": 16.696139216685307,
+        "frac_entrance": 0.5,
+        "frac_active_site": 0.0,
+        "frac_close": 0.5,
+        "n_entrance": 9,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 8,
+          "entrance": 9,
+          "intermediate": 1
+        },
+        "mean_confidence": 0.9061337775654263,
+        "mean_iptm": 0.9318781031502618,
+        "mean_plddt": 0.8996976448429955,
+        "mean_contacts": 5.055555555555555
+      },
+      "R147K": {
+        "n_models": 16,
+        "ki": null,
+        "titer": 793,
+        "kcat_km": 0.32,
+        "mean_dist": 15.989145014659883,
+        "std_dist": 9.261654548668723,
+        "median_dist": 11.663445595703372,
+        "frac_entrance": 0.8125,
+        "frac_active_site": 0.0,
+        "frac_close": 0.8125,
+        "n_entrance": 13,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 3,
+          "entrance": 13
+        },
+        "mean_confidence": 0.9074209555983543,
+        "mean_iptm": 0.94103092700243,
+        "mean_plddt": 0.8990184366703033,
+        "mean_contacts": 6.375
+      },
+      "S186C": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 596,
+        "kcat_km": 0.08,
+        "mean_dist": 20.119419402008315,
+        "std_dist": 9.831549368645893,
+        "median_dist": 26.43475656436705,
+        "frac_entrance": 0.3157894736842105,
+        "frac_active_site": 0.15789473684210525,
+        "frac_close": 0.47368421052631576,
+        "n_entrance": 6,
+        "n_active_site": 3,
+        "binding_modes": {
+          "distant": 10,
+          "entrance": 6,
+          "active_site": 3
+        },
+        "mean_confidence": 0.9054669580961529,
+        "mean_iptm": 0.9272505766467044,
+        "mean_plddt": 0.900021029146094,
+        "mean_contacts": 5.052631578947368
+      },
+      "S208E": {
+        "n_models": 14,
+        "ki": null,
+        "titer": null,
+        "kcat_km": null,
+        "mean_dist": 16.246556100559136,
+        "std_dist": 10.457566056593544,
+        "median_dist": 10.056687265468724,
+        "frac_entrance": 0.5714285714285714,
+        "frac_active_site": 0.14285714285714285,
+        "frac_close": 0.7142857142857143,
+        "n_entrance": 8,
+        "n_active_site": 2,
+        "binding_modes": {
+          "distant": 4,
+          "entrance": 8,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9076607567923409,
+        "mean_iptm": 0.949018337896892,
+        "mean_plddt": 0.8973213349069867,
+        "mean_contacts": 5.0
+      },
+      "T209D": {
+        "n_models": 16,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.13,
+        "mean_dist": 20.756963483037026,
+        "std_dist": 9.604604866892503,
+        "median_dist": 13.008451986759864,
+        "frac_entrance": 0.5625,
+        "frac_active_site": 0.0,
+        "frac_close": 0.5625,
+        "n_entrance": 9,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 7,
+          "entrance": 9
+        },
+        "mean_confidence": 0.9001363292336464,
+        "mean_iptm": 0.9236087314784527,
+        "mean_plddt": 0.8942682035267353,
+        "mean_contacts": 4.3125
+      },
+      "M212Q": {
+        "n_models": 16,
+        "ki": null,
+        "titer": 601,
+        "kcat_km": 0.5,
+        "mean_dist": 18.055140028176524,
+        "std_dist": 9.6401661952211,
+        "median_dist": 12.736484800624174,
+        "frac_entrance": 0.6875,
+        "frac_active_site": 0.0,
+        "frac_close": 0.6875,
+        "n_entrance": 11,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 11,
+          "distant": 5
+        },
+        "mean_confidence": 0.9074544124305248,
+        "mean_iptm": 0.9397144243121147,
+        "mean_plddt": 0.8993894197046757,
+        "mean_contacts": 6.4375
+      },
+      "I226V": {
+        "n_models": 18,
+        "ki": null,
+        "titer": 633,
+        "kcat_km": 0.46,
+        "mean_dist": 20.650814903787413,
+        "std_dist": 12.863371803795697,
+        "median_dist": 11.959293580894496,
+        "frac_entrance": 0.5,
+        "frac_active_site": 0.1111111111111111,
+        "frac_close": 0.6111111111111112,
+        "n_entrance": 9,
+        "n_active_site": 2,
+        "binding_modes": {
+          "distant": 7,
+          "active_site": 2,
+          "entrance": 9
+        },
+        "mean_confidence": 0.9074887401527829,
+        "mean_iptm": 0.9335355559984843,
+        "mean_plddt": 0.9009770254294077,
+        "mean_contacts": 5.888888888888889
+      },
+      "V230E": {
+        "n_models": 18,
+        "ki": 10,
+        "titer": 278,
+        "kcat_km": 0.08,
+        "mean_dist": 14.629149524281527,
+        "std_dist": 7.522929176197995,
+        "median_dist": 11.626041491444985,
+        "frac_entrance": 0.7222222222222222,
+        "frac_active_site": 0.1111111111111111,
+        "frac_close": 0.8333333333333334,
+        "n_entrance": 13,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 13,
+          "distant": 3,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9085271656513214,
+        "mean_iptm": 0.9496682286262512,
+        "mean_plddt": 0.8982418841785855,
+        "mean_contacts": 7.777777777777778
+      },
+      "R74G-R147K": {
+        "n_models": 17,
+        "ki": null,
+        "titer": 909,
+        "kcat_km": 0.42,
+        "mean_dist": 28.280509935045828,
+        "std_dist": 10.418708387143349,
+        "median_dist": 34.13046410832996,
+        "frac_entrance": 0.11764705882352941,
+        "frac_active_site": 0.0,
+        "frac_close": 0.11764705882352941,
+        "n_entrance": 2,
+        "n_active_site": 0,
+        "binding_modes": {
+          "intermediate": 4,
+          "distant": 11,
+          "entrance": 2
+        },
+        "mean_confidence": 0.90146505131441,
+        "mean_iptm": 0.9073050092248356,
+        "mean_plddt": 0.9000050706021926,
+        "mean_contacts": 2.7058823529411766
+      },
+      "HKQ": {
+        "n_models": 19,
+        "ki": 80,
+        "titer": 1079,
+        "kcat_km": 0.4,
+        "mean_dist": 24.97769540261081,
+        "std_dist": 4.578029895374739,
+        "median_dist": 25.15923202082192,
+        "frac_entrance": 0.0,
+        "frac_active_site": 0.0,
+        "frac_close": 0.0,
+        "n_entrance": 0,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 10,
+          "intermediate": 9
+        },
+        "mean_confidence": 0.9083982737440812,
+        "mean_iptm": 0.9301426818496302,
+        "mean_plddt": 0.9029621576008043,
+        "mean_contacts": 4.2631578947368425
+      },
+      "GKQ": {
+        "n_models": 20,
+        "ki": 11,
+        "titer": 8,
+        "kcat_km": 0.5,
+        "mean_dist": 27.175079490613683,
+        "std_dist": 7.44230417018012,
+        "median_dist": 22.639874949093347,
+        "frac_entrance": 0.0,
+        "frac_active_site": 0.0,
+        "frac_close": 0.0,
+        "n_entrance": 0,
+        "n_active_site": 0,
+        "binding_modes": {
+          "distant": 8,
+          "intermediate": 12
+        },
+        "mean_confidence": 0.9050601184368133,
+        "mean_iptm": 0.9139630973339081,
+        "mean_plddt": 0.9028343558311462,
+        "mean_contacts": 3.6
+      },
+      "R74G-R147K-Q140L": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 401,
+        "kcat_km": 0.03,
+        "mean_dist": 30.096883501558,
+        "std_dist": 9.92528132814853,
+        "median_dist": 34.72742241150269,
+        "frac_entrance": 0.0,
+        "frac_active_site": 0.10526315789473684,
+        "frac_close": 0.10526315789473684,
+        "n_entrance": 0,
+        "n_active_site": 2,
+        "binding_modes": {
+          "intermediate": 4,
+          "distant": 13,
+          "active_site": 2
+        },
+        "mean_confidence": 0.8995358285151029,
+        "mean_iptm": 0.9015070827383744,
+        "mean_plddt": 0.8990430141750135,
+        "mean_contacts": 2.9473684210526314
+      }
+    },
+    "no_cofactor": {
+      "WT": {
+        "n_models": 15,
+        "ki": 18,
+        "titer": 475,
+        "kcat_km": 0.066,
+        "mean_dist": 9.089925143685807,
+        "std_dist": 2.284150863573312,
+        "median_dist": 9.773432461086973,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 15,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 15
+        },
+        "mean_confidence": 0.9187983234723409,
+        "mean_iptm": 0.9268722494443258,
+        "mean_plddt": 0.9167798161506653,
+        "mean_contacts": 6.533333333333333
+      },
+      "Y19H": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 388,
+        "kcat_km": 0.78,
+        "mean_dist": 10.332155368063761,
+        "std_dist": 2.681221825007365,
+        "median_dist": 9.715963473551543,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.9158533466489691,
+        "mean_iptm": 0.9207381010055542,
+        "mean_plddt": 0.9146321604126378,
+        "mean_contacts": 6.894736842105263
+      },
+      "K22M": {
+        "n_models": 17,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 12.014328922662306,
+        "std_dist": 1.7287652808068446,
+        "median_dist": 12.927653628827574,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 17,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 17
+        },
+        "mean_confidence": 0.9143652880893034,
+        "mean_iptm": 0.9097358093542212,
+        "mean_plddt": 0.915522624464596,
+        "mean_contacts": 7.176470588235294
+      },
+      "K22Y": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 22,
+        "kcat_km": 0.12,
+        "mean_dist": 12.563687474122945,
+        "std_dist": 3.6082418908892038,
+        "median_dist": 11.341706046755945,
+        "frac_entrance": 0.8947368421052632,
+        "frac_active_site": 0.0,
+        "frac_close": 0.8947368421052632,
+        "n_entrance": 17,
+        "n_active_site": 0,
+        "binding_modes": {
+          "intermediate": 2,
+          "entrance": 17
+        },
+        "mean_confidence": 0.9142320940369054,
+        "mean_iptm": 0.9075082822849876,
+        "mean_plddt": 0.9159130140354759,
+        "mean_contacts": 6.631578947368421
+      },
+      "R74G": {
+        "n_models": 20,
+        "ki": 110,
+        "titer": 975,
+        "kcat_km": 0.04,
+        "mean_dist": 9.067158544917412,
+        "std_dist": 3.278120028823226,
+        "median_dist": 8.795582711066324,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 20,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 20
+        },
+        "mean_confidence": 0.9141323328018188,
+        "mean_iptm": 0.9234799325466156,
+        "mean_plddt": 0.911795437335968,
+        "mean_contacts": 7.5
+      },
+      "R74H": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 770,
+        "kcat_km": 0.44,
+        "mean_dist": 10.773026464641342,
+        "std_dist": 5.564981335766781,
+        "median_dist": 8.786790328414023,
+        "frac_entrance": 0.8947368421052632,
+        "frac_active_site": 0.0,
+        "frac_close": 0.8947368421052632,
+        "n_entrance": 17,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 17,
+          "intermediate": 2
+        },
+        "mean_confidence": 0.913020670413971,
+        "mean_iptm": 0.9189038245301497,
+        "mean_plddt": 0.9115498818849262,
+        "mean_contacts": 7.684210526315789
+      },
+      "I145A": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 623,
+        "kcat_km": 0.01,
+        "mean_dist": 9.03252078541291,
+        "std_dist": 2.1553393545855597,
+        "median_dist": 9.367833373152132,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.9186117586336637,
+        "mean_iptm": 0.9222876335445204,
+        "mean_plddt": 0.9176927867688631,
+        "mean_contacts": 7.0
+      },
+      "I145F": {
+        "n_models": 19,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.2,
+        "mean_dist": 9.968062397164445,
+        "std_dist": 2.0800318588627333,
+        "median_dist": 9.554868104526506,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.918750568440086,
+        "mean_iptm": 0.9180834042398553,
+        "mean_plddt": 0.9189173610586869,
+        "mean_contacts": 5.7894736842105265
+      },
+      "R147K": {
+        "n_models": 20,
+        "ki": null,
+        "titer": 793,
+        "kcat_km": 0.32,
+        "mean_dist": 10.024660980094303,
+        "std_dist": 2.7264060226791678,
+        "median_dist": 9.862004400730882,
+        "frac_entrance": 0.9,
+        "frac_active_site": 0.1,
+        "frac_close": 1.0,
+        "n_entrance": 18,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 18,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9160171687602997,
+        "mean_iptm": 0.918824702501297,
+        "mean_plddt": 0.9153152704238892,
+        "mean_contacts": 7.2
+      },
+      "S186C": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 596,
+        "kcat_km": 0.08,
+        "mean_dist": 9.35711959182284,
+        "std_dist": 2.0218674241116528,
+        "median_dist": 9.790672504835344,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.9193285201725206,
+        "mean_iptm": 0.9278835622887862,
+        "mean_plddt": 0.9171897392523917,
+        "mean_contacts": 6.157894736842105
+      },
+      "S208E": {
+        "n_models": 19,
+        "ki": null,
+        "titer": null,
+        "kcat_km": null,
+        "mean_dist": 8.223285131502156,
+        "std_dist": 2.0956276927517,
+        "median_dist": 7.382185742497589,
+        "frac_entrance": 0.8947368421052632,
+        "frac_active_site": 0.10526315789473684,
+        "frac_close": 1.0,
+        "n_entrance": 17,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 17,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9107753508969357,
+        "mean_iptm": 0.9065095594054774,
+        "mean_plddt": 0.9118417877899972,
+        "mean_contacts": 6.7894736842105265
+      },
+      "T209D": {
+        "n_models": 19,
+        "ki": null,
+        "titer": null,
+        "kcat_km": 0.13,
+        "mean_dist": 10.234964984010539,
+        "std_dist": 2.3680602749777653,
+        "median_dist": 10.103051213694338,
+        "frac_entrance": 0.8947368421052632,
+        "frac_active_site": 0.10526315789473684,
+        "frac_close": 1.0,
+        "n_entrance": 17,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 17,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9132076125395926,
+        "mean_iptm": 0.9122876870004755,
+        "mean_plddt": 0.9134375829445688,
+        "mean_contacts": 6.947368421052632
+      },
+      "M212Q": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 601,
+        "kcat_km": 0.5,
+        "mean_dist": 9.687777429173691,
+        "std_dist": 1.3023468499780697,
+        "median_dist": 10.191429500080059,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.915944378626974,
+        "mean_iptm": 0.9186670968407079,
+        "mean_plddt": 0.9152636998578122,
+        "mean_contacts": 5.7894736842105265
+      },
+      "I226V": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 633,
+        "kcat_km": 0.46,
+        "mean_dist": 8.806160947807836,
+        "std_dist": 2.087751316547732,
+        "median_dist": 9.371942251274518,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.9179682261065433,
+        "mean_iptm": 0.9266882570166337,
+        "mean_plddt": 0.9157882207318356,
+        "mean_contacts": 6.684210526315789
+      },
+      "V230E": {
+        "n_models": 18,
+        "ki": 10,
+        "titer": 278,
+        "kcat_km": 0.08,
+        "mean_dist": 9.53641550290163,
+        "std_dist": 2.269286553528778,
+        "median_dist": 9.559271785122068,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 18,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 18
+        },
+        "mean_confidence": 0.9191651509867774,
+        "mean_iptm": 0.923271076546775,
+        "mean_plddt": 0.9181386563513014,
+        "mean_contacts": 6.277777777777778
+      },
+      "R74G-R147K": {
+        "n_models": 19,
+        "ki": null,
+        "titer": 909,
+        "kcat_km": 0.42,
+        "mean_dist": 9.200933684148596,
+        "std_dist": 2.750101953475126,
+        "median_dist": 8.332643216866531,
+        "frac_entrance": 1.0,
+        "frac_active_site": 0.0,
+        "frac_close": 1.0,
+        "n_entrance": 19,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 19
+        },
+        "mean_confidence": 0.9163448653723064,
+        "mean_iptm": 0.9267065838763588,
+        "mean_plddt": 0.9137544412361948,
+        "mean_contacts": 7.631578947368421
+      },
+      "HKQ": {
+        "n_models": 20,
+        "ki": 80,
+        "titer": 1079,
+        "kcat_km": 0.4,
+        "mean_dist": 9.710517747254949,
+        "std_dist": 5.000341697420381,
+        "median_dist": 8.278322712851505,
+        "frac_entrance": 0.9,
+        "frac_active_site": 0.0,
+        "frac_close": 0.9,
+        "n_entrance": 18,
+        "n_active_site": 0,
+        "binding_modes": {
+          "entrance": 18,
+          "intermediate": 2
+        },
+        "mean_confidence": 0.9105674505233765,
+        "mean_iptm": 0.9212013840675354,
+        "mean_plddt": 0.90790895819664,
+        "mean_contacts": 7.9
+      },
+      "GKQ": {
+        "n_models": 20,
+        "ki": 11,
+        "titer": 8,
+        "kcat_km": 0.5,
+        "mean_dist": 8.276597643391536,
+        "std_dist": 2.42577845519565,
+        "median_dist": 7.419831395887738,
+        "frac_entrance": 0.9,
+        "frac_active_site": 0.1,
+        "frac_close": 1.0,
+        "n_entrance": 18,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 18,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9104090392589569,
+        "mean_iptm": 0.9234747171401978,
+        "mean_plddt": 0.9071426153182983,
+        "mean_contacts": 8.1
+      },
+      "R74G-R147K-Q140L": {
+        "n_models": 16,
+        "ki": null,
+        "titer": 401,
+        "kcat_km": 0.03,
+        "mean_dist": 9.37385221357438,
+        "std_dist": 2.879664093699776,
+        "median_dist": 9.341516671257818,
+        "frac_entrance": 0.875,
+        "frac_active_site": 0.125,
+        "frac_close": 1.0,
+        "n_entrance": 14,
+        "n_active_site": 2,
+        "binding_modes": {
+          "entrance": 14,
+          "active_site": 2
+        },
+        "mean_confidence": 0.9152470380067825,
+        "mean_iptm": 0.9203397892415524,
+        "mean_plddt": 0.9139738492667675,
+        "mean_contacts": 8.375
+      }
+    }
+  },
+  "correlations": {
+    "constrained": {
+      "Ki_vs_frac_entrance": {
+        "r": -0.6018020291629936,
+        "p": 0.2829230009367394,
+        "rho": -0.49999999999999994,
+        "p_spearman": 0.39100221895577053,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_frac_close": {
+        "r": -0.44910576034841654,
+        "p": 0.4480311620996353,
+        "rho": -0.49999999999999994,
+        "p_spearman": 0.39100221895577053,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_mean_dist": {
+        "r": 0.32710298296674956,
+        "p": 0.5910705355249037,
+        "rho": 0.49999999999999994,
+        "p_spearman": 0.39100221895577053,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "titer_vs_frac_entrance": {
+        "r": -0.2047412961681149,
+        "p": 0.44686892049203836,
+        "rho": -0.19571724991295308,
+        "p_spearman": 0.46757149109433815,
+        "n": 16
+      },
+      "titer_vs_frac_close": {
+        "r": -0.1382176222285416,
+        "p": 0.6097121011275086,
+        "rho": -0.15106857454879147,
+        "p_spearman": 0.5765175625948977,
+        "n": 16
+      }
+    },
+    "no_constraint": {
+      "Ki_vs_frac_entrance": {
+        "r": -0.44155207961930826,
+        "p": 0.45664245268133835,
+        "rho": -0.41039134083406165,
+        "p_spearman": 0.49253578170279755,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_frac_close": {
+        "r": -0.5336333037022108,
+        "p": 0.35434461672224143,
+        "rho": -0.41039134083406165,
+        "p_spearman": 0.49253578170279755,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_mean_dist": {
+        "r": 0.5698971206789291,
+        "p": 0.31584111605012016,
+        "rho": 0.39999999999999997,
+        "p_spearman": 0.5046315754686911,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "titer_vs_frac_entrance": {
+        "r": -0.07534950728202815,
+        "p": 0.781516636289148,
+        "rho": -0.10635201504703864,
+        "p_spearman": 0.6950472452786773,
+        "n": 16
+      },
+      "titer_vs_frac_close": {
+        "r": -0.06774238916190664,
+        "p": 0.8031483457138067,
+        "rho": -0.03389831428899711,
+        "p_spearman": 0.9008172925271851,
+        "n": 16
+      }
+    },
+    "no_cofactor": {
+      "Ki_vs_frac_entrance": {
+        "r": 0.0059211346423220165,
+        "p": 0.9924610212767422,
+        "rho": 0.0,
+        "p_spearman": 1.0,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_frac_close": {
+        "r": -0.4133571193021672,
+        "p": 0.4890948052078884,
+        "rho": -0.35355339059327373,
+        "p_spearman": 0.5594043441634877,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "Ki_vs_mean_dist": {
+        "r": 0.31197968109896235,
+        "p": 0.6093163804911916,
+        "rho": 0.0,
+        "p_spearman": 1.0,
+        "n": 5,
+        "variants": [
+          "WT",
+          "R74G",
+          "V230E",
+          "HKQ",
+          "GKQ"
+        ]
+      },
+      "titer_vs_frac_entrance": {
+        "r": 0.07097204682041604,
+        "p": 0.7939471427485449,
+        "rho": 0.0662742210279885,
+        "p_spearman": 0.8073392156825501,
+        "n": 16
+      },
+      "titer_vs_frac_close": {
+        "r": -0.118412239875342,
+        "p": 0.6622782497695989,
+        "rho": -0.13514184797217257,
+        "p_spearman": 0.6177671550976627,
+        "n": 16
+      }
+    }
+  }
+}
