@@ -1,0 +1,199 @@
+condition,metric,target,type,n,spearman_rho,spearman_p,abs_rho
+constrained,chain_ptm_A_protein,titer,individual,16,0.4900663578396291,0.053974273162226576,0.4900663578396291
+constrained,mean_entrance_contacts,titer,individual,16,0.459161272210103,0.07359599347413166,0.459161272210103
+constrained,complex_iplddt,titer,individual,16,-0.4017661131838401,0.12294010274855478,0.4017661131838401
+constrained,chain_ptm_T_atp,titer,individual,16,0.3752760397871034,0.1520527602764196,0.3752760397871034
+constrained,pair_iptm_A_protein__T_atp,titer,individual,16,0.362031003088735,0.16822244229307293,0.362031003088735
+constrained,confidence_score,titer,individual,16,-0.2869757951313143,0.2811847165470148,0.2869757951313143
+constrained,complex_plddt,titer,individual,16,-0.28403245364278806,0.28636716511322435,0.28403245364278806
+constrained,complex_ipde,titer,individual,16,0.28403245364278806,0.28636716511322435,0.28403245364278806
+constrained,pair_iptm_A_protein__L_substrate,titer,individual,16,0.27520242917720916,0.3022553591884895,0.27520242917720916
+constrained,chain_ptm_L_substrate,titer,individual,16,0.25459903875752504,0.3413020602524982,0.25459903875752504
+constrained,pair_iptm_L_substrate__L_substrate,titer,individual,16,0.25459903875752504,0.3413020602524982,0.25459903875752504
+constrained,complex_pde,titer,individual,16,0.2501840265247356,0.35002518025763796,0.2501840265247356
+constrained,pair_iptm_L_substrate__T_atp,titer,individual,16,0.244297343547683,0.3618491054055737,0.244297343547683
+constrained,ptm,titer,individual,16,0.2369389898263672,0.37693674370191366,0.2369389898263672
+constrained,mean_contacts,titer,individual,16,0.23105230684931463,0.3892505371419811,0.23105230684931463
+constrained,frac_entrance,titer,individual,16,-0.19571724991295308,0.46757149109433815,0.19571724991295308
+constrained,frac_close,titer,individual,16,-0.15106857454879147,0.5765175625948977,0.15106857454879147
+constrained,frac_active_site,titer,individual,16,0.145020760745947,0.5920450488727121,0.145020760745947
+constrained,chain_ptm_S_substrate2,titer,individual,16,0.09713026912136795,0.7204533612901972,0.09713026912136795
+constrained,pair_iptm_S_substrate2__S_substrate2,titer,individual,16,0.09713026912136795,0.7204533612901972,0.09713026912136795
+constrained,pair_iptm_S_substrate2__T_atp,titer,individual,16,-0.09271525688857848,0.732716401893539,0.09271525688857848
+constrained,mean_dist,titer,individual,16,0.07947022019021013,0.7698602810713127,0.07947022019021013
+constrained,mean_mg_s_dist,titer,individual,16,0.06181017125905231,0.8201115700901211,0.06181017125905231
+constrained,pair_iptm_A_protein__S_substrate2,titer,individual,16,0.055923488281999716,0.8370188319791677,0.055923488281999716
+constrained,median_dist,titer,individual,16,0.048565134560683974,0.8582465098077368,0.048565134560683974
+constrained,iptm,titer,individual,16,-0.030905085629526156,0.9095400980389841,0.030905085629526156
+constrained,pair_iptm_L_substrate__S_substrate2,titer,individual,16,0.014716707442631503,0.9568602193882964,0.014716707442631503
+constrained,ligand_iptm,titer,individual,16,-0.007358353721315752,0.9784231020466425,0.007358353721315752
+constrained,composite(-entrance+complex_pde),titer (Ki-subset),composite,5,0.7,0.1881204043741873,0.7
+constrained,composite(-entrance+complex_ipde),titer (Ki-subset),composite,5,0.7,0.1881204043741873,0.7
+constrained,composite(-entrance+pair_iptm_A_protein__T_atp),titer (Ki-subset),composite,5,0.7,0.1881204043741873,0.7
+constrained,frac_entrance,titer (Ki-subset),individual,5,-0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+chain_ptm_A_protein),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+mean_dist),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+median_dist),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+mean_entrance_contacts),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+mean_mg_s_dist),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+constrained,composite(-entrance+chain_ptm_L_substrate),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+chain_ptm_S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+pair_iptm_A_protein__L_substrate),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+pair_iptm_A_protein__S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+pair_iptm_L_substrate__L_substrate),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+pair_iptm_S_substrate2__S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+pair_iptm_S_substrate2__T_atp),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+mean_contacts),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+constrained,composite(-entrance+ptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+iptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+ligand_iptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+complex_plddt),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+complex_iplddt),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+chain_ptm_T_atp),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+pair_iptm_L_substrate__S_substrate2),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+constrained,composite(-entrance+confidence_score),titer (Ki-subset),composite,5,0.0,1.0,0.0
+constrained,composite(-entrance+pair_iptm_L_substrate__T_atp),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_atp,confidence_score,titer,individual,16,-0.48123633337405025,0.05913024528947233,0.48123633337405025
+no_atp,complex_plddt,titer,individual,16,-0.4724063089084713,0.06463994323054133,0.4724063089084713
+no_atp,mean_contacts,titer,individual,16,0.42413015401490683,0.10157229407789219,0.42413015401490683
+no_atp,complex_iplddt,titer,individual,16,-0.41648282062647163,0.10855889816874535,0.41648282062647163
+no_atp,median_dist,titer,individual,16,-0.3988227716953138,0.12596731375787296,0.3988227716953138
+no_atp,mean_dist,titer,individual,16,-0.32818257597068257,0.21461589234374495,0.32818257597068257
+no_atp,frac_close,titer,individual,16,-0.3133426293025615,0.23730271406377793,0.3133426293025615
+no_atp,mean_entrance_contacts,titer,individual,16,0.2793810651402006,0.2946729372420085,0.2793810651402006
+no_atp,frac_entrance,titer,individual,16,-0.2792005996773491,0.2949980436118089,0.2792005996773491
+no_atp,pair_iptm_L_substrate__S_substrate2,titer,individual,16,0.2369389898263672,0.37693674370191366,0.2369389898263672
+no_atp,mean_mg_s_dist,titer,individual,16,-0.2281089653607883,0.3954878909103696,0.2281089653607883
+no_atp,pair_iptm_A_protein__S_substrate2,titer,individual,16,0.21192058717389364,0.43073618740853403,0.21192058717389364
+no_atp,ptm,titer,individual,16,0.19278886749847268,0.4743894151031529,0.19278886749847268
+no_atp,iptm,titer,individual,16,0.16188378186894656,0.5491853378865109,0.16188378186894656
+no_atp,ligand_iptm,titer,individual,16,0.16188378186894656,0.5491853378865109,0.16188378186894656
+no_atp,chain_ptm_S_substrate2,titer,individual,16,0.15305375740336766,0.5714582023783741,0.15305375740336766
+no_atp,pair_iptm_S_substrate2__S_substrate2,titer,individual,16,0.15305375740336766,0.5714582023783741,0.15305375740336766
+no_atp,pair_iptm_A_protein__L_substrate,titer,individual,16,0.09860193986563108,0.7163796723063032,0.09860193986563108
+no_atp,frac_active_site,titer,individual,16,0.0891788756959721,0.7425830365338333,0.0891788756959721
+no_atp,chain_ptm_A_protein,titer,individual,16,0.08682857391152587,0.7491614107021848,0.08682857391152587
+no_atp,complex_pde,titer,individual,16,0.07064019572463123,0.7948914247688719,0.07064019572463123
+no_atp,complex_ipde,titer,individual,16,-0.042678451583631365,0.8752951396111206,0.042678451583631365
+no_atp,chain_ptm_L_substrate,titer,individual,16,0.03384842711805246,0.9009625881945321,0.03384842711805246
+no_atp,pair_iptm_L_substrate__L_substrate,titer,individual,16,0.03384842711805246,0.9009625881945321,0.03384842711805246
+no_atp,composite(-entrance+chain_ptm_S_substrate2),titer (Ki-subset),composite,5,-0.6,0.28475697986529375,0.6
+no_atp,composite(-entrance+pair_iptm_S_substrate2__S_substrate2),titer (Ki-subset),composite,5,-0.6,0.28475697986529375,0.6
+no_atp,composite(-entrance+pair_iptm_L_substrate__S_substrate2),titer (Ki-subset),composite,5,-0.49999999999999994,0.39100221895577053,0.49999999999999994
+no_atp,composite(-entrance+complex_pde),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_atp,composite(-entrance+complex_ipde),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_atp,composite(-entrance+pair_iptm_A_protein__S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_atp,composite(-entrance+mean_entrance_contacts),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_atp,frac_entrance,titer (Ki-subset),individual,5,0.28867513459481287,0.6376180914006018,0.28867513459481287
+no_atp,composite(-entrance+ptm),titer (Ki-subset),composite,5,-0.19999999999999998,0.747060078104662,0.19999999999999998
+no_atp,composite(-entrance+chain_ptm_A_protein),titer (Ki-subset),composite,5,-0.19999999999999998,0.747060078104662,0.19999999999999998
+no_atp,composite(-entrance+confidence_score),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+iptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+ligand_iptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+complex_plddt),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+complex_iplddt),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+chain_ptm_L_substrate),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+pair_iptm_A_protein__L_substrate),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+pair_iptm_L_substrate__L_substrate),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+median_dist),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_atp,composite(-entrance+mean_dist),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_atp,composite(-entrance+mean_contacts),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_atp,composite(-entrance+mean_mg_s_dist),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_cofactor,median_dist,titer,individual,16,-0.40765279616089267,0.11703771694686249,0.40765279616089267
+no_cofactor,chain_ptm_A_protein,titer,individual,16,0.3473142956461035,0.18748776319768082,0.3473142956461035
+no_cofactor,ptm,titer,individual,16,0.34289928341331405,0.19353772308038864,0.34289928341331405
+no_cofactor,chain_ptm_L_substrate,titer,individual,16,0.3399559419247878,0.19764090965476153,0.3399559419247878
+no_cofactor,pair_iptm_L_substrate__L_substrate,titer,individual,16,0.3399559419247878,0.19764090965476153,0.3399559419247878
+no_cofactor,pair_iptm_A_protein__S_substrate2,titer,individual,16,0.33112591745920883,0.21028754589928556,0.33112591745920883
+no_cofactor,mean_entrance_contacts,titer,individual,16,0.32498166524886357,0.21938725156574215,0.32498166524886357
+no_cofactor,complex_plddt,titer,individual,16,-0.31493753927231416,0.234795138020984,0.31493753927231416
+no_cofactor,chain_ptm_S_substrate2,titer,individual,16,0.2516556972689987,0.34710363587633475,0.2516556972689987
+no_cofactor,pair_iptm_S_substrate2__S_substrate2,titer,individual,16,0.2516556972689987,0.34710363587633475,0.2516556972689987
+no_cofactor,mean_contacts,titer,individual,16,0.24336309656549815,0.36374580928303724,0.24336309656549815
+no_cofactor,complex_ipde,titer,individual,16,-0.23105230684931463,0.3892505371419811,0.23105230684931463
+no_cofactor,complex_iplddt,titer,individual,16,-0.2295806361050515,0.3923625400891416,0.2295806361050515
+no_cofactor,pair_iptm_A_protein__L_substrate,titer,individual,16,0.21633559940668312,0.42096645620030626,0.21633559940668312
+no_cofactor,complex_pde,titer,individual,16,-0.2045622334525779,0.4472751519912378,0.2045622334525779
+no_cofactor,frac_active_site,titer,individual,16,-0.1911923397558461,0.4781267924531165,0.1911923397558461
+no_cofactor,frac_close,titer,individual,16,-0.1738112179598601,0.5197198085501246,0.1738112179598601
+no_cofactor,iptm,titer,individual,16,0.17218547707878862,0.5236929036366568,0.17218547707878862
+no_cofactor,ligand_iptm,titer,individual,16,0.17218547707878862,0.5236929036366568,0.17218547707878862
+no_cofactor,pair_iptm_L_substrate__S_substrate2,titer,individual,16,0.057395159026262875,0.8327854556156655,0.057395159026262875
+no_cofactor,confidence_score,titer,individual,16,-0.03384842711805246,0.9009625881945321,0.03384842711805246
+no_cofactor,mean_dist,titer,individual,16,-0.03384842711805246,0.9009625881945321,0.03384842711805246
+no_cofactor,frac_entrance,titer,individual,16,0.014013108387380903,0.9589210521929865,0.014013108387380903
+no_cofactor,composite(-entrance+complex_iplddt),titer (Ki-subset),composite,5,-0.7999999999999999,0.10408803866182788,0.7999999999999999
+no_cofactor,composite(-entrance+iptm),titer (Ki-subset),composite,5,-0.49999999999999994,0.39100221895577053,0.49999999999999994
+no_cofactor,composite(-entrance+ligand_iptm),titer (Ki-subset),composite,5,-0.49999999999999994,0.39100221895577053,0.49999999999999994
+no_cofactor,composite(-entrance+median_dist),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_cofactor,composite(-entrance+mean_entrance_contacts),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_cofactor,composite(-entrance+complex_pde),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_cofactor,composite(-entrance+pair_iptm_A_protein__L_substrate),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_cofactor,composite(-entrance+pair_iptm_A_protein__S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_cofactor,composite(-entrance+pair_iptm_L_substrate__S_substrate2),titer (Ki-subset),composite,5,-0.3,0.6238376647810728,0.3
+no_cofactor,composite(-entrance+confidence_score),titer (Ki-subset),composite,5,-0.19999999999999998,0.747060078104662,0.19999999999999998
+no_cofactor,composite(-entrance+mean_dist),titer (Ki-subset),composite,5,0.19999999999999998,0.747060078104662,0.19999999999999998
+no_cofactor,composite(-entrance+ptm),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+complex_ipde),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+chain_ptm_A_protein),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+chain_ptm_L_substrate),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+chain_ptm_S_substrate2),titer (Ki-subset),composite,5,0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+pair_iptm_L_substrate__L_substrate),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,composite(-entrance+pair_iptm_S_substrate2__S_substrate2),titer (Ki-subset),composite,5,0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_cofactor,frac_entrance,titer (Ki-subset),individual,5,0.0,1.0,0.0
+no_cofactor,composite(-entrance+complex_plddt),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_cofactor,composite(-entrance+mean_contacts),titer (Ki-subset),composite,5,0.0,1.0,0.0
+no_constraint,pair_iptm_A_protein__T_atp,titer,individual,16,0.5518765290986815,0.02666588870423162,0.5518765290986815
+no_constraint,mean_entrance_contacts,titer,individual,16,0.5284145792505661,0.035360264951493414,0.5284145792505661
+no_constraint,chain_ptm_A_protein,titer,individual,16,0.47534965039699756,0.06276326989114171,0.47534965039699756
+no_constraint,pair_iptm_A_protein__L_substrate,titer,individual,16,0.33112591745920883,0.21028754589928556,0.33112591745920883
+no_constraint,chain_ptm_T_atp,titer,individual,16,0.32229589299362993,0.22344246714403135,0.32229589299362993
+no_constraint,pair_iptm_L_substrate__T_atp,titer,individual,16,0.3119941977837879,0.23943581954856008,0.3119941977837879
+no_constraint,ptm,titer,individual,16,0.2884474658755775,0.27861483675178017,0.2884474658755775
+no_constraint,confidence_score,titer,individual,16,0.2516556972689987,0.34710363587633475,0.2516556972689987
+no_constraint,chain_ptm_L_substrate,titer,individual,16,0.2516556972689987,0.34710363587633475,0.2516556972689987
+no_constraint,pair_iptm_L_substrate__L_substrate,titer,individual,16,0.2516556972689987,0.34710363587633475,0.2516556972689987
+no_constraint,complex_ipde,titer,individual,16,0.18543051377715697,0.4917327471086168,0.18543051377715697
+no_constraint,complex_pde,titer,individual,16,0.166298794101736,0.5381937741142251,0.166298794101736
+no_constraint,complex_iplddt,titer,individual,16,-0.1633554526132097,0.5455105840229945,0.1633554526132097
+no_constraint,ligand_iptm,titer,individual,16,0.12803535475089411,0.6365337727096072,0.12803535475089411
+no_constraint,iptm,titer,individual,16,0.1162619887967889,0.6680807907616779,0.1162619887967889
+no_constraint,chain_ptm_S_substrate2,titer,individual,16,0.09860193986563108,0.7163796723063032,0.09860193986563108
+no_constraint,pair_iptm_S_substrate2__S_substrate2,titer,individual,16,0.09860193986563108,0.7163796723063032,0.09860193986563108
+no_constraint,mean_contacts,titer,individual,16,0.093519882179676,0.7304768759254063,0.093519882179676
+no_constraint,pair_iptm_S_substrate2__T_atp,titer,individual,16,0.08977191540005218,0.7409257646943954,0.08977191540005218
+no_constraint,complex_plddt,titer,individual,16,0.07652687870168383,0.7781816147180738,0.07652687870168383
+no_constraint,frac_entrance,titer,individual,16,-0.07612627144817621,0.7793159703285002,0.07612627144817621
+no_constraint,frac_close,titer,individual,16,-0.06444557600907407,0.8125659283052566,0.06444557600907407
+no_constraint,pair_iptm_L_substrate__S_substrate2,titer,individual,16,0.06328184200331548,0.8158960436310546,0.06328184200331548
+no_constraint,median_dist,titer,individual,16,-0.057395159026262875,0.8327854556156655,0.057395159026262875
+no_constraint,frac_active_site,titer,individual,16,-0.04422244034905412,0.8708182661614428,0.04422244034905412
+no_constraint,pair_iptm_A_protein__S_substrate2,titer,individual,16,-0.03973511009510507,0.8838392298321894,0.03973511009510507
+no_constraint,mean_mg_s_dist,titer,individual,16,-0.035320097862315616,0.896677625761926,0.035320097862315616
+no_constraint,mean_dist,titer,individual,16,-0.014716707442631503,0.9568602193882964,0.014716707442631503
+no_constraint,composite(-entrance+complex_pde),titer (Ki-subset),composite,5,0.7999999999999999,0.10408803866182788,0.7999999999999999
+no_constraint,composite(-entrance+complex_ipde),titer (Ki-subset),composite,5,0.7999999999999999,0.10408803866182788,0.7999999999999999
+no_constraint,composite(-entrance+pair_iptm_A_protein__T_atp),titer (Ki-subset),composite,5,0.7999999999999999,0.10408803866182788,0.7999999999999999
+no_constraint,composite(-entrance+mean_entrance_contacts),titer (Ki-subset),composite,5,0.4103913408340617,0.4925357817027974,0.4103913408340617
+no_constraint,composite(-entrance+ligand_iptm),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+complex_plddt),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+complex_iplddt),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+chain_ptm_A_protein),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+pair_iptm_A_protein__L_substrate),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+median_dist),titer (Ki-subset),composite,5,0.39999999999999997,0.5046315754686911,0.39999999999999997
+no_constraint,composite(-entrance+ptm),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,composite(-entrance+iptm),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,composite(-entrance+chain_ptm_L_substrate),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,composite(-entrance+pair_iptm_A_protein__S_substrate2),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,composite(-entrance+pair_iptm_L_substrate__L_substrate),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,composite(-entrance+pair_iptm_L_substrate__S_substrate2),titer (Ki-subset),composite,5,0.3,0.6238376647810728,0.3
+no_constraint,frac_entrance,titer (Ki-subset),individual,5,-0.20519567041703085,0.7405819415910722,0.20519567041703085
+no_constraint,composite(-entrance+chain_ptm_S_substrate2),titer (Ki-subset),composite,5,-0.19999999999999998,0.747060078104662,0.19999999999999998
+no_constraint,composite(-entrance+pair_iptm_S_substrate2__S_substrate2),titer (Ki-subset),composite,5,-0.19999999999999998,0.747060078104662,0.19999999999999998
+no_constraint,composite(-entrance+confidence_score),titer (Ki-subset),composite,5,0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+chain_ptm_T_atp),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+pair_iptm_L_substrate__T_atp),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+pair_iptm_S_substrate2__T_atp),titer (Ki-subset),composite,5,0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+mean_contacts),titer (Ki-subset),composite,5,0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+mean_mg_s_dist),titer (Ki-subset),composite,5,-0.09999999999999999,0.8728885715695383,0.09999999999999999
+no_constraint,composite(-entrance+mean_dist),titer (Ki-subset),composite,5,0.0,1.0,0.0

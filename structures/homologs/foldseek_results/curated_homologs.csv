@@ -1,0 +1,126 @@
+rank,clean_id,db_source,description,organism,seq_identity,alignment_length,prob,evalue,bit_score,q_len,t_len,has_sequence,sequence_length
+1,Q751D8,alphafold,Diphosphomevalonate decarboxylase,Eremothecium gossypii ATCC 10895,68.8,392,1.0000,1.02e-61,2372.0,391,397,True,397
+2,Q6BY07,alphafold,Diphosphomevalonate decarboxylase,Debaryomyces hansenii CBS767,64.8,390,1.0000,6.14e-59,2224.0,391,388,True,388
+3,A0A1D8PC43,alphafold,Diphosphomevalonate decarboxylase,Candida albicans SC5314,63.7,386,1.0000,2.43e-54,1992.0,391,362,True,362
+4,I1S130,alphafold,Diphosphomevalonate decarboxylase ERG19,Fusarium graminearum PH-1,57.2,388,1.0000,2.96e-53,1957.0,391,382,True,382
+5,O13963,alphafold,Diphosphomevalonate decarboxylase,Schizosaccharomyces pombe 972h-,54.9,391,1.0000,1.64e-51,1896.0,391,393,True,393
+6,Q4WNV9,alphafold,Diphosphomevalonate decarboxylase mvd1,Aspergillus fumigatus Af293,55.4,402,1.0000,2.14e-52,1889.0,391,404,True,404
+7,G9BIY1,alphafold,Diphosphomevalonate decarboxylase,Ganoderma lucidum,49.6,399,1.0000,4.35e-49,1722.0,391,400,True,400
+8,6XR5,pdb,Crystal Structure of Diphosphomevalonate decarboxylase (MVD1) Cryptococcus neoformans var. grubii serotype A,Cryptococcus neoformans var. grubii H99,50.7,394,1.0000,1.64e-47,1639.0,391,386,True,386
+9,Q54YQ9,alphafold,Diphosphomevalonate decarboxylase,Dictyostelium discoideum,44.0,402,1.0000,1.41e-45,1564.0,391,391,True,391
+10,3F0N,pdb,Mus Musculus Mevalonate Pyrophosphate Decarboxylase,Mus musculus,44.9,396,1.0000,2.05e-45,1547.0,391,387,True,387
+11,F4JCU3,alphafold,"Diphosphomevalonate decarboxylase MVD2, peroxisomal",Arabidopsis thaliana,43.3,422,1.0000,1.26e-45,1542.0,391,419,True,419
+12,Q0P570,alphafold,Diphosphomevalonate decarboxylase,Bos taurus,44.9,398,1.0000,1.15e-44,1527.0,391,400,True,400
+13,Q99JF5,alphafold,Diphosphomevalonate decarboxylase,Mus musculus,45.1,403,1.0000,2.05e-44,1507.0,391,401,True,401
+14,Q62967,alphafold,Diphosphomevalonate decarboxylase,Rattus norvegicus,46.2,400,1.0000,3.88e-44,1502.0,391,401,True,401
+15,Q5U403,alphafold,Diphosphomevalonate decarboxylase,Danio rerio,44.0,400,1.0000,1.29e-44,1496.0,391,400,True,400
+16,P53602,alphafold,Diphosphomevalonate decarboxylase,Homo sapiens,44.7,398,1.0000,1.32e-43,1492.0,391,400,False,0
+17,3D4J,pdb,Crystal structure of Human mevalonate diphosphate decarboxylase,Homo sapiens,44.4,403,1.0000,1.40e-44,1491.0,391,374,False,0
+18,O23722,alphafold,"Diphosphomevalonate decarboxylase MVD1, peroxisomal",Arabidopsis thaliana,43.4,414,1.0000,1.72e-44,1488.0,391,412,False,0
+19,6N10,pdb,Crystal structure of Arabidopsis thaliana mevalonate 5-diphosphate decarboxylase 1 complexed with (R)-MVAPP,Arabidopsis thaliana,44.4,407,1.0000,1.13e-43,1481.0,391,403,False,0
+20,F8QQQ7,alphafold,Diphosphomevalonate decarboxylase 2,Panax ginseng,43.5,411,1.0000,3.97e-43,1468.0,391,420,False,0
+21,D0EAP4,alphafold,Diphosphomevalonate decarboxylase 1,Panax ginseng,41.3,423,1.0000,5.63e-43,1452.0,391,417,False,0
+22,2HKE,pdb,Mevalonate diphosphate decarboxylase from Trypanosoma brucei,Trypanosoma brucei,37.8,399,1.0000,1.99e-39,1323.0,391,376,False,0
+23,Q97UL5,alphafold,Diphosphomevalonate decarboxylase,Saccharolobus solfataricus P2,34.0,382,1.0000,2.29e-32,1088.0,391,325,False,0
+24,6N0Z,pdb,Crystal structure of Anaerolinea thermophila mevalonate 5-phosphate decarboxylase N20K H194M mutant complexed with (R)-MVAPP,Anaerolinea thermophila UNI-1,32.7,379,1.0000,1.52e-33,1084.0,391,321,False,0
+25,6N0Y,pdb,Crystal structure of Anaerolinea thermophila mevalonate 5-phosphate decarboxylase complexed with (R)-MVAPP,Anaerolinea thermophila UNI-1,32.3,380,1.0000,2.73e-33,1083.0,391,316,False,0
+26,6N0X,pdb,Crystal structure of Anaerolinea thermophila mevalonate 5-phosphate decarboxylase complexed with (R)-MVAP,Anaerolinea thermophila UNI-1,31.7,381,1.0000,1.27e-31,1014.0,391,320,False,0
+27,5GMD,pdb,Crystal structure of Sulfolobus solfataricus diphosphomevalonate decarboxylase in complex with ATP-gamma-S,Saccharolobus solfataricus P2,32.8,384,1.0000,5.11e-31,1007.0,391,325,False,0
+28,4DPU,pdb,Crystal structure of Staphylococcus epidermidis S192A mevalonate diphosphate decarboxylase complexed with inhibitor 6-FMVAPP and ATPgS,Staphylococcus epidermidis,27.6,383,1.0000,8.84e-30,952.0,391,326,False,0
+29,3QT6,pdb,Crystal structure of Staphylococcus epidermidis mevalonate diphosphate decarboxylase complexed with inhibitor DPGP,Staphylococcus epidermidis,28.9,384,1.0000,3.37e-29,950.0,391,328,False,0
+30,3QT8,pdb,Crystal structure of mutant S192A Staphylococcus epidermidis mevalonate diphosphate decarboxylase complexed with inhibitor 6-FMVAPP,Staphylococcus epidermidis,28.1,384,1.0000,1.78e-29,946.0,391,328,False,0
+31,2HK2,pdb,Crystal structure of mevalonate diphosphate decarboxylase from Staphylococcus aureus (monoclinic form),Staphylococcus aureus,27.5,381,1.0000,8.34e-30,943.0,391,331,False,0
+32,6E2U,pdb,"MDDEF in complex with MVAPP, AMPPCP and Magnesium",Enterococcus faecalis,28.0,381,1.0000,3.92e-30,942.0,391,327,False,0
+33,3QT7,pdb,Crystal structure of Staphylococcus epidermidis mevalonate diphosphate decarboxylase complexed with inhibitor 6-FMVAPP,Staphylococcus epidermidis,27.6,383,1.0000,1.68e-29,941.0,391,320,False,0
+34,4DPX,pdb,Crystal structure of S192A Staphylococcus epidermidis mevalonate diphosphate decarboxylase,Staphylococcus epidermidis,28.4,383,1.0000,4.01e-29,939.0,391,322,False,0
+35,4DU7,pdb,Crystal structure of Staphylococcus epidermidis mevalonate diphosphate decarboxylase complexed with substrate mevalonate diphosphate,Staphylococcus epidermidis,28.6,384,1.0000,5.06e-29,939.0,391,325,False,0
+36,3QT5,pdb,Crystal structure of Staphylococcus epidermidis mevalonate diphosphate decarboxylase,Staphylococcus epidermidis,27.9,383,1.0000,5.68e-29,934.0,391,327,False,0
+37,4DPW,pdb,Crystal structure of Staphylococcus epidermidis D283A mevalonate diphosphate decarboxylase complexed with mevalonate diphosphate and ATPgS,Staphylococcus epidermidis,27.3,380,1.0000,2.24e-29,922.0,391,326,False,0
+38,6E2T,pdb,MDDEF in complex with MVAPP,Enterococcus faecalis,25.9,382,1.0000,3.18e-29,906.0,391,320,False,0
+39,4DPY,pdb,Crystal structure of Staphylococcus epidermidis S192A mevalonate diphosphate decarboxylase complexed with inhibitor DPGP,Staphylococcus epidermidis,27.2,381,1.0000,8.06e-29,901.0,391,321,False,0
+40,5V2L,pdb,Mevalonate diphosphate mediated ATP binding mechanism of the mevalonate diphosphate decarboxylase from Enterococcus faecalis,Enterococcus faecalis V583,26.7,381,1.0000,9.05e-29,895.0,391,321,False,0
+41,4DU8,pdb,Crystal structure of Staphylococcus epidermidis D283A mevalonate diphosphate decarboxylase complexed with inhibitor DPGP,Staphylococcus epidermidis,25.9,381,1.0000,2.90e-28,887.0,391,320,False,0
+42,4DPT,pdb,Crystal structure of Staphylococcus epidermidis mevalonate diphosphate decarboxylase complexed with inhibitor 6-FMVAPP and ATPgS,Staphylococcus epidermidis,26.0,384,1.0000,1.04e-27,868.0,391,319,False,0
+43,6E2S,pdb,apo form of MDDEF with buffer exchange,Enterococcus faecalis,24.2,383,1.0000,2.97e-27,827.0,391,311,False,0
+44,D4GXZ3,alphafold,Phosphomevalonate decarboxylase,Haloferax volcanii DS2,20.2,390,1.0000,8.93e-26,814.0,391,324,False,0
+45,2GS8,pdb,Structure of mevalonate pyrophosphate decarboxylase from Streptococcus pyogenes,Streptococcus pyogenes M1 GAS,23.4,375,1.0000,6.25e-25,777.0,391,316,False,0
+46,4RKS,pdb,Crystal Structure of Mevalonate-3-Kinase from Thermoplasma acidophilum (Mevalonate Bound),Thermoplasma acidophilum DSM 1728,16.3,386,1.0000,2.87e-21,657.0,391,317,False,0
+47,Q9HIN1,alphafold,Mevalonate 3-kinase,Thermoplasma acidophilum DSM 1728,17.0,382,1.0000,1.56e-21,656.0,391,318,False,0
+48,4RKZ,pdb,Crystal Structure of Mevalonate-3-Kinase from Thermoplasma acidophilum (Mevalonate 3-Phosphate/ADP Bound),Thermoplasma acidophilum DSM 1728,15.3,384,1.0000,5.44e-21,654.0,391,313,False,0
+49,3LTO,pdb,Crystal structure of a mevalonate diphosphate decarboxylase from Legionella pneumophila,Legionella pneumophila subsp. pneumophila str. Philadelphia 1,27.1,332,1.0000,2.15e-21,625.0,391,315,False,0
+50,Q6KZB1,alphafold,Mevalonate-3-kinase,Picrophilus oshimae DSM 9789,15.0,385,1.0000,1.09e-19,583.0,391,324,False,0
+51,7T71,pdb,"Crystal Structure of Mevalonate 3,5-Bisphosphate Decarboxylase from Picrophilus Torridus",Picrophilus oshimae DSM 9789,17.7,333,1.0000,3.85e-16,461.0,391,348,False,0
+52,Q9HJS1,alphafold,"Mevalonate 3,5-bisphosphate decarboxylase",Thermoplasma acidophilum DSM 1728,15.5,372,1.0000,1.04e-16,434.0,391,405,False,0
+53,Q97BM8,alphafold,"Mevalonate 3,5-bisphosphate decarboxylase",Thermoplasma volcanium GSS1,17.2,370,1.0000,1.07e-15,418.0,391,372,False,0
+54,A7NI09,alphafold,Galactokinase,Roseiflexus castenholzii DSM 13941,15.5,444,1.0000,1.45e-12,284.0,391,391,False,0
+55,B1LCQ5,alphafold,Galactokinase,Thermotoga sp. RQ2,15.0,426,1.0000,1.63e-12,282.0,391,350,False,0
+56,A5UZX0,alphafold,Galactokinase,Roseiflexus sp. RS-1,15.8,447,1.0000,8.09e-13,275.0,391,391,False,0
+57,Q65FC4,alphafold,Homoserine kinase,Bacillus licheniformis DSM 13 = ATCC 14580,16.1,397,1.0000,5.65e-11,263.0,391,306,False,0
+58,3HUL,pdb,Structure of putative homoserine kinase thrB from Listeria monocytogenes,Listeria monocytogenes,15.8,390,1.0000,2.72e-11,259.0,391,277,False,0
+59,B7HIL3,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus B4264,16.3,325,1.0000,1.92e-10,257.0,391,289,False,0
+60,Q5N2S7,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Synechococcus elongatus PCC 6301,15.6,397,1.0000,1.70e-10,256.0,391,314,False,0
+61,Q31RH7,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Synechococcus elongatus PCC 7942 = FACHB-805,15.6,397,1.0000,2.15e-10,255.0,391,314,False,0
+62,B0KBH0,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Thermoanaerobacter pseudethanolicus ATCC 33223,16.4,389,1.0000,3.63e-10,254.0,391,289,False,0
+63,B7HPV6,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus AH187,15.7,323,1.0000,2.42e-10,253.0,391,289,False,0
+64,B0JNB0,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Microcystis aeruginosa NIES-843,15.2,399,1.0000,2.71e-10,253.0,391,313,False,0
+65,Q92F77,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Listeria innocua Clip11262,15.3,385,1.0000,1.30e-09,252.0,391,291,False,0
+66,Q73FG3,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus ATCC 10987,15.0,325,1.0000,2.88e-10,250.0,391,289,False,0
+67,Q5L3V4,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Geobacillus kaustophilus HTA426,17.5,324,1.0000,4.32e-10,250.0,391,290,False,0
+68,Q7U7D2,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Parasynechococcus marenigrum WH 8102,15.8,397,1.0000,1.61e-10,250.0,391,309,False,0
+69,B1XK39,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Picosynechococcus sp. PCC 7002,17.7,395,1.0000,1.61e-10,249.0,391,316,False,0
+70,B7JK51,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus AH820,15.0,325,1.0000,3.85e-10,248.0,391,289,False,0
+71,Q65PH5,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus licheniformis DSM 13 = ATCC 14580,15.1,383,1.0000,1.10e-09,247.0,391,289,False,0
+72,Q3AKU3,alphafold,Homoserine kinase,Synechococcus sp. CC9605,15.6,396,1.0000,6.88e-10,247.0,391,315,False,0
+73,C1ESX4,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus 03BB102,15.2,328,1.0000,3.63e-10,246.0,391,289,False,0
+74,Q9KGK0,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Halalkalibacterium halodurans C-125,18.7,325,1.0000,2.95e-09,245.0,391,287,False,0
+75,C3LJ17,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus anthracis str. CDC 684,15.0,325,1.0000,5.45e-10,245.0,391,289,False,0
+76,A7GJV7,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cytotoxicus NVH 391-98,16.0,325,1.0000,4.58e-10,243.0,391,289,False,0
+77,Q8YAE1,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Listeria monocytogenes EGD-e,16.7,317,1.0000,3.72e-09,243.0,391,293,False,0
+78,Q0S4S3,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Rhodococcus jostii RHA1,16.0,392,1.0000,5.15e-10,243.0,391,311,False,0
+79,B7ISV5,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus G9842,15.8,328,1.0000,6.49e-10,241.0,391,289,False,0
+80,B9IZC8,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus Q1,16.3,325,1.0000,7.30e-10,240.0,391,292,False,0
+81,A0R8B7,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus thuringiensis str. Al Hakam,16.3,325,1.0000,6.88e-10,240.0,391,292,False,0
+82,A9KKE9,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Lachnoclostridium phytofermentans ISDg,15.3,332,1.0000,2.78e-09,236.0,391,291,False,0
+83,B8DGN5,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Listeria monocytogenes HCC23,16.7,322,1.0000,2.62e-09,235.0,391,291,False,0
+84,Q7VCH6,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Prochlorococcus marinus subsp. marinus str. CCMP1375,16.4,394,1.0000,8.99e-11,235.0,391,319,False,0
+85,Q63HI8,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Bacillus cereus E33L,16.0,325,1.0000,1.96e-09,234.0,391,292,False,0
+86,Q4L3F2,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus haemolyticus JCSC1435,17.8,325,1.0000,1.47e-09,233.0,391,282,False,0
+87,B4U041,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus equi subsp. zooepidemicus MGCS10565,15.1,383,1.0000,2.08e-09,233.0,391,283,False,0
+88,A0AEZ5,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Listeria welshimeri serovar 6b str. SLCC5334,16.9,319,1.0000,4.18e-09,233.0,391,291,False,0
+89,A5GJT4,alphafold,Homoserine kinase,Synechococcus sp. WH 7803,15.6,397,1.0000,2.95e-09,230.0,391,315,False,0
+90,C0MED6,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus equi subsp. zooepidemicus H70,15.2,380,1.0000,2.47e-09,229.0,391,283,False,0
+91,Q2JQU4,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Synechococcus sp. JA-3-3Ab,15.0,400,1.0000,3.51e-09,226.0,391,309,False,0
+92,A4J0P1,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Desulforamulus reducens MI-1,17.4,338,1.0000,2.47e-09,224.0,391,282,False,0
+93,Q7V7W1,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Prochlorococcus marinus str. MIT 9313,15.8,397,1.0000,4.86e-10,224.0,391,319,False,0
+94,B0K474,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Thermoanaerobacter sp. X514,15.2,387,1.0000,2.62e-09,222.0,391,289,False,0
+95,Q8E7K5,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus agalactiae NEM316,16.6,325,1.0000,7.92e-09,221.0,391,283,False,0
+96,Q7V8D0,alphafold,Homoserine kinase,Prochlorococcus marinus str. MIT 9313,15.1,402,1.0000,2.47e-09,220.0,391,316,False,0
+97,C0MBI2,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus equi subsp. equi 4047,15.2,388,1.0000,3.51e-09,219.0,391,283,False,0
+98,B2GFD7,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Limosilactobacillus fermentum IFO 3956,15.1,331,1.0000,1.06e-08,219.0,391,283,False,0
+99,A1SNG8,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Nocardioides sp. JS614,16.9,331,1.0000,1.47e-09,219.0,391,297,False,0
+100,Q8E245,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus agalactiae 2603V/R,15.1,329,1.0000,4.97e-09,217.0,391,283,False,0
+101,Q0B0T2,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Syntrophomonas wolfei subsp. wolfei str. Goettingen G311,15.9,327,1.0000,7.47e-09,217.0,391,285,False,0
+102,Q2G0S8,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus NCTC 8325,15.8,322,1.0000,9.99e-09,216.0,391,282,False,0
+103,Q8CQU6,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus epidermidis ATCC 12228,16.0,323,1.0000,8.89e-09,214.0,391,282,False,0
+104,Q5HRR0,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus epidermidis RP62A,16.0,323,1.0000,9.43e-09,214.0,391,282,False,0
+105,P65180,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus Mu50,15.1,324,1.0000,5.59e-09,213.0,391,282,False,0
+106,A6QEE8,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus str. Newman,15.1,324,1.0000,5.59e-09,213.0,391,282,False,0
+107,A5GLH6,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Synechococcus sp. WH 7803,15.2,400,1.0000,3.05e-10,213.0,391,309,False,0
+108,Q6GJH6,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus MRSA252,15.7,323,1.0000,1.89e-08,212.0,391,282,False,0
+109,Q2YVV0,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus RF122,15.8,322,1.0000,1.79e-08,211.0,391,282,False,0
+110,B0TB90,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Heliomicrobium modesticaldum Ice1,16.2,344,1.0000,1.12e-08,211.0,391,315,False,0
+111,P65181,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus N315,15.7,323,1.0000,1.89e-08,209.0,391,282,False,0
+112,Q3K3L9,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Streptococcus agalactiae A909,15.6,332,1.0000,7.92e-09,208.0,391,283,False,0
+113,P65182,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus MW2,15.7,323,1.0000,2.39e-08,207.0,391,282,False,0
+114,Q5HII1,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus COL,15.7,323,1.0000,2.85e-08,206.0,391,282,False,0
+115,A7WYP4,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus Mu3,15.3,325,1.0000,2.01e-08,205.0,391,282,False,0
+116,A5IQ47,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus JH9,15.3,325,1.0000,2.53e-08,203.0,391,282,False,0
+117,Q0TNA0,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Clostridium perfringens ATCC 13124,15.8,328,1.0000,6.42e-08,203.0,391,288,False,0
+118,Q6GBZ3,alphafold,Putative 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Staphylococcus aureus subsp. aureus MSSA476,15.3,325,1.0000,2.68e-08,202.0,391,282,False,0
+119,Q0I9S4,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Synechococcus sp. CC9311,15.3,398,1.0000,1.55e-09,202.0,391,310,False,0
+120,Q7V1E2,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Prochlorococcus marinus subsp. pastoris str. CCMP1986,15.5,392,1.0000,1.16e-09,201.0,391,312,False,0
+121,B2TJM0,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Clostridium botulinum B str. Eklund 17B (NRP),15.0,379,1.0000,4.80e-08,191.0,391,280,False,0
+122,5WAS,pdb,Corynebacterium glutamicum Hydrolyzed Homoserine kinase,Corynebacterium glutamicum,17.7,214,1.0000,7.58e-07,171.0,391,180,False,0
+123,A7HR11,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Parvibaculum lavamentivorans DS-1,15.6,345,1.0000,2.11e-06,142.0,391,290,False,0
+124,A6L5X6,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Phocaeicola vulgatus ATCC 8482,16.5,321,1.0000,3.24e-05,124.0,391,275,False,0
+125,B3PRG5,alphafold,4-diphosphocytidyl-2-C-methyl-D-erythritol kinase,Rhizobium etli CIAT 652,15.2,401,1.0000,1.43e-05,106.0,391,297,False,0
