@@ -9,6 +9,8 @@ import os
 import csv
 import glob
 import json
+import yaml
+from collections import Counter
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -222,8 +224,6 @@ def analyze_homolog(name):
 
 
 def main():
-    import yaml
-
     print("=== Analyzing All Homolog Cofolding Results ===\n")
 
     # Find all completed jobs

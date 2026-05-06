@@ -1,0 +1,46 @@
+version: 1
+sequences:
+- protein:
+    id: A
+    sequence: MSLKEKTHALFAEKFGYPATTHIQAPGRVNLIGEHTDYNDGFVLPCAIDYQTVISCAKRDDRRVRVVAADYDNETDEFSLDEPILTHDSQQWSNYVRGVVKHLQQRDPGFGGADLVISGNVPQGAGLSSSASLEVAVGTVFRHLYHLSLDGAQIALNGQEAENQFVGCNCGIMDQLISALGKKDHALLIDCRSLGTKAVPMPQGVAVVIINSNFKRTLVGSEYNTRREQCETGARFFTQKALRDVSLDQFNAVAHELDPIVAKRVRHVLTENARTVEAADALAKGNLTRMGELMAESHASMRDDFEITVPQIDTLVEIVKSVIGDKGGVRMTGGGFGGCVVALVPEALVPEVQAAVEAQYEARTGIKETFYVCKPSEGAGLC
+- ligand:
+    id: L
+    smiles: C[C@](O)(CCOP(=O)(O)O)CC(=O)O
+- ligand:
+    id: S
+    smiles: C[C@](O)(CCOP(=O)(O)O)CC(=O)O
+- ligand:
+    id: T
+    ccd: ATP
+- ligand:
+    id: M
+    ccd: MG
+constraints:
+- pocket:
+    binder: L
+    contacts:
+    - - A
+      - 32
+    - - A
+      - 129
+    - - A
+      - 183
+    - - A
+      - 185
+    - - A
+      - 192
+    - - A
+      - 247
+    max_distance: 6.0
+- pocket:
+    binder: T
+    contacts:
+    - - A
+      - 130
+    - - A
+      - 183
+    - - A
+      - 185
+    - - A
+      - 247
+    max_distance: 6.0
