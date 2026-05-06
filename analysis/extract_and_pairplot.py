@@ -49,25 +49,25 @@ VARIANT_NAMES = {
 CHAIN_NAMES = {0: 'A_protein', 1: 'L_substrate', 2: 'S_substrate2', 3: 'T_atp', 4: 'M_mg'}
 
 VARIANT_DATA = {
-    'WT':   {'ki': 18,   'kcat': 0.15, 'km': 2.3,  'kcat_km': 0.066, 'titer': 475},
-    'Y19H': {'ki': None, 'kcat': 0.27, 'km': 0.35, 'kcat_km': 0.78,  'titer': 388},
-    'K22M': {'ki': None, 'kcat': 0.09, 'km': 1.3,  'kcat_km': 0.12,  'titer': 22},
-    'K22Y': {'ki': None, 'kcat': 0.09, 'km': 1.3,  'kcat_km': 0.12,  'titer': 22},
-    'R74G': {'ki': 110,  'kcat': 0.14, 'km': 3.4,  'kcat_km': 0.04,  'titer': 975},
-    'R74H': {'ki': None, 'kcat': 0.33, 'km': 0.75, 'kcat_km': 0.44,  'titer': 770},
-    'I145A': {'ki': None, 'kcat': 0.029,'km': 2.0,  'kcat_km': 0.01,  'titer': 623},
-    'I145F': {'ki': None, 'kcat': 0.28, 'km': 1.36, 'kcat_km': 0.20,  'titer': None},
-    'R147K': {'ki': None, 'kcat': 0.149,'km': 0.5,  'kcat_km': 0.32,  'titer': 793},
-    'S186C': {'ki': None, 'kcat': 0.07, 'km': 0.8,  'kcat_km': 0.08,  'titer': 596},
-    'S208E': {'ki': None, 'kcat': None, 'km': None, 'kcat_km': None,  'titer': None},
-    'T209D': {'ki': None, 'kcat': 0.13, 'km': 0.99, 'kcat_km': 0.13,  'titer': None},
-    'M212Q': {'ki': None, 'kcat': 0.35, 'km': 0.7,  'kcat_km': 0.50,  'titer': 601},
-    'I226V': {'ki': None, 'kcat': 0.16, 'km': 0.34, 'kcat_km': 0.46,  'titer': 633},
-    'V230E': {'ki': 10,   'kcat': 0.07, 'km': 0.8,  'kcat_km': 0.08,  'titer': 278},
-    'R74G-R147K': {'ki': None, 'kcat': 0.22, 'km': 0.53, 'kcat_km': 0.42, 'titer': 909},
-    'HKQ':  {'ki': 80,   'kcat': 0.16, 'km': 0.40, 'kcat_km': 0.40,  'titer': 1079},
-    'GKQ':  {'ki': 11,   'kcat': 0.22, 'km': 0.50, 'kcat_km': 0.50,  'titer': 8},
-    'R74G-R147K-Q140L': {'ki': None, 'kcat': 0.06, 'km': 2.0, 'kcat_km': 0.03, 'titer': 401},
+    'WT':   {'ki': 18,   'kcat': 0.15, 'km': 2.3,  'kcat_km': 0.066, 'titer': 475,  'growth_rate': 0.39},
+    'Y19H': {'ki': None, 'kcat': 0.27, 'km': 0.35, 'kcat_km': 0.78,  'titer': 388,  'growth_rate': 0.22},
+    'K22M': {'ki': None, 'kcat': 0.09, 'km': 1.3,  'kcat_km': 0.12,  'titer': 22,   'growth_rate': None},
+    'K22Y': {'ki': None, 'kcat': 0.09, 'km': 1.3,  'kcat_km': 0.12,  'titer': 22,   'growth_rate': 0.13},
+    'R74G': {'ki': 110,  'kcat': 0.14, 'km': 3.4,  'kcat_km': 0.04,  'titer': 975,  'growth_rate': 0.81},
+    'R74H': {'ki': None, 'kcat': 0.33, 'km': 0.75, 'kcat_km': 0.44,  'titer': 770,  'growth_rate': 0.68},
+    'I145A': {'ki': None, 'kcat': 0.029,'km': 2.0,  'kcat_km': 0.01,  'titer': 623,  'growth_rate': 0.17},
+    'I145F': {'ki': None, 'kcat': 0.28, 'km': 1.36, 'kcat_km': 0.20,  'titer': None, 'growth_rate': None},
+    'R147K': {'ki': None, 'kcat': 0.149,'km': 0.5,  'kcat_km': 0.32,  'titer': 793,  'growth_rate': 0.56},
+    'S186C': {'ki': None, 'kcat': 0.07, 'km': 0.8,  'kcat_km': 0.08,  'titer': 596,  'growth_rate': 0.30},
+    'S208E': {'ki': None, 'kcat': None, 'km': None, 'kcat_km': None,  'titer': None, 'growth_rate': None},
+    'T209D': {'ki': None, 'kcat': 0.13, 'km': 0.99, 'kcat_km': 0.13,  'titer': None, 'growth_rate': None},
+    'M212Q': {'ki': None, 'kcat': 0.35, 'km': 0.7,  'kcat_km': 0.50,  'titer': 601,  'growth_rate': 0.09},
+    'I226V': {'ki': None, 'kcat': 0.16, 'km': 0.34, 'kcat_km': 0.46,  'titer': 633,  'growth_rate': 0.35},
+    'V230E': {'ki': 10,   'kcat': 0.07, 'km': 0.8,  'kcat_km': 0.08,  'titer': 278,  'growth_rate': 0.21},
+    'R74G-R147K': {'ki': None, 'kcat': 0.22, 'km': 0.53, 'kcat_km': 0.42, 'titer': 909, 'growth_rate': 0.84},
+    'HKQ':  {'ki': 80,   'kcat': 0.16, 'km': 0.40, 'kcat_km': 0.40,  'titer': 1079, 'growth_rate': 0.79},
+    'GKQ':  {'ki': 11,   'kcat': 0.22, 'km': 0.50, 'kcat_km': 0.50,  'titer': 8,    'growth_rate': None},
+    'R74G-R147K-Q140L': {'ki': None, 'kcat': 0.06, 'km': 2.0, 'kcat_km': 0.03, 'titer': 401, 'growth_rate': None},
 }
 
 # Also load structural metrics from the four_condition_comparison.json
@@ -165,6 +165,7 @@ def main():
     df_agg['kcat'] = df_agg['variant'].map(lambda v: VARIANT_DATA[v]['kcat'])
     df_agg['km'] = df_agg['variant'].map(lambda v: VARIANT_DATA[v]['km'])
     df_agg['kcat_km'] = df_agg['variant'].map(lambda v: VARIANT_DATA[v]['kcat_km'])
+    df_agg['growth_rate'] = df_agg['variant'].map(lambda v: VARIANT_DATA[v]['growth_rate'])
 
     # Add structural metrics from four_condition_comparison.json
     structural_cols = ['mean_dist', 'std_dist', 'median_dist', 'frac_entrance',
@@ -195,7 +196,7 @@ def main():
         'frac_close', 'mean_contacts', 'mean_entrance_contacts', 'mean_mg_s_dist',
     ]
 
-    experimental_targets = ['titer', 'ki', 'kcat', 'km', 'kcat_km']
+    experimental_targets = ['titer', 'ki', 'kcat', 'km', 'kcat_km', 'growth_rate']
 
     # Available cofolding metrics (some pair_iptm cols may not exist in all conditions)
     available_metrics = [m for m in cofolding_metrics if m in df_agg.columns]
@@ -234,8 +235,18 @@ def main():
                 label_col='variant'
             )
 
+        # --- 4. Pair plot: cofolding metrics vs growth_rate ---
+        df_gr = df_cond.dropna(subset=['growth_rate'])
+        if len(df_gr) >= 4:
+            plot_pairwise_correlations(
+                df_gr, available_metrics, 'growth_rate',
+                f'Cofolding Metrics vs Growth Rate ({condition})',
+                os.path.join(ANALYSIS_DIR, f'pairplot_growth_rate_{condition}.png'),
+                label_col='variant'
+            )
+
     # --- 4. Cross-condition comparison: one big pair plot per experimental target ---
-    for target in ['titer', 'ki']:
+    for target in ['titer', 'ki', 'growth_rate']:
         df_target = df_agg.dropna(subset=[target])
         if len(df_target) >= 4:
             plot_pairwise_correlations_by_condition(
