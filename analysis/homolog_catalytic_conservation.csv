@@ -1,0 +1,94 @@
+rank,name,clean_id,organism,kingdom,seq_identity,frac_entrance,frac_active_site,frac_close,cat_core,atp_bind,sub_anchor,sub_bind,gateway_diff,entrance_diff,pos_18,pos_19,pos_20,pos_22,pos_25,pos_28,pos_72,pos_73,pos_74,pos_120,pos_121,pos_147,pos_153,pos_155,pos_158,pos_208,pos_209,pos_212,pos_302
+1,MDD_Ddis,Q54YQ9,Dictyostelium discoideum,Protozoa,44.0,0.00,0.00,0.00,2,3,2,4,1,4,K,Y,W,K,E,I,A,V,R,S,S,G,S,S,R,S,T,M,D
+2,MDD_Efae,6E2U,Enterococcus faecalis,Bacteria,28.0,0.00,0.00,0.00,2,3,2,4,1,3,K,Y,W,K,E,I,N,E,Q,S,S,R,S,S,R,S,R,M,D
+3,MDD_Ssol,5GMD,Saccharolobus solfataricus,Archaea,32.8,0.00,0.00,0.00,2,3,2,4,2,3,K,Y,W,K,E,N,N,I,V,S,S,K,S,S,R,S,R,M,D
+4,homolog_2HKE,2HKE,Trypanosoma brucei,Protozoa,37.8,0.00,0.00,0.00,2,3,2,4,1,3,K,Y,W,K,T,I,T,P,R,S,S,M,S,S,R,S,T,M,D
+5,homolog_4RKZ,4RKZ,Thermoplasma acidophilum DSM 1728,Archaea,15.3,0.00,0.00,0.00,1,3,2,0,2,4,-,-,-,-,-,N,-,V,R,S,S,N,S,S,R,S,-,-,T
+6,homolog_5WAT,5WAT,Corynebacterium glutamicum,Bacteria,13.4,0.00,0.00,0.00,0,1,1,0,3,2,-,-,-,G,T,G,G,E,-,S,S,-,P,N,A,A,T,-,G
+7,homolog_6ZFH,6ZFH,Homo sapiens,Animal,12.5,0.00,0.00,0.00,0,1,2,0,3,4,Y,N,Q,-,-,V,-,-,-,S,S,-,S,M,I,I,T,-,-
+8,homolog_A6URV6,A6URV6,Methanococcus vannielii SB,Unknown,11.9,0.00,0.00,0.00,0,2,1,2,2,2,K,A,F,K,I,N,N,E,R,S,S,-,-,-,-,S,-,E,E
+9,homolog_A6VQK2,A6VQK2,Actinobacillus succinogenes 130Z,Bacteria,12.8,0.00,0.00,0.00,2,2,1,0,2,1,-,-,I,-,T,N,N,E,R,S,S,D,Q,A,R,S,H,H,D
+10,homolog_A8GBA5,A8GBA5,Serratia proteamaculans 568,Unknown,14.0,0.00,0.00,0.00,1,2,1,1,3,4,K,-,-,-,-,N,Y,Q,T,S,S,-,C,S,-,-,K,-,D
+11,homolog_B2VBV2,B2VBV2,Erwinia tasmaniensis Et1/99,Unknown,14.7,0.00,0.00,0.00,0,3,1,0,2,1,-,-,I,-,T,N,-,E,R,S,S,D,C,S,-,S,T,G,-
+12,homolog_B9K9C8,B9K9C8,Thermotoga neapolitana DSM 4359,Unknown,13.6,0.00,0.00,0.00,0,1,1,0,2,1,-,-,I,-,T,N,N,E,-,S,S,R,I,D,T,-,-,-,-
+13,homolog_C1AKV1,C1AKV1,Mycobacterium tuberculosis variant bovis BCG str. Tokyo 172,Unknown,12.7,0.00,0.00,0.00,1,1,1,0,3,3,-,-,I,-,T,N,-,-,-,A,Y,-,S,S,-,-,-,A,D
+14,homolog_D4GXZ3,D4GXZ3,Haloferax volcanii DS2,Archaea,20.2,0.00,0.00,0.00,1,3,2,2,1,3,K,Y,H,M,T,R,A,E,R,S,S,T,S,S,R,S,-,M,-
+15,homolog_Q0W4U0,Q0W4U0,Methanocella arvoryzae MRE50,Unknown,13.6,0.00,0.00,0.00,0,1,2,1,1,4,K,-,-,-,-,-,I,E,R,S,S,R,S,D,A,-,-,A,-
+16,homolog_Q58504,Q58504,Methanocaldococcus jannaschii DSM 2661,Unknown,12.7,0.00,0.00,0.00,0,1,0,0,3,5,-,-,-,-,-,-,-,-,-,K,N,N,K,V,T,S,-,-,E
+17,homolog_Q6NHU3,Q6NHU3,Corynebacterium diphtheriae NCTC 13129,Bacteria,13.9,0.00,0.00,0.00,1,2,1,0,3,3,-,-,-,G,T,G,G,E,-,S,S,D,Q,S,-,-,-,-,D
+18,homolog_Q87M60,Q87M60,Vibrio parahaemolyticus RIMD 2210633,Unknown,12.8,0.00,0.00,0.00,1,2,1,0,2,3,-,-,I,-,T,N,-,-,R,S,S,E,C,S,R,I,E,F,-
+19,homolog_Q8U0F3,Q8U0F3,Pyrococcus furiosus DSM 3638,Unknown,14.9,0.00,0.00,0.00,1,3,2,2,3,4,V,Y,-,K,-,-,R,E,-,S,S,K,S,S,-,S,-,-,D
+20,homolog_Q97UL5,Q97UL5,Saccharolobus solfataricus P2,Archaea,34.0,0.00,0.00,0.00,2,3,2,4,2,3,K,Y,W,K,E,N,N,I,V,S,S,K,S,S,R,S,R,M,D
+21,MDD_Saur,2HK2,Staphylococcus aureus,Bacteria,27.5,0.00,0.02,0.02,2,3,2,4,1,5,K,Y,W,K,E,I,-,-,-,S,S,R,S,S,R,S,R,M,D
+22,homolog_3QT6,3QT6,Staphylococcus epidermidis,Bacteria,28.9,0.02,0.00,0.02,2,3,2,4,1,4,K,Y,W,K,E,I,N,-,-,S,S,R,S,S,R,S,R,M,D
+23,homolog_5V2L,5V2L,Enterococcus faecalis V583,Bacteria,26.7,0.02,0.00,0.02,2,3,2,4,1,3,K,Y,W,K,E,I,N,E,Q,S,S,R,S,S,R,S,R,M,D
+24,homolog_A5IMZ6,A5IMZ6,Thermotoga petrophila RKU-1,Unknown,14.7,0.02,0.00,0.02,1,1,1,0,2,0,-,-,I,-,T,N,N,E,-,S,S,R,I,D,T,-,T,S,D
+25,homolog_A6UV93,A6UV93,Methanococcus aeolicus Nankai-3,Unknown,13.5,0.02,0.00,0.02,1,1,1,1,3,3,G,Y,F,-,L,N,-,E,N,S,S,-,-,Y,-,-,-,E,D
+26,homolog_B0R6D7,B0R6D7,Halobacterium salinarum R1,Unknown,14.3,0.02,0.00,0.02,1,2,2,0,2,3,-,-,-,-,T,N,-,T,V,S,S,R,S,V,A,S,-,-,D
+27,homolog_B4F0A6,B4F0A6,Proteus mirabilis HI4320,Unknown,12.2,0.02,0.00,0.02,0,2,1,0,2,2,-,-,P,-,-,N,N,I,R,S,S,-,-,K,E,S,T,Q,-
+28,homolog_C3MU21,C3MU21,Saccharolobus islandicus M.14.25,Archaea,11.7,0.02,0.00,0.02,0,2,2,1,2,4,-,Y,-,-,-,-,I,E,-,S,S,R,S,S,A,-,-,N,R
+29,homolog_C3PFP1,C3PFP1,Corynebacterium aurimucosum ATCC 700975,Bacteria,13.0,0.02,0.00,0.02,1,2,2,0,3,3,-,-,-,G,T,-,G,E,G,S,S,E,S,S,-,-,-,R,D
+30,homolog_C4LB24,C4LB24,Tolumonas auensis DSM 9187,Unknown,12.2,0.02,0.00,0.02,2,1,2,0,3,2,-,-,I,-,T,N,-,-,-,S,S,-,S,H,R,-,T,E,D
+31,homolog_P56838,P56838,Thermotoga maritima MSB8,Unknown,14.5,0.02,0.00,0.02,1,2,1,0,3,1,-,-,I,-,T,N,N,E,-,S,S,K,-,E,E,S,R,E,D
+32,homolog_8AOZ,8AOZ,Streptomyces kaniharaensis,Unknown,11.6,0.04,0.00,0.04,0,1,1,0,2,4,-,-,-,-,-,-,-,-,-,-,-,R,S,S,L,L,T,R,E
+33,homolog_A0KQH8,A0KQH8,Aeromonas hydrophila subsp. hydrophila ATCC 7966,Unknown,12.9,0.04,0.00,0.04,1,1,2,0,3,2,-,-,I,-,T,N,-,-,-,S,S,-,S,H,R,N,T,R,-
+34,homolog_A7Z8E0,A7Z8E0,Bacillus velezensis FZB42,Bacteria,13.8,0.04,0.00,0.04,0,1,1,0,3,4,-,-,-,-,-,-,N,L,I,S,S,H,E,N,A,-,-,-,G
+35,homolog_B1LCQ5,B1LCQ5,Thermotoga sp. RQ2,Unknown,15.0,0.04,0.00,0.04,1,1,1,0,2,0,-,-,I,-,T,N,N,E,-,S,S,R,I,D,T,-,T,S,D
+36,MPD_Ather,6N0X,Anaerolinea thermophila,Bacteria,31.7,0.00,0.06,0.06,2,3,2,3,1,4,K,Y,W,N,A,R,L,K,R,S,S,R,S,S,R,S,T,H,D
+37,homolog_1FWK,1FWK,Methanocaldococcus jannaschii,Unknown,11.9,0.06,0.00,0.06,0,1,0,0,3,5,-,-,-,-,-,-,-,-,-,K,N,N,K,V,T,S,-,-,E
+38,homolog_A7FKP2,A7FKP2,Yersinia pseudotuberculosis IP 31758,Unknown,14.0,0.06,0.00,0.06,0,1,1,1,3,3,-,-,-,K,T,-,Y,E,T,S,S,-,-,E,E,N,I,-,A
+39,homolog_A7MV01,A7MV01,Vibrio campbellii ATCC BAA-1116,Unknown,13.9,0.06,0.00,0.06,1,2,1,1,2,3,V,A,A,K,-,N,-,-,R,S,S,E,C,S,R,-,T,E,-
+40,homolog_Q751D8,Q751D8,Eremothecium gossypii ATCC 10895,Fungi,68.8,0.00,0.06,0.06,2,3,2,4,1,2,K,Y,W,K,S,N,N,A,R,S,S,K,S,S,R,S,T,M,D
+41,homolog_6N0Y,6N0Y,Anaerolinea thermophila UNI-1,Bacteria,32.3,0.02,0.08,0.10,2,3,2,3,1,4,K,Y,W,N,A,R,L,K,R,S,S,R,S,S,R,S,T,H,D
+42,homolog_Q1C960,Q1C960,Yersinia pestis Antiqua,Unknown,13.8,0.10,0.00,0.10,0,1,1,1,3,3,-,-,-,K,T,-,Y,E,T,S,S,-,-,E,E,N,I,-,A
+43,homolog_Q4WNV9,Q4WNV9,Aspergillus fumigatus Af293,Fungi,55.4,0.08,0.02,0.10,2,3,2,4,0,3,K,Y,W,K,A,N,S,K,R,S,S,R,S,S,R,S,T,M,D
+44,homolog_Q6KZB1,Q6KZB1,Picrophilus oshimae DSM 9789,Archaea,15.0,0.10,0.00,0.10,1,2,2,0,1,3,-,-,G,I,-,N,H,E,R,S,S,R,S,S,R,-,-,-,-
+45,homolog_3F0N,3F0N,Mus musculus,Animal,44.9,0.00,0.12,0.12,2,3,2,4,1,4,K,Y,W,K,E,I,Q,P,R,S,S,E,S,S,R,S,T,M,D
+46,homolog_6N0Z,6N0Z,Anaerolinea thermophila UNI-1,Bacteria,32.7,0.00,0.14,0.14,2,3,2,4,0,4,K,Y,W,K,A,R,L,K,R,S,S,R,S,S,R,S,T,M,D
+47,homolog_Q65UV5,Q65UV5,[Mannheimia] succiniciproducens MBEL55E,Unknown,13.9,0.14,0.00,0.14,2,2,1,0,3,2,-,-,I,-,T,N,-,E,-,S,S,L,C,S,R,-,-,-,D
+48,homolog_Q9Y946,Q9Y946,Aeropyrum pernix K1,Unknown,10.9,0.14,0.00,0.14,0,2,1,0,3,4,A,A,I,R,-,-,-,-,-,S,S,-,P,S,E,L,T,V,S
+49,homolog_A1JRX5,A1JRX5,Yersinia enterocolitica subsp. enterocolitica 8081,Unknown,14.9,0.16,0.00,0.16,0,2,1,1,2,2,K,A,P,-,T,N,Y,V,R,S,S,-,-,E,E,S,T,Q,-
+50,homolog_A4W899,A4W899,Enterobacter sp. 638,Unknown,14.5,0.12,0.06,0.18,0,1,1,0,3,2,-,-,I,-,T,N,A,H,D,S,S,-,-,E,E,R,T,-,-
+51,homolog_B8F7C7,B8F7C7,Glaesserella parasuis SH0165,Unknown,13.6,0.18,0.00,0.18,2,2,1,0,2,2,-,-,I,-,T,N,Q,E,R,S,S,L,C,S,R,P,E,Q,D
+52,homolog_B8GCS2,B8GCS2,Chloroflexus aggregans DSM 9485,Unknown,12.8,0.18,0.00,0.18,0,2,1,2,3,2,R,Y,F,K,T,N,-,E,-,S,S,E,Q,-,H,S,-,V,-
+53,homolog_Q4JU24,Q4JU24,Corynebacterium jeikeium K411,Bacteria,10.8,0.18,0.00,0.18,0,1,0,1,3,4,-,-,H,K,-,-,E,E,V,G,S,D,L,-,-,-,K,-,-
+54,homolog_Q7MI80,Q7MI80,Vibrio vulnificus YJ016,Unknown,12.4,0.18,0.00,0.18,1,2,1,1,2,4,V,A,A,K,-,N,-,-,R,S,S,E,C,S,R,I,E,F,-
+55,homolog_4RKS,4RKS,Thermoplasma acidophilum DSM 1728,Archaea,16.3,0.02,0.20,0.22,1,3,2,0,2,4,-,-,-,-,-,N,D,N,R,S,S,N,S,S,R,S,-,-,T
+56,homolog_C0PWW2,C0PWW2,Salmonella enterica subsp. enterica serovar Paratyphi C str. RKS4594,Unknown,14.2,0.24,0.00,0.24,1,2,1,0,2,2,-,-,I,-,T,N,N,D,R,S,S,-,C,S,R,-,-,-,-
+57,homolog_Q9KRP1,Q9KRP1,Vibrio cholerae O1 biovar El Tor str. N16961,Unknown,14.7,0.24,0.00,0.24,1,1,2,0,3,1,-,-,I,-,T,N,N,-,D,S,S,-,S,Q,R,-,T,A,-
+58,MDD_Sepi,4DPU,Staphylococcus epidermidis,Bacteria,27.6,0.08,0.18,0.26,2,2,2,4,1,4,K,Y,W,K,E,I,N,-,-,S,S,R,S,S,R,A,R,M,D
+59,homolog_A5UZX0,A5UZX0,Roseiflexus sp. RS-1,Bacteria,15.8,0.24,0.02,0.26,1,1,1,0,2,2,-,-,I,-,T,N,I,E,R,S,S,L,A,H,R,-,-,D,L
+60,homolog_B2J0A5,B2J0A5,Nostoc punctiforme PCC 73102,Unknown,13.9,0.26,0.00,0.26,0,0,1,0,3,3,E,I,I,D,G,E,N,V,P,S,N,-,-,-,-,A,T,E,-
+61,homolog_B5ETC9,B5ETC9,Aliivibrio fischeri MJ11,Unknown,13.3,0.20,0.06,0.26,1,2,1,0,3,1,Q,A,P,-,-,N,N,E,I,S,S,-,C,S,R,N,T,E,E
+62,homolog_Q0P570,Q0P570,Bos taurus,Animal,44.9,0.04,0.22,0.26,2,3,2,4,1,4,K,Y,W,K,E,I,H,P,R,S,S,E,S,S,R,S,T,M,D
+63,homolog_Q12XK2,Q12XK2,Methanococcoides burtonii DSM 6242,Unknown,11.7,0.26,0.00,0.26,1,1,1,1,2,4,K,-,-,G,-,-,I,E,R,S,S,-,-,-,-,-,-,-,D
+64,homolog_A5UDQ5,A5UDQ5,Haemophilus influenzae PittEE,Unknown,13.0,0.28,0.00,0.28,1,2,1,0,3,2,-,-,I,-,T,N,-,E,K,S,S,D,C,S,R,V,E,F,L
+65,homolog_3LTO,3LTO,Legionella pneumophila subsp. pneumophila str. Philadelphia 1,Bacteria,27.1,0.08,0.28,0.36,2,3,2,3,3,4,K,Y,M,K,E,N,-,-,-,S,S,Q,S,S,R,S,R,H,D
+66,homolog_A7NI09,A7NI09,Roseiflexus castenholzii DSM 13941,Bacteria,15.5,0.36,0.00,0.36,1,1,1,0,2,2,-,-,I,-,T,N,I,E,R,S,S,L,A,H,R,-,-,D,L
+67,homolog_B7LK02,B7LK02,Escherichia fergusonii ATCC 35469,Unknown,13.7,0.36,0.00,0.36,1,2,1,0,3,1,-,-,I,-,T,N,Y,E,-,S,S,-,C,S,R,N,T,Q,-
+68,homolog_P94169,P94169,Actinobacillus pleuropneumoniae,Bacteria,13.2,0.40,0.00,0.40,1,2,1,0,3,2,-,-,I,-,T,N,-,E,K,S,S,L,C,S,R,-,-,-,-
+69,homolog_Q6BY07,Q6BY07,Debaryomyces hansenii CBS767,Fungi,64.8,0.02,0.38,0.40,2,3,2,4,1,2,K,Y,W,K,K,N,S,E,R,S,S,K,S,S,R,S,T,M,D
+70,homolog_Q739T5,Q739T5,Bacillus cereus ATCC 10987,Bacteria,13.0,0.34,0.08,0.42,0,1,1,1,3,4,H,V,V,K,E,N,-,-,P,S,S,Q,E,V,A,-,-,-,G
+71,MDD_Cneo,6XR5,Cryptococcus neoformans,Fungi,50.7,0.08,0.36,0.44,2,3,2,4,1,2,K,Y,W,K,T,I,K,E,R,S,S,L,S,S,R,S,T,M,D
+72,homolog_B7ULN0,B7ULN0,Escherichia coli O127:H6 str. E2348/69,Unknown,13.6,0.44,0.00,0.44,1,2,1,0,3,1,-,-,I,-,T,N,H,E,N,S,S,-,C,S,R,N,T,Q,-
+73,homolog_Q32IG8,Q32IG8,Shigella dysenteriae Sd197,Unknown,14.1,0.44,0.00,0.44,1,2,1,0,3,1,-,-,I,-,T,N,H,E,N,S,S,-,C,S,R,N,T,E,-
+74,homolog_3QT8,3QT8,Staphylococcus epidermidis,Bacteria,28.1,0.26,0.20,0.46,2,2,2,4,1,4,K,Y,W,K,E,I,N,-,-,S,S,R,S,S,R,A,R,M,D
+75,homolog_Q324G2,Q324G2,Shigella boydii Sb227,Unknown,13.6,0.46,0.00,0.46,2,2,1,0,3,1,-,-,I,-,T,N,H,E,N,S,S,-,C,S,R,N,T,Q,D
+76,homolog_Q97BM8,Q97BM8,Thermoplasma volcanium GSS1,Archaea,17.2,0.16,0.30,0.46,2,2,2,1,3,3,K,F,L,Y,V,R,N,E,D,S,S,K,S,S,R,-,-,-,D
+77,MDD_Hsap,3D4J,Homo sapiens,Animal,44.4,0.06,0.42,0.48,2,3,2,4,1,4,K,Y,W,K,E,V,Q,P,R,S,S,E,S,S,R,S,T,M,D
+78,homolog_P53602,P53602,Homo sapiens,Animal,44.7,0.14,0.34,0.48,2,3,2,4,1,4,K,Y,W,K,E,V,Q,P,R,S,S,E,S,S,R,S,T,M,D
+79,homolog_P57899,P57899,Pasteurella multocida subsp. multocida str. Pm70,Unknown,13.8,0.52,0.00,0.52,1,2,1,0,3,2,-,-,I,-,T,N,-,E,-,S,S,L,C,S,-,-,-,-,D
+80,homolog_Q0T6Y7,Q0T6Y7,Shigella flexneri 5 str. 8401,Unknown,13.4,0.52,0.00,0.52,1,2,1,0,3,1,-,-,I,-,T,N,H,E,N,S,S,-,C,S,R,N,T,Q,-
+81,homolog_Q3Z453,Q3Z453,Shigella sonnei Ss046,Unknown,13.7,0.54,0.00,0.54,1,2,1,0,3,1,-,-,I,-,T,N,H,E,N,S,S,-,C,S,R,N,T,Q,-
+82,homolog_I1S130,I1S130,Fusarium graminearum PH-1,Fungi,57.2,0.10,0.54,0.64,2,3,2,4,1,3,K,Y,W,K,A,N,G,A,R,S,S,L,S,S,R,S,T,M,D
+83,homolog_G9BIY1,G9BIY1,Ganoderma lucidum,Fungi,49.6,0.18,0.48,0.66,2,3,2,4,0,3,K,Y,W,K,T,I,G,G,R,S,S,R,S,S,R,S,T,M,D
+84,homolog_A0A1D8PC43,A0A1D8PC43,Candida albicans SC5314,Fungi,63.7,0.00,0.68,0.68,2,3,2,4,1,3,K,Y,W,K,K,N,T,P,R,S,S,K,S,S,R,S,T,M,D
+85,MDD_Spombe,O13963,Schizosaccharomyces pombe,Fungi,54.9,0.50,0.22,0.72,2,3,2,4,0,2,K,Y,W,K,V,N,N,K,R,S,S,R,S,S,R,S,T,M,D
+86,homolog_A7MIX5,A7MIX5,Cronobacter sakazakii ATCC BAA-894,Unknown,13.2,0.72,0.00,0.72,1,1,1,0,3,3,-,-,I,-,T,N,S,Q,Q,S,S,-,K,H,R,L,D,-,-
+87,homolog_A9WB97,A9WB97,Chloroflexus aurantiacus J-10-fl,Unknown,12.6,0.72,0.08,0.80,2,2,1,0,2,4,Y,N,D,D,T,A,Q,F,D,S,S,-,A,H,R,S,D,M,D
+88,homolog_A8AJ37,A8AJ37,Citrobacter koseri ATCC BAA-895,Unknown,14.3,0.80,0.02,0.82,1,2,1,0,3,2,-,-,I,-,T,N,N,-,-,S,S,-,C,S,R,-,-,-,-
+89,homolog_Q5U403,Q5U403,Danio rerio,Animal,44.0,0.02,0.82,0.84,2,3,2,4,1,4,K,Y,W,K,E,I,H,P,R,S,S,G,S,S,R,S,T,M,D
+90,MDD_Spyo,2GS8,Streptococcus pyogenes,Bacteria,23.4,0.32,0.54,0.86,2,3,2,4,2,5,K,Y,W,K,Q,M,-,-,-,S,S,A,S,S,R,S,R,M,D
+91,homolog_6E2T,6E2T,Enterococcus faecalis,Bacteria,25.9,0.60,0.32,0.92,2,3,2,4,1,3,K,Y,W,K,E,I,N,E,Q,S,S,R,S,S,R,S,R,M,D
+92,homolog_7T71,7T71,Picrophilus oshimae DSM 9789,Archaea,17.7,0.92,0.02,0.94,2,3,1,1,2,2,K,F,L,D,-,N,N,E,R,E,S,Y,S,S,R,S,-,-,D
+93,homolog_P72663,P72663,Synechocystis sp. PCC 6803 substr. Kazusa,Unknown,14.7,0.90,0.08,0.98,0,2,0,0,3,4,E,I,L,D,H,V,N,-,-,G,S,Q,L,S,P,-,-,N,-
