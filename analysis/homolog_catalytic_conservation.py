@@ -280,37 +280,37 @@ def main():
     print(f"    (excluded {len(non_mva)} non-mevalonate GHMP kinases: "
           f"{', '.join(f'{f}={c}' for f, c in Counter(r['family'] for r in non_mva).most_common())})\n")
 
-    header = (f"{'Name':<25} {'Family':<6} {'Kingdom':<10} {'SeqID':>5} {'Close%':>6} "
+    header = (f"{'Name':<25} {'Family':<6} {'Kingdom':<10} {'SeqID':>5} {'Ent%':>5} {'Act%':>5} "
               f"{'Cat':>3} {'ATP':>3} {'Anc':>3} {'Sub':>3} {'GwDiff':>6} "
               f"  R74  R147 M212   T25  N28  N72  G73 T209")
-    print(header)
-    print("-" * len(header))
 
-    for r in sorted(mva_results, key=lambda x: float(x['frac_close'])):
-        gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
-        ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
-        print(f"{r['name']:<25} {r['family']:<6} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
-              f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
-              f"{r['gateway_diff']:>4}/3{gw}{ent}")
+    def print_table(rows):
+        print(header)
+        print("-" * len(header))
+        for r in sorted(rows, key=lambda x: float(x['frac_entrance'])):
+            gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
+            ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
+            print(f"{r['name']:<25} {r['family']:<6} {r['kingdom']:<10} {r['seq_identity']:>5} "
+                  f"{r['frac_entrance']:>5} {r['frac_active_site']:>5} "
+                  f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
+                  f"{r['gateway_diff']:>4}/3{gw}{ent}")
+
+    print_table(mva_results)
+
+    print(f"\n  Reference: PMDsc WT  entrance=0.28, active_site=0.04")
+    print(f"  Reference: PMDsc HKQ entrance=0.02, active_site=0.00")
 
     # MDD-only view
     mdd_results = [r for r in results if r['family'] == 'MDD']
     print(f"\n=== MDD ONLY (same enzyme class as PMDsc): {len(mdd_results)} ===\n")
-    print(header)
-    print("-" * len(header))
-    for r in sorted(mdd_results, key=lambda x: float(x['frac_close'])):
-        gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
-        ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
-        print(f"{r['name']:<25} {r['family']:<6} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
-              f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
-              f"{r['gateway_diff']:>4}/3{gw}{ent}")
+    print_table(mdd_results)
 
     # --- Figure: heatmap of mevalonate pathway enzymes ---
     if not mva_results:
         print("\nNo mevalonate pathway enzymes found - no figure generated.")
         return
 
-    fig_data = sorted(mva_results, key=lambda x: float(x['frac_close']))
+    fig_data = sorted(mva_results, key=lambda x: (float(x['frac_entrance']), float(x['frac_active_site'])))
     n_rows = len(fig_data)
     n_cols = len(ALL_POSITIONS)
 
@@ -352,11 +352,11 @@ def main():
                         fontweight='bold', color='#d62728',
                         bbox=dict(boxstyle='round,pad=0.25', facecolor='#f8d7da', alpha=0.9))
 
-    # Annotations on right side
     for i, r in enumerate(fig_data):
         y = n_rows - 1 - i
-        ax.text(n_cols + 0.3, y, f"close={r['frac_close']}", fontsize=7,
-                va='center', ha='left', color='#555555')
+        ax.text(n_cols + 0.3, y,
+                f"ent={r['frac_entrance']} act={r['frac_active_site']}",
+                fontsize=6, va='center', ha='left', color='#555555')
 
     row_labels = ['PMDsc WT'] + [
         f"[{r['family']}] {r['name'].replace('homolog_','').replace('MDD_','').replace('MPD_','')} "
