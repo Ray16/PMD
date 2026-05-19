@@ -305,6 +305,23 @@ def main():
     print(f"\n=== MDD ONLY (same enzyme class as PMDsc): {len(mdd_results)} ===\n")
     print_table(mdd_results)
 
+    # Save filtered CSVs
+    mva_csv = os.path.join(ANALYSIS_DIR, 'homolog_mevalonate_enzymes.csv')
+    with open(mva_csv, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
+        writer.writeheader()
+        for r in sorted(mva_results, key=lambda x: (float(x['frac_entrance']), float(x['frac_active_site']))):
+            writer.writerow(r)
+    print(f"\nSaved mevalonate pathway enzymes: {mva_csv} ({len(mva_results)} entries)")
+
+    mdd_csv = os.path.join(ANALYSIS_DIR, 'homolog_mdd_only.csv')
+    with open(mdd_csv, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
+        writer.writeheader()
+        for r in sorted(mdd_results, key=lambda x: (float(x['frac_entrance']), float(x['frac_active_site']))):
+            writer.writerow(r)
+    print(f"Saved MDD-only list: {mdd_csv} ({len(mdd_results)} entries)")
+
     # --- Figure: heatmap of mevalonate pathway enzymes ---
     if not mva_results:
         print("\nNo mevalonate pathway enzymes found - no figure generated.")
