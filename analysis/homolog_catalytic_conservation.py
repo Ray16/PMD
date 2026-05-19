@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """Re-filter homologs by proper catalytic vs binding vs gateway conservation.
 
-Classifies residues into functional groups and checks which homologs
-conserve the catalytic machinery while varying at gateway/entrance positions.
+Classifies residues into functional groups, identifies enzyme family via
+UniProt/PDB metadata, and checks which true MDD/MPD homologs conserve
+the catalytic machinery while varying at gateway/entrance positions.
 """
 
 import os
+import re
 import csv
+import json
 import yaml
 import numpy as np
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.request import urlopen, Request
+from urllib.error import URLError
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -16,6 +23,105 @@ from Bio.Align import PairwiseAligner
 
 ANALYSIS_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(os.path.dirname(ANALYSIS_DIR), 'structures', 'homologs', 'cofold_configs')
+
+EC_TO_FAMILY = {
+    '4.1.1.33': 'MDD',
+    '4.1.1.99': 'MPD',
+    '4.1.1.110': 'MBD',
+    '2.7.1.185': 'M3K',
+    '2.7.1.6': 'GalK',
+    '2.7.1.39': 'HSK',
+    '2.7.1.36': 'MVK',
+    '2.7.1.71': 'SHK',
+    '2.7.1.148': 'IspE',
+}
+
+PDB_TITLE_PATTERNS = {
+    'mevalonate diphosphate decarboxylase': 'MDD',
+    'mevalonate pyrophosphate decarboxylase': 'MDD',
+    'diphosphomevalonate decarboxylase': 'MDD',
+    'mevalonate 5-phosphate decarboxylase': 'MPD',
+    'phosphomevalonate decarboxylase': 'MPD',
+    'mevalonate-3-kinase': 'M3K',
+    'mevalonate 3,5-bisphosphate decarboxylase': 'MBD',
+    'homoserine kinase': 'HSK',
+    'galactokinase': 'GalK',
+    'shikimate kinase': 'SHK',
+    'mevalonate kinase': 'MVK',
+    'diphosphocytidyl': 'IspE',
+}
+
+MEVALONATE_FAMILIES = {'MDD', 'MPD', 'MBD', 'M3K'}
+
+
+def _fetch_json(url, timeout=10):
+    try:
+        req = Request(url, headers={'Accept': 'application/json'})
+        with urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read())
+    except (URLError, json.JSONDecodeError, OSError):
+        return None
+
+
+def query_uniprot_family(accession):
+    """Query UniProt REST API for EC number and return family classification."""
+    data = _fetch_json(f'https://rest.uniprot.org/uniprotkb/{accession}.json')
+    if not data:
+        return 'unknown'
+    rec = data.get('proteinDescription', {}).get('recommendedName', {})
+    for ec_entry in rec.get('ecNumbers', []):
+        ec = ec_entry.get('value', '')
+        if ec in EC_TO_FAMILY:
+            return EC_TO_FAMILY[ec]
+    name = rec.get('fullName', {}).get('value', '')
+    if not name:
+        subs = data.get('proteinDescription', {}).get('submissionNames', [])
+        if subs:
+            name = subs[0].get('fullName', {}).get('value', '')
+    name_lower = name.lower()
+    for pattern, family in PDB_TITLE_PATTERNS.items():
+        if pattern in name_lower:
+            return family
+    return 'unknown'
+
+
+def query_pdb_family(pdb_id):
+    """Query RCSB PDB REST API for structure title and infer family."""
+    data = _fetch_json(f'https://data.rcsb.org/rest/v1/core/entry/{pdb_id}')
+    if not data:
+        return 'unknown'
+    title = data.get('struct', {}).get('title', '').lower()
+    for pattern, family in PDB_TITLE_PATTERNS.items():
+        if pattern in title:
+            return family
+    return 'unknown'
+
+
+def is_pdb_id(clean_id):
+    return bool(re.match(r'^[0-9][A-Za-z0-9]{3}$', clean_id))
+
+
+def classify_families(clean_ids):
+    """Classify all IDs in parallel, querying UniProt or PDB as appropriate."""
+    results = {}
+
+    def _classify(cid):
+        if is_pdb_id(cid):
+            return cid, query_pdb_family(cid)
+        else:
+            return cid, query_uniprot_family(cid)
+
+    print("Querying UniProt/PDB for enzyme family classifications...")
+    with ThreadPoolExecutor(max_workers=15) as executor:
+        futures = {executor.submit(_classify, cid): cid for cid in clean_ids}
+        for future in as_completed(futures):
+            cid, family = future.result()
+            results[cid] = family
+
+    counts = Counter(results.values())
+    print(f"  Classified {len(results)} entries: "
+          f"{', '.join(f'{f}={c}' for f, c in counts.most_common())}\n")
+    return results
 
 PMDSC_SEQ = (
     "MTVYTASVTAPVNIATLKYWGKRDTKLNLPTNSSISVTLSQDDLRTLTSAATAPEFERDTLWLNGEPHSIDNERTQNCLRDLR"
@@ -109,6 +215,9 @@ def main():
             homologs.append(row)
     print(f"Loaded {len(homologs)} homologs from entrance analysis\n")
 
+    all_clean_ids = list(set(h['clean_id'] for h in homologs))
+    family_map = classify_families(all_clean_ids)
+
     results = []
     for h in homologs:
         name = h['name']
@@ -125,6 +234,7 @@ def main():
             continue
 
         row = dict(h)
+        row['family'] = family_map.get(h['clean_id'], 'unknown')
         row['cat_core'] = count_conserved(mapped, CATALYTIC_CORE)
         row['atp_bind'] = count_conserved(mapped, ATP_BINDING)
         row['sub_anchor'] = count_conserved(mapped, SUBSTRATE_ANCHORING)
@@ -137,10 +247,18 @@ def main():
 
     print(f"Successfully aligned: {len(results)}\n")
 
+    # --- Family breakdown ---
+    family_counts = Counter(r['family'] for r in results)
+    print("=== ENZYME FAMILY BREAKDOWN (from UniProt/PDB metadata) ===\n")
+    for fam, count in family_counts.most_common():
+        marker = " <-- mevalonate pathway" if fam in MEVALONATE_FAMILIES else ""
+        print(f"  {fam:<8} {count:>3}{marker}")
+    print()
+
     # Save CSV
     pos_cols = [f'pos_{p}' for p in ALL_POSITIONS]
     fieldnames = [
-        'rank', 'name', 'clean_id', 'organism', 'kingdom', 'seq_identity',
+        'rank', 'name', 'clean_id', 'family', 'organism', 'kingdom', 'seq_identity',
         'frac_entrance', 'frac_active_site', 'frac_close',
         'cat_core', 'atp_bind', 'sub_anchor', 'sub_bind',
         'gateway_diff', 'entrance_diff',
@@ -154,46 +272,45 @@ def main():
             writer.writerow(r)
     print(f"Saved CSV: {out_csv}\n")
 
-    # --- Console output ---
+    # --- Family-filtered analysis ---
+    mva_results = [r for r in results if r['family'] in MEVALONATE_FAMILIES]
+    non_mva = [r for r in results if r['family'] not in MEVALONATE_FAMILIES]
 
-    # Filter: catalytic core conserved (D302 + R158)
-    core_pass = [r for r in results if r['cat_core'] == 2]
-    print(f"=== HOMOLOGS WITH CATALYTIC CORE CONSERVED (D302 + R158): {len(core_pass)}/{len(results)} ===\n")
+    print(f"=== MEVALONATE PATHWAY ENZYMES ONLY: {len(mva_results)}/{len(results)} ===")
+    print(f"    (excluded {len(non_mva)} non-mevalonate GHMP kinases: "
+          f"{', '.join(f'{f}={c}' for f, c in Counter(r['family'] for r in non_mva).most_common())})\n")
 
-    header = (f"{'Name':<25} {'Kingdom':<10} {'SeqID':>5} {'Close%':>6} "
+    header = (f"{'Name':<25} {'Family':<6} {'Kingdom':<10} {'SeqID':>5} {'Close%':>6} "
               f"{'Cat':>3} {'ATP':>3} {'Anc':>3} {'Sub':>3} {'GwDiff':>6} "
               f"  R74  R147 M212   T25  N28  N72  G73 T209")
     print(header)
     print("-" * len(header))
 
-    for r in sorted(core_pass, key=lambda x: float(x['frac_close'])):
+    for r in sorted(mva_results, key=lambda x: float(x['frac_close'])):
         gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
         ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
-        print(f"{r['name']:<25} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
+        print(f"{r['name']:<25} {r['family']:<6} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
               f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
               f"{r['gateway_diff']:>4}/3{gw}{ent}")
 
-    # Further filter: core + ATP + anchoring
-    full_machinery = [r for r in core_pass
-                      if r['atp_bind'] >= 2 and r['sub_anchor'] >= 1]
-    print(f"\n=== FURTHER FILTER: core + >=2/3 ATP + >=1/2 anchoring: {len(full_machinery)} ===\n")
+    # MDD-only view
+    mdd_results = [r for r in results if r['family'] == 'MDD']
+    print(f"\n=== MDD ONLY (same enzyme class as PMDsc): {len(mdd_results)} ===\n")
+    print(header)
+    print("-" * len(header))
+    for r in sorted(mdd_results, key=lambda x: float(x['frac_close'])):
+        gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
+        ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
+        print(f"{r['name']:<25} {r['family']:<6} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
+              f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
+              f"{r['gateway_diff']:>4}/3{gw}{ent}")
 
-    if full_machinery:
-        print(header)
-        print("-" * len(header))
-        for r in sorted(full_machinery, key=lambda x: float(x['frac_close'])):
-            gw = f"  {r['pos_74']:>3}  {r['pos_147']:>3} {r['pos_212']:>3}"
-            ent = f"   {r['pos_25']:>3}  {r['pos_28']:>3}  {r['pos_72']:>3}  {r['pos_73']:>3} {r['pos_209']:>3}"
-            print(f"{r['name']:<25} {r['kingdom']:<10} {r['seq_identity']:>5} {r['frac_close']:>6} "
-                  f"{r['cat_core']:>1}/2 {r['atp_bind']:>1}/3 {r['sub_anchor']:>1}/2 {r['sub_bind']:>1}/4 "
-                  f"{r['gateway_diff']:>4}/3{gw}{ent}")
-
-    # --- Figure: heatmap of core-passing homologs ---
-    if not core_pass:
-        print("\nNo homologs pass catalytic core filter - no figure generated.")
+    # --- Figure: heatmap of mevalonate pathway enzymes ---
+    if not mva_results:
+        print("\nNo mevalonate pathway enzymes found - no figure generated.")
         return
 
-    fig_data = sorted(core_pass, key=lambda x: float(x['frac_close']))
+    fig_data = sorted(mva_results, key=lambda x: float(x['frac_close']))
     n_rows = len(fig_data)
     n_cols = len(ALL_POSITIONS)
 
@@ -242,7 +359,7 @@ def main():
                 va='center', ha='left', color='#555555')
 
     row_labels = ['PMDsc WT'] + [
-        f"{r['name'].replace('homolog_','').replace('MDD_','').replace('MPD_','')} "
+        f"[{r['family']}] {r['name'].replace('homolog_','').replace('MDD_','').replace('MPD_','')} "
         f"({r['kingdom']}, {r['seq_identity']}%)"
         for r in fig_data
     ]
@@ -272,7 +389,7 @@ def main():
     ax.legend(handles=legend_elements, loc='upper right', fontsize=7, ncol=2,
               title='Residue group', title_fontsize=8)
 
-    ax.set_title('Homologs with Catalytic Core Conserved (D302 + R158)\n'
+    ax.set_title('Mevalonate Pathway Enzymes (MDD/MPD/MBD/M3K) — Functional Residue Conservation\n'
                  'Green = matches PMDsc, Red = differs. Sorted by close binding fraction.',
                  fontsize=12, fontweight='bold', pad=15)
 
