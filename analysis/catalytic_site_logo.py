@@ -264,7 +264,7 @@ def make_logo(alignment_rows, positions, labels, title, outpath,
                  bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
     fig.tight_layout()
-    fig.savefig(outpath, dpi=200, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"Saved {outpath}")
 
@@ -333,7 +333,7 @@ def make_conservation_by_kingdom(alignment_rows, positions, labels):
                  fontsize=13, fontweight='bold', y=1.01)
     fig.tight_layout()
     outpath = os.path.join(ANALYSIS_DIR, 'catalytic_conservation_by_kingdom.png')
-    fig.savefig(outpath, dpi=200, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"Saved {outpath}")
 

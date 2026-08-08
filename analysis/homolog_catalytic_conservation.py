@@ -412,7 +412,7 @@ def main():
 
     fig.tight_layout()
     fig_path = os.path.join(ANALYSIS_DIR, 'homolog_catalytic_filter.png')
-    fig.savefig(fig_path, dpi=200, bbox_inches='tight')
+    fig.savefig(fig_path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"\nSaved figure: {fig_path}")
 

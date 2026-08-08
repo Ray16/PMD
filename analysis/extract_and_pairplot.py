@@ -312,7 +312,7 @@ def plot_pairwise_correlations(df, metrics, target, title, outpath, label_col='v
 
     fig.suptitle(title, fontsize=12, fontweight='bold', y=1.01)
     fig.tight_layout()
-    fig.savefig(outpath, dpi=150, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"  Saved {outpath}")
 
@@ -365,7 +365,7 @@ def plot_pairwise_correlations_by_condition(df, metrics, target, title, outpath)
     fig.legend(handles=handles, loc='upper right', fontsize=8)
     fig.suptitle(title, fontsize=12, fontweight='bold', y=1.01)
     fig.tight_layout()
-    fig.savefig(outpath, dpi=150, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"  Saved {outpath}")
 
@@ -421,7 +421,7 @@ def plot_correlation_heatmap(df_agg, metrics, targets, outpath):
     fig.suptitle('Spearman Correlations: Cofolding Metrics vs Experimental (* p<0.05, ** p<0.01, *** p<0.001)',
                  fontsize=11, fontweight='bold', y=1.02)
     fig.tight_layout()
-    fig.savefig(outpath, dpi=150, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"  Saved {outpath}")
 

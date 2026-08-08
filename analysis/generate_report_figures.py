@@ -279,7 +279,7 @@ def fig1_l2_distance_distribution(all_data):
     ax.set_ylim(0, None)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig1_l2_distance_distribution.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -314,7 +314,7 @@ def fig2_close_binding_frequency(all_data):
     ax.set_ylim(0, max(fracs) * 1.3 + 0.05)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig2_close_binding_frequency.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -367,7 +367,7 @@ def fig3_consensus_contacts(all_data):
     plt.colorbar(im, ax=ax, label='Contact (1=yes)', shrink=0.6)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig3_consensus_contacts.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -414,7 +414,7 @@ def fig4_r74g_competitive(all_data):
                   fontsize=13, fontweight='bold', y=1.02)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig4_r74g_competitive.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -462,7 +462,7 @@ def fig5_r74_loop_mechanism(insights_data):
                   fontsize=13, fontweight='bold', y=1.02)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig5_r74_loop_mechanism.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -585,7 +585,7 @@ def fig6_gkq_paradox():
                   fontsize=12, fontweight='bold', y=1.05)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig6_gkq_paradox.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -624,7 +624,7 @@ def fig7_confidence_correlation(all_data):
     ax.legend(fontsize=9)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'fig7_confidence_correlation.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -650,7 +650,7 @@ def figS1_ki_vs_close_fraction(all_data):
                   fontsize=12, fontweight='bold')
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'figS1_ki_vs_close_fraction.png')
-    fig.savefig(path, dpi=200, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 
@@ -705,7 +705,7 @@ def figS2_full_contact_heatmap(all_data):
     plt.colorbar(im, ax=ax, label='Contact (1=yes)', shrink=0.3)
     plt.tight_layout()
     path = os.path.join(OUT_DIR, 'figS2_full_contact_heatmap.png')
-    fig.savefig(path, dpi=150, bbox_inches='tight')
+    fig.savefig(path, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f'  Saved {path}')
 

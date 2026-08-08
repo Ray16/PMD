@@ -113,7 +113,7 @@ def plot_top_predictors(df_agg, df_rank, target='kcat_km', top_n=5):
                  fontsize=13, fontweight='bold', y=1.02)
     fig.tight_layout()
     outpath = os.path.join(ANALYSIS_DIR, 'kcat_km_top_predictors.png')
-    fig.savefig(outpath, dpi=150, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"Saved {outpath}")
 
@@ -166,7 +166,7 @@ def plot_condition_comparison(df_rank, target='kcat_km'):
 
     outpath = os.path.join(ANALYSIS_DIR, 'kcat_km_predictor_heatmap.png')
     fig.tight_layout()
-    fig.savefig(outpath, dpi=150, bbox_inches='tight')
+    fig.savefig(outpath, dpi=300, bbox_inches='tight')
     plt.close(fig)
     print(f"Saved {outpath}")
 

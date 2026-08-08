@@ -190,7 +190,7 @@ def fig_enzyme_overview():
                edgecolor='gray', fancybox=True)
 
     out_path = f"{ANALYSIS_DIR}/struct_enzyme_overview.png"
-    fig.savefig(out_path, dpi=200, bbox_inches='tight', facecolor='white')
+    fig.savefig(out_path, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
     shutil.rmtree(tmpdir)
     print("  Done.")
@@ -320,7 +320,7 @@ def fig_variant_panels():
                fontsize=12, frameon=True, bbox_to_anchor=(0.5, -0.02))
 
     out_path = f"{ANALYSIS_DIR}/struct_variant_panels.png"
-    fig.savefig(out_path, dpi=200, bbox_inches='tight', facecolor='white')
+    fig.savefig(out_path, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
     print(f"  Combined panel saved to {out_path}")
 
