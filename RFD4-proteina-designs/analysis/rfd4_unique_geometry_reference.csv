@@ -1,0 +1,9 @@
+group,candidate_ids,distance_A,angle_deg,global_iptm,global_iptm_status
+G1,candidate_014;candidate_028;candidate_133;candidate_140;candidate_231;candidate_245,3.6188563110463505,177.4889287492619,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G2,candidate_007;candidate_063;candidate_070;candidate_084;candidate_105,3.6640897914761856,177.28974635056667,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G3,candidate_021;candidate_147;candidate_182;candidate_203;candidate_238,3.6736958230098478,176.1988769738719,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G4,candidate_077;candidate_098;candidate_126;candidate_161,3.6634794935962174,175.63805214846062,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G5,candidate_000;candidate_035;candidate_112;candidate_154;candidate_224,3.624871170124533,174.32750448810185,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G6,candidate_119;candidate_175;candidate_196;candidate_210,3.5591463864247004,173.60908297668928,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G7,candidate_049;candidate_091;candidate_168;candidate_189,3.711054432368245,173.2771046872037,,No Boltz-2 full-complex result located in supplied RFD4 inputs
+G8,candidate_042;candidate_056;candidate_217;candidate_252,3.7029746150898744,171.02456755107644,,No Boltz-2 full-complex result located in supplied RFD4 inputs
