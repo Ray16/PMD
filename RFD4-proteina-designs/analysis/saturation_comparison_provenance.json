@@ -1,0 +1,139 @@
+{
+  "historical_table": "saturation_mutagenesis/results/tables/nac_per_model.tsv",
+  "historical_table_sha256": "9858b5917567dc882f81ae1c833a9b9b1cb1aa244e06e7c9ce9421e4869e802d",
+  "historical_total_poses": 83700,
+  "historical_total_sequences": 1674,
+  "models_per_sequence": 50,
+  "raw_WT_spot_checks": [
+    {
+      "file": "saturation_mutagenesis/results/raw_lambda13/full/full_wtrefs/by_seed/atherm_WT/s0/atherm_WT_model_0.pdb",
+      "sha256": "b867bdf15f974cf181d3fc7f2230c4ddf565b2523e1fc8abbc78ffb3c44e64f2",
+      "distance_A": 4.153919233687627,
+      "angle_deg": 155.52597555851384,
+      "historical_table_matches": true
+    },
+    {
+      "file": "saturation_mutagenesis/results/raw_lambda13/full/full_wtrefs/by_seed/atherm_WT/s0/atherm_WT_model_49.pdb",
+      "sha256": "43eec34adbb109c16d255c477c11706477c8e1f1671b677748d79bfec9277201",
+      "distance_A": 6.643715903016926,
+      "angle_deg": 136.28262412604326,
+      "historical_table_matches": true
+    },
+    {
+      "file": "saturation_mutagenesis/results/raw_lambda13/full/full_wtrefs/by_seed/haur_WT/s0/haur_WT_model_0.pdb",
+      "sha256": "2bff285a3db60279800d0b75553ca10fe5910c08a64ec841142a51e459d19cef",
+      "distance_A": 3.716273133126789,
+      "angle_deg": 163.7144384771565,
+      "historical_table_matches": true
+    },
+    {
+      "file": "saturation_mutagenesis/results/raw_lambda13/full/full_wtrefs/by_seed/haur_WT/s0/haur_WT_model_49.pdb",
+      "sha256": "6b6073102891c582f0dac6ecb45368280d6bd62e26cc7ce05aeb8ddef25b0685",
+      "distance_A": 3.807140790672181,
+      "angle_deg": 162.95604692999046,
+      "historical_table_matches": true
+    }
+  ],
+  "RFD4_coordinate_conditioned_files": [
+    "candidate_000_generated.cif",
+    "candidate_007_generated.cif",
+    "candidate_014_generated.cif",
+    "candidate_021_generated.cif",
+    "candidate_028_generated.cif",
+    "candidate_035_generated.cif",
+    "candidate_042_generated.cif",
+    "candidate_049_generated.cif",
+    "candidate_056_generated.cif",
+    "candidate_063_generated.cif",
+    "candidate_070_generated.cif",
+    "candidate_077_generated.cif",
+    "candidate_084_generated.cif",
+    "candidate_091_generated.cif",
+    "candidate_098_generated.cif",
+    "candidate_105_generated.cif",
+    "candidate_112_generated.cif",
+    "candidate_119_generated.cif",
+    "candidate_126_generated.cif",
+    "candidate_133_generated.cif",
+    "candidate_140_generated.cif",
+    "candidate_147_generated.cif",
+    "candidate_154_generated.cif",
+    "candidate_161_generated.cif",
+    "candidate_168_generated.cif",
+    "candidate_175_generated.cif",
+    "candidate_182_generated.cif",
+    "candidate_189_generated.cif",
+    "candidate_196_generated.cif",
+    "candidate_203_generated.cif",
+    "candidate_210_generated.cif",
+    "candidate_217_generated.cif",
+    "candidate_224_generated.cif",
+    "candidate_231_generated.cif",
+    "candidate_238_generated.cif",
+    "candidate_245_generated.cif",
+    "candidate_252_generated.cif"
+  ],
+  "RFD4_unique_sequences": 8,
+  "RFD4_unique_complete_coordinate_sets": 8,
+  "RFD4_duplicate_coordinate_groups": {
+    "4fdd6fb434888eae6800c600e6b6f5d35fbc33f403291dc0e36bae752c86474e": [
+      "candidate_000_generated.cif",
+      "candidate_035_generated.cif",
+      "candidate_112_generated.cif",
+      "candidate_154_generated.cif",
+      "candidate_224_generated.cif"
+    ],
+    "c26ea26740a47272aee8fd80702a76cfc2758d26f881056f50b88de449244bff": [
+      "candidate_007_generated.cif",
+      "candidate_063_generated.cif",
+      "candidate_070_generated.cif",
+      "candidate_084_generated.cif",
+      "candidate_105_generated.cif"
+    ],
+    "8fae21f97fdc9ac7cf2e5146681e15457dff7431e6a3609bdd243d0772b6a2eb": [
+      "candidate_014_generated.cif",
+      "candidate_028_generated.cif",
+      "candidate_133_generated.cif",
+      "candidate_140_generated.cif",
+      "candidate_231_generated.cif",
+      "candidate_245_generated.cif"
+    ],
+    "2ebe4016ba5879ede44ea0fea505e737d15651f266e4f91920ed87ae8efda53b": [
+      "candidate_021_generated.cif",
+      "candidate_147_generated.cif",
+      "candidate_182_generated.cif",
+      "candidate_203_generated.cif",
+      "candidate_238_generated.cif"
+    ],
+    "51eebf48651a006a9d9ede352e9fcdde51ed161f9256acc0455773d5064a28fd": [
+      "candidate_042_generated.cif",
+      "candidate_056_generated.cif",
+      "candidate_217_generated.cif",
+      "candidate_252_generated.cif"
+    ],
+    "ccea8d2a5ad00c6c6f87a3af1a7ef57056b049a7ea237e50949ff7c011846926": [
+      "candidate_049_generated.cif",
+      "candidate_091_generated.cif",
+      "candidate_168_generated.cif",
+      "candidate_189_generated.cif"
+    ],
+    "1ecc7e8ac79dd32898e84ecbd8585546169b38db88a7fa8acbc2375c4a5cebdc": [
+      "candidate_077_generated.cif",
+      "candidate_098_generated.cif",
+      "candidate_126_generated.cif",
+      "candidate_161_generated.cif"
+    ],
+    "89ff549904124e9aae6794d6bc01f3cf93e95e822fea6d0234d73101c33dbbdd": [
+      "candidate_119_generated.cif",
+      "candidate_175_generated.cif",
+      "candidate_196_generated.cif",
+      "candidate_210_generated.cif"
+    ]
+  },
+  "RFD4_summary_weighting": "Each distinct complete coordinate set counted once",
+  "atom_mapping": {
+    "historical": "chain L O16 / chain T PG / chain T O3B",
+    "RFD4": "IMV O16 / IAT P41 / IAT O27"
+  },
+  "limitation": "RFD4 generated coordinate-conditioned inputs and independent 50-pose cofold ensembles are not equivalent evidence."
+}
