@@ -85,8 +85,8 @@ def savefig(fig,out,name):
 
 
 def plots(out, summary, poses, rfd):
-    fig,axes=plt.subplots(2,2,figsize=(16,12),gridspec_kw={'height_ratios':[1,1.1]})
-    fig.subplots_adjust(top=.86,bottom=.14,hspace=.28,wspace=.18,left=.06,right=.98)
+    fig,axes=plt.subplots(2,2,figsize=(18,12.5),gridspec_kw={'height_ratios':[1,1.1]})
+    fig.subplots_adjust(top=.86,bottom=.15,hspace=.28,wspace=.38,left=.06,right=.93)
     for col,arm in enumerate(['atherm','haur']):
         rs=[r for r in summary if r['arm']==arm]
         ax,tab=axes[:,col]
@@ -103,21 +103,30 @@ def plots(out, summary, poses, rfd):
             labels.append(ax.text(x,y,r['mutation'],fontsize=8.5,color=color))
         ax.scatter([r['angle_deg'] for r in rfd],[r['distance_A'] for r in rfd],
                    s=100,marker='*',color='#d55e00',edgecolor='white',linewidth=.5,zorder=4)
-        for group in ['G1','G6']:
-            r=next(r for r in rfd if r['group']==group)
-            labels.append(ax.text(r['angle_deg'],r['distance_A'],f'RFD4 {group}',fontsize=8.5,color='#a34000'))
         ymin=min([r['distance_q25_A'] for r in rs]+[r['distance_A'] for r in rfd])-.12
         ymax=max(r['distance_q75_A'] for r in rs)+.25
         xmin=min(r['angle_q25_deg'] for r in rs)-4
         ax.set(xlim=(xmin,181),ylim=(ymin,ymax),xlabel='Attack angle (°)',ylabel='Attack distance (Å)')
         ax.set_title(('At' if arm=='atherm' else 'Ha')+f': {len(rs)-1} selected mutants + WT',fontsize=13)
         ax.spines[['top','right']].set_visible(False)
-        adjust_text(labels,ax=ax,expand=(1.2,1.3),
-                    arrowprops=dict(arrowstyle='-',color='#808080',lw=.45))
+        # Keep group labels in a dedicated gutter. Their points stay at the exact
+        # measured coordinates; labels are ordered by height to reduce crossings.
+        adjust_text(labels,ax=ax,expand=(1.5,1.6),force_text=(.35,.6),
+                    force_static=(.3,.5),time_lim=4,
+                    arrowprops=dict(arrowstyle='-',color='#808080',lw=.55))
+        for index,r in enumerate(sorted(rfd,key=lambda r:(r['distance_A'],r['angle_deg']))):
+            ax.annotate(r['group'],xy=(r['angle_deg'],r['distance_A']),
+                        xycoords='data',xytext=(1.035,.055+.068*index),
+                        textcoords='axes fraction',ha='left',va='center',fontsize=10,
+                        weight='bold',color='#a34000',annotation_clip=False,
+                        arrowprops=dict(arrowstyle='-',color='#ba7953',lw=.65,
+                                        shrinkA=3,shrinkB=4,connectionstyle='arc3,rad=0'))
+        ax.text(1.035,.625,'RFD4',transform=ax.transAxes,fontsize=10,
+                weight='bold',color='#a34000',ha='left',va='bottom')
         tab.axis('off')
         cells=[[r['mutation'],f"{r['global_iptm_mean']:.5f}",f"{r['global_iptm_delta_vs_WT']:+.5f}",
                 f"{r['distance_median_A']:.3f}",f"{r['angle_median_deg']:.2f}",f"{r['NAC_count']}/50"] for r in rs]
-        table=tab.table(cellText=cells,colLabels=['Mutant','Global ipTM','Δ vs WT','Median d (Å)','Median angle','NAC'],
+        table=tab.table(cellText=cells,colLabels=['Mutant','Mean global ipTM','Δ vs WT','Median d (Å)','Median angle','NAC'],
                         cellLoc='center',colWidths=[.15,.19,.17,.19,.2,.1],bbox=[0,0,1,1])
         table.auto_set_font_size(False);table.set_fontsize(9.5)
         for (i,j),cell in table.get_celld().items():
@@ -127,9 +136,10 @@ def plots(out, summary, poses, rfd):
             else:cell.set_facecolor('#edf2f6' if i%2 else '#fafbfc')
     fig.suptitle('The selected 20 mutants vs RFD4: geometry and global ipTM',fontsize=20,weight='bold',y=.97)
     fig.text(.5,.92,'User-confirmed October 15 testing panel · all 50 saved full-complex Boltz-2 poses per mutant',ha='center',fontsize=12)
-    fig.text(.06,.075,'Blue: selected-mutant medians; gray: WT; whiskers: middle 50% of poses. Orange stars: 8 unique RFD4 structures.\n'
+    fig.text(.06,.08,'Blue: selected-mutant medians; gray: WT; whiskers: middle 50% of poses. Orange stars: 8 unique RFD4 structures.\n'
+             'All RFD4 groups G1–G8 are labelled in gutters; connector lines point to exact coordinates. No coordinate jitter.\n'
              'NAC: distance ≤4.0 Å AND angle ≥165°. Median coordinates need not represent a single pose.\n'
-             'Global ipTM is native confidence JSON [iptm]. RFD4 supplied structures are coordinate-conditioned; their Boltz-2 global ipTM is unavailable.',
+             'Global ipTM is native confidence JSON [iptm]. RFD4 ligand atoms carry coordinate-conditioning annotations; Boltz-2 global ipTM is unavailable.',
              fontsize=10,color='#44546a',linespacing=1.7)
     savefig(fig,out,'rfd4_vs_selected20')
     fig,axes=plt.subplots(1,2,figsize=(13,8))
@@ -155,8 +165,26 @@ def plots(out, summary, poses, rfd):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--project-root',type=Path,required=True)
-    root=ap.parse_args().project_root.resolve();sat=root/'saturation_mutagenesis'
+    ap.add_argument('--plots-only',action='store_true',help='Render the previously audited CSVs without rescoring unchanged structures')
+    args=ap.parse_args();root=args.project_root.resolve();sat=root/'saturation_mutagenesis'
     package=sat/'proposed_candidate_final/titer_final_20261015';out=root/'RFD4-proteina-designs/analysis'
+    if args.plots_only:
+        summary=read(out/'selected20_boltz2_full_summary.csv',',')
+        strings={'id','arm','mutation','selection_group','sequence_sha256'}
+        for row in summary:
+            for key,value in row.items():
+                if key not in strings and value!='':
+                    row[key]=int(value) if key in {'n_models','NAC_count'} else float(value)
+        poses=read(out/'selected20_boltz2_full_per_model.csv',',')
+        for row in poses:row['global_iptm']=float(row['global_iptm'])
+        rfd=read(out/'rfd4_unique_geometry_reference.csv',',')
+        for row in rfd:
+            row['distance_A']=float(row['distance_A']);row['angle_deg']=float(row['angle_deg'])
+        assert [r['id'] for r in summary]==EXPECTED+['atherm_WT','haur_WT']
+        assert len(poses)==1100 and len(rfd)==8
+        plots(out,summary,poses,rfd)
+        print('Re-rendered audited plots with every RFD4 group labelled.')
+        return
     panel=read(package/'results/screening_panel.tsv')
     assert [r['id'] for r in panel]==EXPECTED, 'Panel differs from user-specified IDs'
     seqs={r.id:str(r.seq) for r in SeqIO.parse(package/'results/screening_panel.fasta','fasta')}

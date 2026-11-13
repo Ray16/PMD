@@ -1,0 +1,484 @@
+{
+  "RFD4_rechecks": [
+    {
+      "file": "candidate_000_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6248711701245324,
+      "angle_deg": 174.327504488102
+    },
+    {
+      "file": "candidate_007_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6640897914761856,
+      "angle_deg": 177.28974635056667
+    },
+    {
+      "file": "candidate_014_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_021_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6736958230098478,
+      "angle_deg": 176.19887697387213
+    },
+    {
+      "file": "candidate_028_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_035_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6248711701245324,
+      "angle_deg": 174.327504488102
+    },
+    {
+      "file": "candidate_042_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.7029746150898744,
+      "angle_deg": 171.02456755107644
+    },
+    {
+      "file": "candidate_049_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.711054432368245,
+      "angle_deg": 173.2771046872037
+    },
+    {
+      "file": "candidate_056_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.7029746150898744,
+      "angle_deg": 171.02456755107644
+    },
+    {
+      "file": "candidate_063_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6640897914761856,
+      "angle_deg": 177.28974635056667
+    },
+    {
+      "file": "candidate_070_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6640897914761856,
+      "angle_deg": 177.28974635056667
+    },
+    {
+      "file": "candidate_077_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6634794935962174,
+      "angle_deg": 175.63805214846045
+    },
+    {
+      "file": "candidate_084_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6640897914761856,
+      "angle_deg": 177.28974635056667
+    },
+    {
+      "file": "candidate_091_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.711054432368245,
+      "angle_deg": 173.2771046872037
+    },
+    {
+      "file": "candidate_098_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6634794935962174,
+      "angle_deg": 175.63805214846045
+    },
+    {
+      "file": "candidate_105_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6640897914761856,
+      "angle_deg": 177.28974635056667
+    },
+    {
+      "file": "candidate_112_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6248711701245324,
+      "angle_deg": 174.327504488102
+    },
+    {
+      "file": "candidate_119_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.5591463864247004,
+      "angle_deg": 173.60908297668934
+    },
+    {
+      "file": "candidate_126_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6634794935962174,
+      "angle_deg": 175.63805214846045
+    },
+    {
+      "file": "candidate_133_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_140_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_147_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6736958230098478,
+      "angle_deg": 176.19887697387213
+    },
+    {
+      "file": "candidate_154_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6248711701245324,
+      "angle_deg": 174.327504488102
+    },
+    {
+      "file": "candidate_161_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6634794935962174,
+      "angle_deg": 175.63805214846045
+    },
+    {
+      "file": "candidate_168_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.711054432368245,
+      "angle_deg": 173.2771046872037
+    },
+    {
+      "file": "candidate_175_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.5591463864247004,
+      "angle_deg": 173.60908297668934
+    },
+    {
+      "file": "candidate_182_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6736958230098478,
+      "angle_deg": 176.19887697387213
+    },
+    {
+      "file": "candidate_189_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.711054432368245,
+      "angle_deg": 173.2771046872037
+    },
+    {
+      "file": "candidate_196_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.5591463864247004,
+      "angle_deg": 173.60908297668934
+    },
+    {
+      "file": "candidate_203_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6736958230098478,
+      "angle_deg": 176.19887697387213
+    },
+    {
+      "file": "candidate_210_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.5591463864247004,
+      "angle_deg": 173.60908297668934
+    },
+    {
+      "file": "candidate_217_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.7029746150898744,
+      "angle_deg": 171.02456755107644
+    },
+    {
+      "file": "candidate_224_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6248711701245324,
+      "angle_deg": 174.327504488102
+    },
+    {
+      "file": "candidate_231_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_238_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6736958230098478,
+      "angle_deg": 176.19887697387213
+    },
+    {
+      "file": "candidate_245_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.6188563110463505,
+      "angle_deg": 177.4889287492616
+    },
+    {
+      "file": "candidate_252_generated.cif",
+      "source_hash_unchanged": true,
+      "bond_mapping_rechecked": true,
+      "distance_A": 3.7029746150898744,
+      "angle_deg": 171.02456755107644
+    }
+  ],
+  "prior_full_panel_audit_poses": 1100,
+  "additional_independent_parser_spot_checks": [
+    {
+      "id": "atherm_S190T",
+      "model": 0,
+      "BioPDB_distance_A": 3.7850422859191895,
+      "BioPDB_angle_deg": 169.42013566890503,
+      "distance_error_A": 1.4028424644152437e-08,
+      "angle_error_deg": 2.8137251320003998e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_T191N",
+      "model": 0,
+      "BioPDB_distance_A": 6.033298492431641,
+      "BioPDB_angle_deg": 122.5175559336539,
+      "distance_error_A": 1.407835137356983e-07,
+      "angle_error_deg": 1.2071494822407658e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_G189I",
+      "model": 0,
+      "BioPDB_distance_A": 3.7112655639648438,
+      "BioPDB_angle_deg": 167.36133412489033,
+      "distance_error_A": 1.2310203656440422e-07,
+      "angle_error_deg": 6.137063792266417e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_I15G",
+      "model": 0,
+      "BioPDB_distance_A": 5.318374156951904,
+      "BioPDB_angle_deg": 134.4857860700599,
+      "distance_error_A": 2.1873847089182163e-07,
+      "angle_error_deg": 5.076916153257116e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_I103F",
+      "model": 0,
+      "BioPDB_distance_A": 4.056513786315918,
+      "BioPDB_angle_deg": 158.41319615404709,
+      "distance_error_A": 1.1110881548148654e-07,
+      "angle_error_deg": 1.2373963130585253e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I112D",
+      "model": 0,
+      "BioPDB_distance_A": 3.6370160579681396,
+      "BioPDB_angle_deg": 160.83407379735863,
+      "distance_error_A": 1.1079386297296878e-07,
+      "angle_error_deg": 3.6448018363444135e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I19A",
+      "model": 0,
+      "BioPDB_distance_A": 3.95278000831604,
+      "BioPDB_angle_deg": 160.74447535090604,
+      "distance_error_A": 2.603952697910472e-08,
+      "angle_error_deg": 5.596500955107331e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I19V",
+      "model": 0,
+      "BioPDB_distance_A": 3.7467944622039795,
+      "BioPDB_angle_deg": 164.4486636538352,
+      "distance_error_A": 3.659131255773218e-07,
+      "angle_error_deg": 1.7021895644120377e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I112L",
+      "model": 0,
+      "BioPDB_distance_A": 3.8579721450805664,
+      "BioPDB_angle_deg": 158.88026475354093,
+      "distance_error_A": 1.202422414969817e-07,
+      "angle_error_deg": 5.481457492351183e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_S138T",
+      "model": 0,
+      "BioPDB_distance_A": 4.862886428833008,
+      "BioPDB_angle_deg": 143.04288017989543,
+      "distance_error_A": 5.966330451911972e-08,
+      "angle_error_deg": 4.294916720937181e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_I103D",
+      "model": 0,
+      "BioPDB_distance_A": 4.053389072418213,
+      "BioPDB_angle_deg": 158.4573770805813,
+      "distance_error_A": 2.501117615238968e-07,
+      "angle_error_deg": 6.463104824661059e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_F119P",
+      "model": 0,
+      "BioPDB_distance_A": 3.9040567874908447,
+      "BioPDB_angle_deg": 166.96198098714592,
+      "distance_error_A": 5.122278690095072e-08,
+      "angle_error_deg": 1.7547486663715972e-07,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I19C",
+      "model": 0,
+      "BioPDB_distance_A": 3.7561299800872803,
+      "BioPDB_angle_deg": 164.84519498845287,
+      "distance_error_A": 2.0934971578512318e-07,
+      "angle_error_deg": 1.207403073522073e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_G102V",
+      "model": 0,
+      "BioPDB_distance_A": 3.977527141571045,
+      "BioPDB_angle_deg": 155.46515391894437,
+      "distance_error_A": 2.0356156760215072e-08,
+      "angle_error_deg": 1.2756081133602493e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_T191Q",
+      "model": 0,
+      "BioPDB_distance_A": 5.149338245391846,
+      "BioPDB_angle_deg": 150.1751450185743,
+      "distance_error_A": 2.296853605088245e-07,
+      "angle_error_deg": 2.424418170221543e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_I15S",
+      "model": 0,
+      "BioPDB_distance_A": 4.4362711906433105,
+      "BioPDB_angle_deg": 155.10277411877692,
+      "distance_error_A": 4.4215826999760566e-07,
+      "angle_error_deg": 5.249729156275862e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_I103M",
+      "model": 0,
+      "BioPDB_distance_A": 4.630974769592285,
+      "BioPDB_angle_deg": 153.45948206726231,
+      "distance_error_A": 4.660574450809918e-07,
+      "angle_error_deg": 1.1649162900084775e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_P98C",
+      "model": 0,
+      "BioPDB_distance_A": 4.570143699645996,
+      "BioPDB_angle_deg": 146.76400457061456,
+      "distance_error_A": 4.763679406494248e-08,
+      "angle_error_deg": 1.7373947372334442e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_I112M",
+      "model": 0,
+      "BioPDB_distance_A": 3.7626185417175293,
+      "BioPDB_angle_deg": 162.05666174713065,
+      "distance_error_A": 2.2717203229660754e-07,
+      "angle_error_deg": 3.9260972073407174e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_A17G",
+      "model": 0,
+      "BioPDB_distance_A": 3.6093602180480957,
+      "BioPDB_angle_deg": 164.7253735696166,
+      "distance_error_A": 2.543777677388448e-08,
+      "angle_error_deg": 4.9267960093857255e-06,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "atherm_WT",
+      "model": 0,
+      "BioPDB_distance_A": 4.153919219970703,
+      "BioPDB_angle_deg": 155.52598605933238,
+      "distance_error_A": 1.371692359697363e-08,
+      "angle_error_deg": 1.0500818547143353e-05,
+      "native_global_iptm_rechecked": true
+    },
+    {
+      "id": "haur_WT",
+      "model": 0,
+      "BioPDB_distance_A": 3.716273069381714,
+      "BioPDB_angle_deg": 163.71444419882963,
+      "distance_error_A": 6.37450749962909e-08,
+      "angle_error_deg": 5.721673119296611e-06,
+      "native_global_iptm_rechecked": true
+    }
+  ],
+  "definitions": {
+    "distance": "MVAP tertiary C3 hydroxyl oxygen to ATP gamma phosphorus",
+    "angle": "MVAP hydroxyl oxygen - ATP gamma phosphorus - ATP beta-gamma bridging oxygen; vertex at phosphorus; inline = 180 degrees"
+  },
+  "mapping": {
+    "saturation": "L:O16 - T:PG - T:O3B",
+    "RFD4": "IMV:O16 - IAT:P41 - IAT:O27"
+  },
+  "interpretation": "The supplied RFD4 structures have shorter/straighter step-1 phosphorylation geometry than the selected-mutant ensemble medians. This is a coordinate-level comparison, not evidence of higher enzyme activity or cofold confidence.",
+  "limitations": [
+    "RFD4 ligand atom annotations identify source coordinate-conditioned regions; the original generation configuration was not supplied here, so the precise constraint strength was not established.",
+    "RFD4 files contain 8 distinct complete coordinate sets repeated under 37 filenames.",
+    "RFD4 supplied structures have no Boltz-2 full-complex global ipTM result.",
+    "Near-attack cutoffs are the historical screening definition, not a calibrated titer or activity predictor; selection policy treated NAC as annotation only."
+  ],
+  "primary_references": [
+    "https://www.rcsb.org/ligand/ATP",
+    "https://www.nature.com/articles/srep39737",
+    "https://www.nature.com/articles/s41467-020-17733-0"
+  ]
+}
